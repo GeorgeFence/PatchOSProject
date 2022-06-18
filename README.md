@@ -10,3 +10,4 @@ UPDATE-Fixed canvas
 UPDATE-added license reader
   
 0.0.1.2.9.7 - in progress
+UPDATE - removed license reader|removed "edit" command
