@@ -10,4 +10,4 @@ UPDATE-Fixed canvas
 UPDATE-added license reader
   
 0.0.2 - in progress
-UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms
+UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms, change posistion of forms
