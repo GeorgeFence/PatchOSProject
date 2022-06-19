@@ -1,7 +1,7 @@
 # PatchOS
  PatchOS is operating system
  
- 1DUEPS4B0D55X5ER- devloper license
+ 1DUEPS4B0D55X5ER- devloper license (ONLY FOR V.0.0.1.0.2.8)
 
 0.0.1.0.1.0 - done
 UPDATE-Fixed canvas
