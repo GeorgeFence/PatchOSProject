@@ -9,5 +9,5 @@ UPDATE-Fixed canvas
 0.0.1.0.2.8 - done
 UPDATE-added license reader
   
-0.0.1.2.9.7 - in progress
-UPDATE - removed license reader|removed "edit" command
+0.0.2 - in progress
+UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms
