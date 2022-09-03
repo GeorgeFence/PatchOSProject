@@ -10,4 +10,4 @@ UPDATE-Fixed canvas
 UPDATE-added license reader
   
 0.0.2 - in progress
-UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms|added commands pixelfix|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix|
+UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms|added commands pixelfix|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix|Designed Shell|
