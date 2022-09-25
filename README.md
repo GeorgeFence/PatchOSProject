@@ -10,7 +10,7 @@
 >>-----
 >>**0.0.1.0.2.8**
 >>> + *done*  
->>>**UPDATE-added license reader*
+>>>*UPDATE-added license reader*
 >>-----
 >>*0.0.2*
 >>> + ***in progress***  
