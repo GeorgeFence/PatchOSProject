@@ -14,4 +14,4 @@
 >>-----
 >>*0.0.2*
 >>> + ***in progress***  
->>>*UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms, RegistryEditor|added commands pixelfix|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix,ProcessManager,process, RegistryEdit|Designed Shell|*
+>>>*UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms, RegistryEditor|added commands pixelfix|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix,ProcessManager,process, RegistryEdit,KRNLOS|Designed Shell|deleted file BSPD|*
