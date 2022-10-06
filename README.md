@@ -1,5 +1,6 @@
 # <img src="logo.png" style="width:100px"> **PatchOS** 
- *PatchOS is operating system*
+## Better operating system. Better life
+#### PatchOS is operating system
  
 >1DUEPS4B0D55X5ER- developer license (ONLY FOR V.0.0.1.0.2.8)  
 >  
