@@ -16,3 +16,7 @@
 >>*0.0.2 - Big update with a different design, ... !!!IS UNUSABLE(TOO MUCH ERRORS :( BUT YOU CAN USE IT)!!!*
 >>> + *done*  
 >>>*UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms, RegistryEditor|added commands pixelfix, game|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix, ,SYS32,ConsoleGames|Designed Shell|deleted file BSPD|*
+>>-----
+>>*PatchOS 1 - ????*
+>>> + ***in progress***  
+>>>*UPDATE - *
