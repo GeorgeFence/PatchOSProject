@@ -19,4 +19,4 @@
 >>-----
 >>*PatchOS 1 - ????*
 >>> + ***in progress***  
->>>*UPDATE - *
+>>>*UPDATE - Added in files BootMgr*  
