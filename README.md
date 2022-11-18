@@ -19,4 +19,4 @@
 >>-----
 >>*PatchOS 1 - Desktop MODE*
 >>> + ***in progress***  
->>>*UPDATE - Added in files BootMgr,UFC*  
+>>>*UPDATE - Added in files BootMgr*  
