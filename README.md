@@ -4,7 +4,7 @@
  
 >1DUEPS4B0D55X5ER- developer license (ONLY FOR V.0.0.1.0.2.8)  
 >  
->### Updates
+>### Versions
 >>**0.0.1.0.1.0**
 >>> + *done*  
 >>>*UPDATE-Fixed canvas*
