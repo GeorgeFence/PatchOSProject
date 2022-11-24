@@ -17,6 +17,6 @@
 >>> + *done*  
 >>>*UPDATE - removed license reader|removed "edit" command|added mouse, GUI desktop, forms, RegistryEditor|added commands pixelfix, game|added in files CLI,DataUtils,PMFAT,RTC,Shell,SystemInfo,TextGraphics,Runner,CPU,MEMORY,Instruction,Instructions,shutdownSHRTCT,explorerSHRTCT,pixelfix, ,SYS32,ConsoleGames|Designed Shell|deleted file BSPD|*
 >>-----
->>*PatchOS 1 - Desktop MODE*
+>>*PatchOS 1 (!!!First full version!!!) - Desktop MODE*
 >>> + ***in progress***  
 >>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr*  
