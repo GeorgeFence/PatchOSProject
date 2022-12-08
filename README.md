@@ -3,7 +3,7 @@
 #### PatchOS is operating system made in C# with Cosmos OS
  
 >1DUEPS4B0D55X5ER- developer license (ONLY FOR V.0.0.1.0.2.8)  
->### Breaks
+### Breaks
 >>2022
 >>>5.12.2022 - 26.12.2022
 >>>> - NO UPDATES NOW, MY PC IS BROKEN :( BUT PROJECT IS WORKING :)
