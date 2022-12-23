@@ -25,4 +25,4 @@
 >>-----
 >>*PatchOS 1 (!!!First full version!!!) - Desktop MODE*
 >>> + ***in progress***  
->>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr*  
+>>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr, USL|Added USL programming language*  
