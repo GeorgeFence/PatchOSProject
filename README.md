@@ -1,6 +1,8 @@
 # <img src="logo.png" style="width:100px"> **PatchOS** 
 ## Better operating system. Better life
-> PatchOS is operating system made in C# with Cosmos OS
+> PatchOS is operating system made in C# with Cosmos OS      
+> Watch the video:   
+> [![Watch the video](https://img.youtube.com/vi/Ndva50sJxWA/default.jpg)](https://www.youtube.com/watch?v=Ndva50sJxWA)      
 >1DUEPS4B0D55X5ER- developer license (ONLY FOR V.0.0.1.0.2.8)  
 >### Breaks
 >>2022
@@ -23,4 +25,4 @@
 >>-----
 >>*PatchOS 1 (!!!First full version!!!) - Desktop MODE*
 >>> + ***in progress***  
->>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr*  
+>>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr, USL|Added USL programming language*  
