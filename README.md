@@ -25,4 +25,4 @@
 >>-----
 >>*PatchOS 1 (!!!First full version!!!) - Desktop MODE*
 >>> + ***in progress***  
->>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr, USL, ProgressBar|Added USL programming language|Added in commands mkdir,copyfile,deldir,delfile*  
+>>>*UPDATE - Added in files BootMgr,StringFile, TaskMgr, USL, ProgressBar, RegMgr|Added USL programming language|Added in commands mkdir,copyfile,deldir,delfile,format, reg*  
