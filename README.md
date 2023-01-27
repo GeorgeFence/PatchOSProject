@@ -2,7 +2,7 @@
 ## Better operating system. Better life
 > PatchOS is operating system made in C# with Cosmos OS    
 >
-###Use .vmdk file to boot PatchOS
+### Use .vmdk file to boot PatchOS
 >
 > Watch the video:   
 > [![Watch the video](https://img.youtube.com/vi/Ndva50sJxWA/default.jpg)](https://www.youtube.com/watch?v=Ndva50sJxWA)      
