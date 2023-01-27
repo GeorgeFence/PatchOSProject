@@ -1,6 +1,9 @@
 # <img src="logo.png" style="width:100px"> **PatchOS** 
 ## Better operating system. Better life
-> PatchOS is operating system made in C# with Cosmos OS      
+> PatchOS is operating system made in C# with Cosmos OS    
+>
+>Use .vmdk file to boot PatchOS
+>
 > Watch the video:   
 > [![Watch the video](https://img.youtube.com/vi/Ndva50sJxWA/default.jpg)](https://www.youtube.com/watch?v=Ndva50sJxWA)      
 >1DUEPS4B0D55X5ER- developer license (ONLY FOR V.0.0.1.0.2.8)  
