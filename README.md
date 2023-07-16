@@ -1,4 +1,4 @@
-# <img src="logo.png" style="width:100px"> **PatchOS** 
+# <img src="logo.png" style="width:150px"> **PatchOS** 
 ## Better operating system. Better life
 > PatchOS is operating system made in C# with Cosmos OS    
 >
