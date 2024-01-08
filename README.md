@@ -1,5 +1,5 @@
 # <img src="logo.png" style="width:450px"> #
-> # PatchOS #
+ # PatchOS #
 > ## Better operating system. Better life ##
 > PatchOS is operating system made in C# with Cosmos
 > https://www.buymeacoffee.com/patchos
