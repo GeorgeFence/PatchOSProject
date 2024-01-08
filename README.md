@@ -6,5 +6,5 @@
 >
 ### Use .vmdk file to boot PatchOS
 > [!CAUTION]
-> Use this OS on real hardware at your own risk! Can Corrupt your disk!
+> Use this OS on real hardware at your own risk! Can Corrupt your disk! Filesystem not done yet
     
