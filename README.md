@@ -5,6 +5,6 @@
 ## https://www.buymeacoffee.com/patchos ##
 >
 ### Use .vmdk file to boot PatchOS
-> **Warning**<br>
+> [!CAUTION]
 > Use this OS on real hardware at your own risk! Can Corrupt your disk!
     
