@@ -1,0 +1,20 @@
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.deps.json
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.dll
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.pdb
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.dll
+C:\Users\lenovo\Desktop\GitHubPatchOS\VS\v0.0.1.0.1.0\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.pdb
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.csproj.AssemblyReference.cache
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.AssemblyInfoInputs.cache
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.AssemblyInfo.cs
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.csproj.CoreCompileInputs.cache
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.dll
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\netcoreapp2.0\cosmos\PatchOS.pdb
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.deps.json
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.dll
+D:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\netcoreapp2.0\cosmos\PatchOS.pdb

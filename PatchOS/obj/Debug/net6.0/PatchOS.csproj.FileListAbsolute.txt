@@ -1,0 +1,80 @@
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.dll
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+F:\Dokumenty\GitHubPatchOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.dll
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+F:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.dll
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+D:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+C:\Users\MiniWindows\Desktop\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\bin\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll

@@ -1,0 +1,126 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <!--<RuntimeIdentifier>cosmos</RuntimeIdentifier>-->
+        <Platform>cosmos</Platform>
+        <SupportsX86Intrinsics>false</SupportsX86Intrinsics>
+        <SelfContained>True</SelfContained>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <EnableGDB>False</EnableGDB>
+        <StartCosmosGDB>False</StartCosmosGDB>
+        <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
+        <CosmosDebugPort>Serial: COM1</CosmosDebugPort>
+        <Profile>VMware</Profile>
+        <Description>Use VMware Player or Workstation to deploy and debug.</Description>
+        <PxeInterface>192.168.0.8</PxeInterface>
+        <DebugEnabled>False</DebugEnabled>
+        <VMWareEdition>Workstation</VMWareEdition>
+        <Launch>VMware</Launch>
+        <OptimizationLevel>s</OptimizationLevel>
+        <QemuMemory>256</QemuMemory>
+        <QemuNetworkDevice>PCNet</QemuNetworkDevice>
+        <QemuUSBKeyboard>False</QemuUSBKeyboard>
+        <QemuUSBMouse>False</QemuUSBMouse>
+        <QemuVideoDriver>VMWare</QemuVideoDriver>
+        <QemuAudioDriver>AC97</QemuAudioDriver>
+        <QemuUseSerial>False</QemuUseSerial>
+        <QemuHWAccelWHPX>True</QemuHWAccelWHPX>
+        <QemuUseCustomLocation>True</QemuUseCustomLocation>
+        <QemuLocationParameters>C:\Program Files\qemu\qemu-system-i386.exe</QemuLocationParameters>
+        <QemuUseCustomParameters>True</QemuUseCustomParameters>
+        <ApplicationIcon>BootAnimation\1.ico</ApplicationIcon>
+        <RemoveBootDebugOutput>True</RemoveBootDebugOutput>
+        <CompileVBEMultiboot>False</CompileVBEMultiboot>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageIcon>logo.png</PackageIcon>
+        <Company>PatchOS</Company>
+        <CompressionType>Gzip</CompressionType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="BootAnimation\boot_img.bmp" />
+      <None Remove="Files\Drivers\GUI\bgwallpaper.bmp" />
+      <None Remove="Files\Drivers\GUI\cursor.bmp" />
+      <None Remove="Files\Drivers\GUI\exit.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\apk.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\apk.png" />
+      <None Remove="Files\Drivers\GUI\fileIcons\apkApp.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\APP.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\Menu.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\Menu.png" />
+      <None Remove="Files\Drivers\GUI\fileIcons\MenuApp.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\MenuApp.png" />
+      <None Remove="Files\Drivers\GUI\fileIcons\NONE.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\REG.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\settings.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\ShutdownDialog.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\ShutdownDialog.png" />
+      <None Remove="Files\Drivers\GUI\fileIcons\ShutdownDialogApp.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\ShutdownDialogApp.png" />
+      <None Remove="Files\Drivers\GUI\fileIcons\TXT.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\wifi\connected.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\wifi\nointernet.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\wifi\notconnected.bmp" />
+      <None Remove="Files\Drivers\GUI\fileIcons\WIN.bmp" />
+      <None Remove="Files\Drivers\GUI\serviceapp.bmp" />
+      <None Remove="Files\Drivers\GUI\serviceapp.png" />
+      <None Remove="Files\Drivers\GUI\START.bmp" />
+      <None Remove="Files\Drivers\GUI\systemapp.bmp" />
+      <None Remove="Files\Drivers\GUI\systemapp.png" />
+      <None Remove="Files\Drivers\GUI\userapp.bmp" />
+      <None Remove="Files\Drivers\GUI\wallpaper1_FHD.bmp" />
+      <None Remove="Files\Drivers\GUI\wallpaper1_HD.bmp" />
+      <None Remove="Files\Drivers\GUI\wallpaper2_FHD.bmp" />
+      <None Remove="Files\Drivers\GUI\wallpaper2_HD.bmp" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="BootAnimation\1.ico" />
+      <EmbeddedResource Include="BootAnimation\boot_img.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\cursor.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\exit.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\apk.png" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\apkApp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\APP.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\MenuApp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\MenuApp.png" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\NONE.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\REG.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\settings.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\ShutdownDialogApp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\ShutdownDialogApp.png" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\TXT.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\wifi\connected.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\wifi\nointernet.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\wifi\notconnected.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\fileIcons\WIN.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\serviceapp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\serviceapp.png" />
+      <EmbeddedResource Include="Files\Drivers\GUI\START.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\systemapp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\systemapp.png" />
+      <EmbeddedResource Include="Files\Drivers\GUI\userapp.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\wallpaper1_FHD.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\wallpaper1_HD.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\wallpaper2_FHD.bmp" />
+      <EmbeddedResource Include="Files\Drivers\GUI\wallpaper2_HD.bmp" />
+      <None Include="..\..\..\..\PatchOS\logo.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    
+        <PackageReference Include="Cosmos.Build" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.System2" Version="0.1.0-localbuild20230723082731" />
+        <PackageReference Include="Cosmos.Plugs" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.Core" Version="0.1.0-localbuild20230723082731" />
+        <PackageReference Include="CosmosHttp" Version="1.0.3" />
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="call &quot;E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\copytorepo.bat&quot;&#xD;&#xA;" />
+    </Target>
+
+</Project>

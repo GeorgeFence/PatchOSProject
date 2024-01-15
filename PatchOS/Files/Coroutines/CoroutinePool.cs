@@ -1,0 +1,204 @@
+﻿using Cosmos.Core.Memory;
+using Cosmos.HAL;
+using PatchOS.Files.Drivers.GUI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PatchOS.Files.Coroutines
+{
+    public class CoroutinePool
+    {
+        readonly List<Coroutine> coroutines = new();
+        readonly Queue<Coroutine> coroutinesToRemove = new();
+        bool started = false;
+        bool performHeapCollection = false; // do not perform heap collection by default
+        bool shouldCollectOnNextCycle;
+        ulong heapCollectionIntervalNs = 250000000; // 250ms
+        PIT.PITTimer? heapCollectionTimer;
+
+        /// <summary>
+        /// The main global coroutine pool.
+        /// </summary>
+        public static CoroutinePool Main { get; set; } = new()
+        {
+            // if the main coroutine pool will be started, do call Heap.Collect() in semi-regular intervals
+            PerformHeapCollection = true
+        };
+
+        /// <summary>
+        /// Fired every time a full coroutine execution cycle is performed.
+        /// </summary>
+        // NOTE: As of the time of writing this comment, Cosmos currently doesn't have
+        //       the plugs to support events (MulticastDelegate.*). As a work-around,
+        //       a list of delegates is used instead.
+        public readonly List<Action> OnCoroutineCycle = new();
+
+        /// <summary>
+        /// Whether the pool should perform heap collection after coroutine cycles.
+        /// </summary>
+        // Recommended when the pool is ran on the main Cosmos thread. Can be safely
+        // disabled if you are handling heap memory collection yourself.
+        public bool PerformHeapCollection
+        {
+            get => performHeapCollection;
+            set
+            {
+                performHeapCollection = value;
+
+                if (started)
+                {
+                    if (performHeapCollection)
+                    {
+                        CreateHeapCollectionTimer();
+                    }
+                    else
+                    {
+                        DestroyHeapCollectionTimer();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// The interval, in nanoseconds, in which heap collection should be performed.
+        /// Heap collection will always be performed after a full coroutine cycle is performed.
+        /// </summary>
+        public ulong HeapCollectionInterval
+        {
+            get => heapCollectionIntervalNs;
+            set
+            {
+                if (value != heapCollectionIntervalNs)
+                {
+                    heapCollectionIntervalNs = value;
+
+                    if (started)
+                    {
+                        CreateHeapCollectionTimer(); // create a new timer with the correct interval
+                    }
+                }
+            }
+        }
+
+        private void CreateHeapCollectionTimer()
+        {
+            if (heapCollectionTimer != null)
+            {
+                DestroyHeapCollectionTimer();
+            }
+
+            heapCollectionTimer = new PIT.PITTimer(NotifyHeapCollectionTimer, HeapCollectionInterval, true);
+            Cosmos.HAL.Global.PIT.RegisterTimer(heapCollectionTimer);
+        }
+
+        private void DestroyHeapCollectionTimer()
+        {
+            if (heapCollectionTimer != null)
+            {
+                Cosmos.HAL.Global.PIT.UnregisterTimer(heapCollectionTimer.TimerID);
+                heapCollectionTimer.Dispose();
+                heapCollectionTimer = null;
+            }
+        }
+
+        private void NotifyHeapCollectionTimer()
+        {
+            shouldCollectOnNextCycle = true;
+        }
+
+        /// <summary>
+        /// The running coroutines in this pool.
+        /// </summary>
+        public IEnumerable<Coroutine> RunningCoroutines => coroutines;
+
+        /// <summary>
+        /// Adds a coroutine to the pool.
+        /// </summary>
+        /// <param name="coroutine">The coroutine to add to the pool.</param>
+        public void AddCoroutine(Coroutine coroutine)
+        {
+            coroutines.Add(coroutine);
+            coroutine.Join(this);
+        }
+
+        /// <summary>
+        /// Removes a coroutine from the pool, effectively halting its execution
+        /// in the this <see cref="CoroutinePool"/>.
+        /// </summary>
+        /// <param name="coroutine">The coroutine to remove from the pool.</param>
+        public void RemoveCoroutine(Coroutine coroutine)
+        {
+            coroutinesToRemove.Enqueue(coroutine);
+        }
+
+        /// <summary>
+        /// Starts the coroutine execution loop in the current thread.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Thrown when an attempt is made to start the coroutine pool while it's already running.</exception>
+        public void StartPool()
+        {
+            if (started)
+            {
+                throw new InvalidOperationException("The coroutine pool has already been started.");
+            }
+
+            if (heapCollectionTimer == null)
+            {
+                CreateHeapCollectionTimer();
+            }
+
+            started = true;
+
+            while (true)
+            {
+                for (int i = coroutines.Count - 1; i >= 0; i--)
+                {
+                    var current = coroutines[i];
+
+                    if (current.ExecutionEnded)
+                    {
+                        coroutines.RemoveAt(i);
+                        current.Exit();
+                        current.Running = false;
+                        continue;
+                    }
+
+                    if (current.Halted)
+                    {
+                        continue;
+                    }
+
+                    if (current.CurrentControlPoint == null || current.CurrentControlPoint.CanContinue)
+                    {
+                        ASC16.DrawACSIIString(Kernel.Canvas, i.ToString(), System.Drawing.Color.Green, 0, 0);
+                        Kernel.Canvas.Display();
+                        current.Step();
+                    }
+                }
+
+                foreach (var coroutine in coroutinesToRemove)
+                {
+                    if (coroutines.Remove(coroutine))
+                    {
+                        coroutine.Exit();
+                    }
+
+                    coroutine.Running = false;
+                }
+
+                foreach (var handler in OnCoroutineCycle)
+                {
+                    handler.Invoke();
+                }
+
+                if (shouldCollectOnNextCycle)
+                {
+                    Heap.Collect();
+                }
+            }
+        }
+    }
+}
