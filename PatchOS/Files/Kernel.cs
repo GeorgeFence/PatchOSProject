@@ -76,16 +76,27 @@ namespace PatchOS
                     Canvas.Display();
                     Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
                     Canvas.Display();
-                    ASC16.DrawACSIIString(Canvas, "[R] Regedit", System.Drawing.Color.Red, 0, 688);
-                    ASC16.DrawACSIIString(Canvas, "[Enter] Boot", System.Drawing.Color.Green, 0, 704);
+                    ASC16.DrawACSIIString(Canvas, "any key Regedit", System.Drawing.Color.Red, 0, 688);
+                    ASC16.DrawACSIIString(Canvas, "else    Boot", System.Drawing.Color.Green, 0, 704);
                     Canvas.Display();
                     DrawBootOut("IsFileSystem = " + IsFileSystem.ToString());
+                    DrawBootOut("Wait for input 2s");
+                    DelayCode(2000);
                     try
                     {
-                        ConsoleKeyInfo o = Console.ReadKey(true);
-                        if (o.Key == ConsoleKey.Enter)
+                        if(Console.KeyAvailable)
                         {
+                            if (o.Key == ConsoleKey.R)
+                            {
+                                Kernel.Canvas.Disable();
+                                Kernel.GUI_MODE = false;
+                                REGEDIT.DrawFresh(@"0:\");
 
+                            }
+                            else { Kernel.Shutdown(0); }
+                        }
+                        else
+                        {
                             SYS32.ErrorStatusAdd("1");
                             Files.Factory.Init();
                             SYS32.ErrorStatusAdd("2");
@@ -133,17 +144,6 @@ namespace PatchOS
                             }
                             SYS32.ErrorStatusAdd("4");
                             ProcessManager.Start();
-                        }
-                        else
-                        {
-                            if (o.Key == ConsoleKey.R)
-                            {
-                                Kernel.Canvas.Disable();
-                                Kernel.GUI_MODE = false;
-                                REGEDIT.DrawFresh(@"0:\");
-
-                            }
-                            else { Kernel.Shutdown(0); }
                         }
                     }
                     catch (Exception ex) { SYS32.KernelPanic(ex, "BeforeRun"); }

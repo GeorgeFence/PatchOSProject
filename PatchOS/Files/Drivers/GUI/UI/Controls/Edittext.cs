@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Console = System.Console;
 
 namespace PatchOS.Files.Drivers.GUI.UI.Controls
 {
@@ -36,19 +37,22 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         {
             Canvas.DrawFilledRectangle(System.Drawing.Color.White, Xpos + X, Ypos + Y, W, H);
             Canvas.DrawRectangle(System.Drawing.Color.Black, Xpos + X, Ypos + Y, W, H);
-            KeyEvent o = new KeyEvent();
-            if(o.Key == ConsoleKeyEx.Backspace) 
+            if (Console.KeyAvailable)
             {
-                string[] st = Text.Split("");
-                Text = "";
-                for (int i = 0; i < (st.Length - 1); i++)
+                ConsoleKeyInfo o = Console.ReadKey();
+                if (o.Key == ConsoleKey.Backspace)
                 {
-                    Text = Text + st[i];
+                    string[] st = Text.Split("");
+                    Text = "";
+                    for (int i = 0; i < (st.Length - 1); i++)
+                    {
+                        Text = Text + st[i];
+                    }
                 }
-            }
-            else
-            {
-                Text = Text + o.KeyChar.ToString();
+                else
+                {
+                    Text = Text + o.KeyChar.ToString();
+                }
             }
             ASC16.DrawACSIIString(Canvas, Text, System.Drawing.Color.Black, (uint)(X + Xpos + 3), (uint)(Y + Ypos + 3));
         }
