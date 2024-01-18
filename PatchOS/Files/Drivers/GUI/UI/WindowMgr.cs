@@ -52,26 +52,40 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         window.IsMoving = false;
                     }
 
-                    if (MouseEx.IsMouseWithin(window.X + window.WinW - 27, window.Y + 5, 24, 24))
+                    if(window.Wtype != DesignType.Blank)
                     {
-                        Stop(window);
-                    }
-
-                    if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, 32) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && !SelDone)
-                    {
-                        Windows.Remove(window);
-                        Windows.Insert(Windows.Count, window);
-                        SelDone = true;
-                        if (window.CanMove)
+                        if (MouseEx.IsMouseWithin(window.X + window.WinW - 27, window.Y + 5, 24, 24))
                         {
-                            window.IX = (int)MouseManager.X - window.X;
-                            window.IY = (int)MouseManager.Y - window.Y;
-                            IsDragging = true;
-                            window.IsMoving = true;
+                            if (MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
+                            {
+                                Stop(window);
+                            }
+                        }
+                        else
+                        {
+                            if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, 32) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left && !SelDone)
+                            {
+                                Windows.Remove(window);
+                                Windows.Insert(Windows.Count, window);
+                                SelDone = true;
+                                if (window.CanMove)
+                                {
+                                    window.IX = (int)MouseManager.X - window.X;
+                                    window.IY = (int)MouseManager.Y - window.Y;
+                                    IsDragging = true;
+                                    window.IsMoving = true;
+                                }
+                            }
+
+                            if (window.IsMoving)
+                            {
+                                window.X = (int)MouseManager.X - window.IX;
+                                window.Y = (int)MouseManager.Y - window.IY;
+                            }
                         }
                     }
 
-                    if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, (ushort)window.WinH) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && !SelDone && window.CanMove)
+                    if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, (ushort)window.WinH) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState !=MouseState.Left && !SelDone && window.CanMove)
                     {
                         Windows.Remove(window);
                         Windows.Insert(Windows.Count, window);
@@ -86,11 +100,6 @@ namespace PatchOS.Files.Drivers.GUI.UI
                     }
                     else { window.IsSelected = false; }
 
-                    if (window.IsMoving)
-                    {
-                        window.X = (int)MouseManager.X - window.IX;
-                        window.Y = (int)MouseManager.Y - window.IY;
-                    }
                     window.Update(Canvas, window.X, window.Y, Once);
 
                 }

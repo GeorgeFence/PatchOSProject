@@ -58,7 +58,7 @@ namespace PatchOS.Files.Drivers.GUI
             Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15,15,15), 0, (int)(Kernel.Canvas.Mode.Height - 48), (int)(Kernel.Canvas.Mode.Width), 48);
 
             ASC16.DrawACSIIString(Kernel.Canvas, RTC.GetTime(), System.Drawing.Color.White, (uint)(Kernel.Canvas.Mode.Width - 72), 0);
-            //Wifi.DrawWifiStatus((int)(Kernel.Canvas.Mode.Width - 96), 2);
+            Wifi.DrawWifiStatus((int)(Kernel.Canvas.Mode.Width - 96), 2);
             if (MouseEx.IsMouseWithin((int)(Kernel.Canvas.Mode.Width - 96), 2, 16, 16))
             {
                 if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)

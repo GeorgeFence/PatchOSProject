@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\PatchOS.csproj": {}
+    "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\PatchOS.csproj": {}
   },
   "projects": {
-    "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\PatchOS.csproj": {
+    "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\PatchOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\PatchOS.csproj",
+        "projectUniqueName": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\PatchOS.csproj",
         "projectName": "PatchOS",
-        "projectPath": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\PatchOS.csproj",
+        "projectPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\PatchOS.csproj",
         "packagesPath": "C:\\Users\\defaultAdministrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\obj\\",
+        "outputPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

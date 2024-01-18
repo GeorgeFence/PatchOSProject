@@ -24,6 +24,9 @@ namespace PatchOS.Commands
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.serviceapp.bmp")] static byte[] rawImageServiceApp;
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.systemapp.bmp")] static byte[] rawImageSystemApp;
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.exit.bmp")] static byte[] rawImageExitApp;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.connected.bmp")] static byte[] rawIWifiConn;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.notconnected.bmp")] static byte[] rawWifiNotConn;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.nointernet.bmp")] static byte[] rawWifiNoInte;
 
         public Install()
         {
@@ -78,6 +81,12 @@ namespace PatchOS.Commands
                 GUIConsole.WriteLine("Icons", System.Drawing.Color.Purple);
                 PMFAT.CreateFile(PMFAT.Root +    "Files/apk");
                 PMFAT.WriteAllBytes(PMFAT.Root + "Files/apk", rawApk);
+                PMFAT.CreateFile(PMFAT.Root + "Files/wifinc");
+                PMFAT.WriteAllBytes(PMFAT.Root + "Files/wifinc", rawWifiNotConn);
+                PMFAT.CreateFile(PMFAT.Root + "Files/wific");
+                PMFAT.WriteAllBytes(PMFAT.Root + "Files/wific", rawIWifiConn); 
+                PMFAT.CreateFile(PMFAT.Root + "Files/wifini");
+                PMFAT.WriteAllBytes(PMFAT.Root + "Files/wifini", rawWifiNoInte);
 
                 GUIConsole.WriteLine("Windows", System.Drawing.Color.Purple);
                 PMFAT.CreateFile(PMFAT.Root +    "Files/user");

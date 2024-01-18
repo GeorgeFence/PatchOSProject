@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g12z7ja9zO/H4WfiV6IQGbtnVBP+osxLOElR6d4CGJpg4HhloVUlU2WtTngsRbe+L4dBym1v0xGKga8PjdxE1Q==",
+  "dgSpecHash": "mLjHzBfi/UEzPIlsUFbclftk1k3IyWm1wdIM8pxPLe6xVZxSASrjmyYFmxK8PqamFm2cAZmMmCcKLffNMGeskw==",
   "success": true,
-  "projectFilePath": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\PatchOS.csproj",
+  "projectFilePath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\PatchOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20231230084819\\cosmos.build.0.1.0-localbuild20231230084819.nupkg.sha512",
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20231230084829\\cosmos.common.0.1.0-localbuild20231230084829.nupkg.sha512",

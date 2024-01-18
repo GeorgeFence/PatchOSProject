@@ -1,54 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\",
+  "WorkspaceRootPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\ui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\commands\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\commands\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\apps\\shutdowndialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\shutdowndialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\ui\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\ui\\controls\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\apps\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\apps\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\taskbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\taskbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\vs\\v 1-notdone orig\\patchos\\files\\drivers\\gui\\img.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\img.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,146 +36,66 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "WindowMgr.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAqwDYAAAAJAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFcAAADoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T18:28:38.339Z",
+              "WhenOpened": "2024-01-18T14:50:55.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Button.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
+              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADYAAABHAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T18:21:49.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\Menu.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\Menu.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\Menu.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\Menu.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAQwDQAAADGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T18:19:46.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShutdownDialog.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAQwCwAAADUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T18:19:36.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Label.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T18:04:06.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Welcome.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\Welcome.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\Welcome.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Apps\\Welcome.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\Welcome.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCYAAAB8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-06T11:27:02.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Install.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Commands\\Install.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Commands\\Install.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Commands\\Install.cs",
-              "RelativeToolTip": "PatchOS\\Commands\\Install.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFkAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-02T17:20:23.496Z"
+              "WhenOpened": "2024-01-18T14:47:49.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Window.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAAAIkAAABSAAAA",
+              "Title": "Menu.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Apps\\Menu.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\Menu.cs",
+              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Apps\\Menu.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Apps\\Menu.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAqwC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-02T14:28:53.365Z"
+              "WhenOpened": "2024-01-18T14:43:12.204Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Desktop.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
+              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHsAAAARAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAAAJUAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-02T12:40:22.498Z"
+              "WhenOpened": "2024-01-18T14:37:25.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Img.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Img.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Img.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Img.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Img.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAQwBwAAAAIAAAA",
+              "DocumentIndex": 4,
+              "Title": "Panel.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
+              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAwBQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-02T11:45:53.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Taskbar.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAUwE4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-31T17:43:49.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Kernel.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Kernel.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Kernel.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\VS\\v 1-notdone orig\\PatchOS\\Files\\Kernel.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Kernel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD0AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-30T19:36:31.555Z"
+              "WhenOpened": "2024-01-18T14:33:21.622Z",
+              "EditorCaption": ""
             }
           ]
         }

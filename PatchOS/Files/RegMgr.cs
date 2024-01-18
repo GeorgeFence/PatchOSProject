@@ -107,7 +107,7 @@ namespace PatchOS.Files
             PMFAT.CreateFolder(PMFAT.Root + "REG/BOOT");
 
             RegName.Add(@"REG/BOOT/boot.reg");
-            RegValue.Add("1");
+            RegValue.Add("2");
 
             //FS
             PMFAT.CreateFolder(PMFAT.Root + "REG/FS");

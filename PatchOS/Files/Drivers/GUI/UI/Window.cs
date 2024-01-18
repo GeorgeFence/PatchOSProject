@@ -46,8 +46,8 @@ public class Window : Control
     public Bitmap Icon;
 
     public static Action act;
-    DesignType Wtype;
-    PermitionsType Ptype;
+    public DesignType Wtype;
+    public PermitionsType Ptype;
 
     public Window(int X, int Y, ushort Width, ushort Height, string TitleStr, Action action, DesignType type, PermitionsType perType, Bitmap Icon) : base(X, Y, Width, Height)
     {
@@ -179,10 +179,9 @@ public class Window : Control
                     break;
 
                 case DesignType.Blank:
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, base.Width, base.Height);
+                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, WinW, WinH);
                     ConsoleKeyInfo? key7 = KeyboardEx.ReadKey();
                     ProcessControls(base.X, base.Y, Controls, key7, sel);
-                    ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X), (uint)(base.Y));
                     break;
             }
 

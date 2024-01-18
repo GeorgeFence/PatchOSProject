@@ -35,6 +35,7 @@ namespace PatchOS.Files.Drivers.GUI
         public static bool DrawMouse = false;
         public static List<String> ListPar = new List<String>();
         public static Bitmap Wallpaper;
+        public static MouseState prevMouseState = MouseState.None;
         public Desktop() : base("Desktop", Type.User, process)
         {
             //ProcessManager.Run(new MouseMgr());
@@ -127,21 +128,9 @@ namespace PatchOS.Files.Drivers.GUI
             int fps = 0;
             while (true)
             {
-                if(once)
-                {
-                    start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1;
-                    once = false;
-                }
-                if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second)))
-                {
-                    once = true;
-                    fps = Count;
-                    Count = 0; 
-                    if (Cosmos.HAL.RTC.Second.ToString().EndsWith("0"))
-                    {
-                        Heap.Collect();
-                    }
-                }
+                if(once){start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1;once = false;}
+                if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))){once = true; fps = Count; Count = 0;}
+                
                 Kernel.Canvas.Clear();
                 if (Fill)
                 {
@@ -156,7 +145,9 @@ namespace PatchOS.Files.Drivers.GUI
                 WindowManager.Update(Kernel.Canvas);
                 MouseMgr.DrawMouse(); 
                 Kernel.Canvas.Display();
+                if (Count.ToString().EndsWith("0")) { Heap.Collect(); }
                 Count++;
+                prevMouseState = MouseManager.MouseState;
             } 
             yield return null;
         }

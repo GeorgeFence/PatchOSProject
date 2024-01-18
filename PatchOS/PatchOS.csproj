@@ -120,7 +120,7 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="call &quot;E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\copytorepo.bat&quot;&#xD;&#xA;" />
+      <Exec Command="call &quot;E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\copytorepo.bat&quot;&#xD;&#xA;" />
     </Target>
 
 </Project>

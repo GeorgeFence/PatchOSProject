@@ -43,6 +43,9 @@ namespace PatchOS
         public static Bitmap SystemApp;
         public static Bitmap ServiceApp;
         public static Bitmap ExitApp;
+        public static Bitmap WifiNotConn;
+        public static Bitmap WifiConn;
+        public static Bitmap WifiNotInte;
         #endregion
 
         protected override void BeforeRun()
@@ -110,6 +113,10 @@ namespace PatchOS
                             DrawBootOut("   serviceapp");
                             ExitApp = new Bitmap(PMFAT.Root + "Files/exit");
                             DrawBootOut("   exitapp");
+                            WifiConn = new Bitmap(PMFAT.Root + "Files/wific");
+                            WifiNotConn = new Bitmap(PMFAT.Root + "Files/wifinc");
+                            WifiNotInte = new Bitmap(PMFAT.Root + "Files/wifini");
+                            DrawBootOut("   WiFi");
                             #endregion
                             DrawBootOut("Init Network");
                             NetworkMgr.Initialize();

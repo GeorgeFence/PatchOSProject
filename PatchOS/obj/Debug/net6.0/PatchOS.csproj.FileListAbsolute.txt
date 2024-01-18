@@ -78,3 +78,16 @@ E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.dll
 E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
 E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\PatchOS.pdb
 E:\Dokumenty\PATCHOS\VS\v 1-notdone orig\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.sourcelink.json
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.dll
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll

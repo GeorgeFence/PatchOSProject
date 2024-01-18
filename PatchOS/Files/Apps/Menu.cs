@@ -52,7 +52,7 @@ namespace PatchOS.Files.Apps
             Mwindow.CanMove = false;
             ShutdownDialog = new Button(5, Mwindow.PanelH - 29, 32, 24, 0, "S/R", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Console = new Button(42, Mwindow.PanelH - 29, 64, 24, 0, "Console", true, System.Drawing.Color.Red, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
-            downPanel = new Panel(0, Mwindow.PanelH - 34, Mwindow.PanelW, 34,System.Drawing.Color.LightGray, Drivers.AnachorType.Bottom);
+            downPanel = new Panel(0, 600 - 34, 400, 34,System.Drawing.Color.Gray, Drivers.AnachorType.Bottom);
             Mwindow.Controls.Add(downPanel);
             Mwindow.Controls.Add(ShutdownDialog);
             Mwindow.Controls.Add(Console);
