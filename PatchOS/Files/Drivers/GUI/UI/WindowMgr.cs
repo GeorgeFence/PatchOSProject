@@ -63,7 +63,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         }
                         else
                         {
-                            if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, 32) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left && !SelDone)
+                            if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, 32) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && !SelDone)
                             {
                                 Windows.Remove(window);
                                 Windows.Insert(Windows.Count, window);
