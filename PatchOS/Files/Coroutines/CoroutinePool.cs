@@ -19,6 +19,10 @@ namespace PatchOS.Files.Coroutines
         ulong heapCollectionIntervalNs = 250000000; // 250ms
         PIT.PITTimer? heapCollectionTimer;
 
+        //MoreLineExecute
+        string CoroutineName = null;
+        //end
+
         /// <summary>
         /// The main global coroutine pool.
         /// </summary>

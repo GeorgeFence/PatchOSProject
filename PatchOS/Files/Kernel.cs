@@ -18,6 +18,7 @@ using System.Runtime.CompilerServices;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
+using Cosmos.Core;
 
 namespace PatchOS
 {
@@ -212,20 +213,23 @@ namespace PatchOS
             }
             else
             {
-                Y = 384;
-                Kernel.Resolution(640, 480);
+                Y = 0;
+                Kernel.Resolution(1280, 720);
                 Canvas.Clear(0);
-                Canvas.DrawImageAlpha(boot, 248, 50);
+                Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
                 Canvas.Display();
                 Kernel.DrawBootOut("Stopping services");
                 Process.ProcessManager.StopAll();
                 DelayCode(1000);
+                Kernel.DrawBootOut("Waiting for ACPI for Shutdown");
+                DelayCode(500);
                 if (mode == 0)
                 {
-                    Sys.Power.Shutdown();
+                    ACPI.Shutdown();
                 }
                 if (mode == 1)
                 {
+                    ACPI.Shutdown();
                     Sys.Power.Reboot();
                 }
             }
@@ -235,7 +239,7 @@ namespace PatchOS
         public static void Update(string PackagePath)
         {
             Y = 384;
-            Kernel.Resolution(640, 480);
+            Kernel.Resolution(1280, 720);
             Canvas.Clear(0);
             Canvas.DrawImageAlpha(boot, 248, 50);
             Canvas.Display();

@@ -52,5 +52,15 @@ namespace PatchOS.Files.Drivers
 
             return null;
         }
+        public static String GetInput()
+        {
+            string s = null;
+            if(System.Console.KeyAvailable)
+            {
+                ConsoleKeyInfo key = System.Console.ReadKey();
+                
+            }
+            return s;
+        }
     }
 }
