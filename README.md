@@ -1,7 +1,6 @@
- <img src="Other/logo.png" style="width:200px"> #
+ <img src="Other/logo.png" style="width:200px">
  # PatchOS #
-> ## Better operating system. Better life ##
-> PatchOS is operating system made in C# with Cosmos
+ PatchOS is operating system based on [Cosmos](https://github.com/CosmosOS/Cosmos) in C# Made by GeorgeFence
 > https://www.buymeacoffee.com/patchos
 >
 ### Use .vmdk file to boot PatchOS
