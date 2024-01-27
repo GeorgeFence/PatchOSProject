@@ -1,5 +1,7 @@
+<p align="center">
  <img src="Other/logo.png" style="width:200px">
- # PatchOS #
+</p>
+> # PatchOS #
 > PatchOS is operating system based on [Cosmos](https://github.com/CosmosOS/Cosmos) in C# Made by GeorgeFence
 
 > [!CAUTION]
