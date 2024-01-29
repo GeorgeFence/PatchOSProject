@@ -41,7 +41,7 @@ namespace PatchOS.Files.Coroutines
             }
             catch(Exception ex)
             {
-                SYS32.KernelPanic(ex, "Coroutine");
+                SYS32.KernelPanic(ex, "Coroutine Step");
             }
         }
 

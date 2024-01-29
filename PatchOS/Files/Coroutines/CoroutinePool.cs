@@ -1,11 +1,13 @@
 ﻿using Cosmos.Core.Memory;
 using Cosmos.HAL;
+using PatchOS.Files.Drivers;
 using PatchOS.Files.Drivers.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PatchOS.Files.Coroutines
 {
@@ -18,10 +20,6 @@ namespace PatchOS.Files.Coroutines
         bool shouldCollectOnNextCycle;
         ulong heapCollectionIntervalNs = 250000000; // 250ms
         PIT.PITTimer? heapCollectionTimer;
-
-        //MoreLineExecute
-        string CoroutineName = null;
-        //end
 
         /// <summary>
         /// The main global coroutine pool.
@@ -142,6 +140,7 @@ namespace PatchOS.Files.Coroutines
         /// Starts the coroutine execution loop in the current thread.
         /// </summary>
         /// <exception cref="InvalidOperationException">Thrown when an attempt is made to start the coroutine pool while it's already running.</exception>
+        //
         public void StartPool()
         {
             if (started)
@@ -178,7 +177,10 @@ namespace PatchOS.Files.Coroutines
                     if (current.CurrentControlPoint == null || current.CurrentControlPoint.CanContinue)
                     {
                         ASC16.DrawACSIIString(Kernel.Canvas, i.ToString(), System.Drawing.Color.Green, 0, 0);
-                        Kernel.Canvas.Display();
+                        if (Console.KeyAvailable)
+                        {
+                            KeyboardEx.keypressed = Console.ReadKey();
+                        }
                         current.Step();
                     }
                 }

@@ -32,7 +32,7 @@ namespace PatchOS.Files.Drivers.GUI
         private static int wait = 0;
         private static int regfps;
         private static bool regfpsonce = true;
-        public static bool DrawMouse = false;
+        public static bool isDesktop = false;
         public static List<String> ListPar = new List<String>();
         public static Bitmap Wallpaper;
         public static MouseState prevMouseState = MouseState.None;
@@ -126,6 +126,7 @@ namespace PatchOS.Files.Drivers.GUI
             bool once = true;
             int start = 0;
             int fps = 0;
+            isDesktop = true;
             while (true)
             {
                 if(once){start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1;once = false;}

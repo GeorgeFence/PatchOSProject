@@ -45,7 +45,6 @@ namespace PatchOS.Files.Drivers.GUI
                 if (!Make)
                 {
                     DrawTaskBar();
-                    Kernel.Canvas.Display();
                 }
             }
             yield return null;

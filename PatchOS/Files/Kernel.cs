@@ -55,7 +55,7 @@ namespace PatchOS
             {
                 Canvas = new SVGAIICanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
-                Canvas.Display();
+                ;
                 PMFAT.Initialize();
                 DrawBootOut("Checking Requirments");
                 DelayCode(500);
@@ -74,12 +74,12 @@ namespace PatchOS
                     boot = new Bitmap(PMFAT.Root + "Files/boot");
                     GUI_MODE = true;
                     Canvas.Clear(System.Drawing.Color.Black);
-                    Canvas.Display();
+                    ;
                     Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
-                    Canvas.Display();
+                    ;
                     ASC16.DrawACSIIString(Canvas, "any key Regedit", System.Drawing.Color.Red, 0, 688);
                     ASC16.DrawACSIIString(Canvas, "else    Boot", System.Drawing.Color.Green, 0, 704);
-                    Canvas.Display();
+                    ;
                     DrawBootOut("IsFileSystem = " + IsFileSystem.ToString());
                     DrawBootOut("Wait for input 2s");
                     DelayCode(2000);
@@ -87,14 +87,9 @@ namespace PatchOS
                     {
                         if(Console.KeyAvailable)
                         {
-                            if (o.Key == ConsoleKey.R)
-                            {
-                                Kernel.Canvas.Disable();
-                                Kernel.GUI_MODE = false;
-                                REGEDIT.DrawFresh(@"0:\");
-
-                            }
-                            else { Kernel.Shutdown(0); }
+                            Kernel.Canvas.Disable();
+                            Kernel.GUI_MODE = false;
+                            REGEDIT.DrawFresh(@"0:\");
                         }
                         else
                         {
@@ -197,7 +192,7 @@ namespace PatchOS
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas = new SVGAIICanvas(new Mode(W,H,ColorDepth.ColorDepth32)); Canvas.Display(); }
+        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas = new SVGAIICanvas(new Mode(W,H,ColorDepth.ColorDepth32)); ; }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();
@@ -217,7 +212,11 @@ namespace PatchOS
                 Kernel.Resolution(1280, 720);
                 Canvas.Clear(0);
                 Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
-                Canvas.Display();
+                if (Desktop.isDesktop)
+                {
+                    Canvas.DrawImage(Kernel.Wpp2HD, 0, 0);
+                }
+                ;
                 Kernel.DrawBootOut("Stopping services");
                 Process.ProcessManager.StopAll();
                 DelayCode(1000);
@@ -242,14 +241,14 @@ namespace PatchOS
             Kernel.Resolution(1280, 720);
             Canvas.Clear(0);
             Canvas.DrawImageAlpha(boot, 248, 50);
-            Canvas.Display();
+            ;
             Kernel.DrawBootOut("Stopping services");
             Process.ProcessManager.StopAll();
             DelayCode(1000);
             Y = 384;
             Canvas.Clear(0);
             Canvas.DrawImageAlpha(boot, 248, 50);
-            Canvas.Display();
+            ;
             Kernel.DrawBootOut("Preparing system for updates");
             DelayCode(1000);
 

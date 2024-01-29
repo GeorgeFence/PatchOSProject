@@ -11,6 +11,8 @@ namespace PatchOS.Files.Drivers
     {
         private static readonly List<Action<ConsoleKeyInfo>> Callbacks;
 
+        public static ConsoleKeyInfo keypressed;
+
         static KeyboardEx()
         {
             Callbacks = new List<Action<ConsoleKeyInfo>>();

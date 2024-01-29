@@ -25,7 +25,7 @@ namespace PatchOS.Files
         public void DrawBoot()
         {
             //canvas.Clear(Color.Black);
-            //canvas.Display();
+            //;
         }
         public void AfterStart()
         {

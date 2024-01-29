@@ -1,9 +1,11 @@
 ﻿using Cosmos.System;
 using Cosmos.System.Graphics;
+using PatchOS.Files.Coroutines;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using Console = System.Console;
@@ -38,7 +40,14 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         {
             Canvas.DrawFilledRectangle(System.Drawing.Color.White, Xpos + X, Ypos + Y, W, H);
             Canvas.DrawRectangle(System.Drawing.Color.Black, Xpos + X, Ypos + Y, W, H);
-            Text = Text + KeyboardEx.GetInput();
+            if (KeyboardEx.keypressed.KeyChar.ToString() != "") 
+            {
+                Text = Text + KeyboardEx.keypressed.KeyChar;
+            }
+            else
+            {
+
+            }
             ASC16.DrawACSIIString(Canvas, Text, System.Drawing.Color.Black, (uint)(X + Xpos + 3), (uint)(Y + Ypos + 3));
         }
     }
