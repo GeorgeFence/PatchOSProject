@@ -209,19 +209,13 @@ namespace PatchOS
             else
             {
                 Y = 0;
-                Kernel.Resolution(1280, 720);
-                Canvas.Clear(0);
-                Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
-                if (Desktop.isDesktop)
-                {
-                    Canvas.DrawImage(Kernel.Wpp2HD, 0, 0);
-                }
-                ;
+                //Kernel.Resolution(1280, 720);
+                Canvas.DrawImageAlpha(boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.DrawBootOut("Stopping services");
                 Process.ProcessManager.StopAll();
                 DelayCode(1000);
                 Kernel.DrawBootOut("Waiting for ACPI for Shutdown");
-                DelayCode(500);
+                DelayCode(200);
                 if (mode == 0)
                 {
                     ACPI.Shutdown();

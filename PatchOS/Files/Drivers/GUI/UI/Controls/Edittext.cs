@@ -40,10 +40,9 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         {
             Canvas.DrawFilledRectangle(System.Drawing.Color.White, Xpos + X, Ypos + Y, W, H);
             Canvas.DrawRectangle(System.Drawing.Color.Black, Xpos + X, Ypos + Y, W, H);
-            KeyEvent key = new KeyEvent();
-            if(KeyboardManager.TryReadKey(out key))
+            if(Key.keyevent.KeyChar.ToString() != "")
             {
-                Text = Text + key.KeyChar;
+                Text = Text + Key.keyevent.KeyChar.ToString();
             }
             ASC16.DrawACSIIString(Canvas, Text, System.Drawing.Color.Black, (uint)(X + Xpos + 3), (uint)(Y + Ypos + 3));
         }

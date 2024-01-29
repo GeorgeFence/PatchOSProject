@@ -38,8 +38,7 @@ namespace PatchOS.Files.Drivers.GUI
         public static MouseState prevMouseState = MouseState.None;
         public Desktop() : base("Desktop", Type.User, process)
         {
-            //ProcessManager.Run(new MouseMgr());
-            //ProcessManager.Run(new Taskbar());
+            ProcessManager.Run(new Key());
         }
         
         static IEnumerator<CoroutineControlPoint> desktop()
@@ -56,9 +55,9 @@ namespace PatchOS.Files.Drivers.GUI
                     p++;
                 }
                 ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Selected, System.Drawing.Color.Blue, 5, (uint)(584));
-                for (int i = 0; i < ListPar.Count; i++)
+                for (int i = 0; i < ProcessManager.running.Count; i++)
                 {
-                    ASC16.DrawACSIIString(Kernel.Canvas, ListPar[i], System.Drawing.Color.Green, 5, (uint)(600 + (i * 16)));
+                    ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(600 + (i * 16)));
                 }
             }
             bool Fill = true;
@@ -144,7 +143,8 @@ namespace PatchOS.Files.Drivers.GUI
                 Taskbar.DrawTaskBar();
                 ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);
                 WindowManager.Update(Kernel.Canvas);
-                MouseMgr.DrawMouse(); 
+                MouseMgr.DrawMouse();
+                DrawPar();
                 Kernel.Canvas.Display();
                 if (Count.ToString().EndsWith("0")) { Heap.Collect(); }
                 Count++;

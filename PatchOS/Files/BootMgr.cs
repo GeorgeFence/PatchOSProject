@@ -1,6 +1,7 @@
 ﻿using Cosmos.System;
 using Cosmos.System.Graphics;
 using PatchOS.Commands;
+using PatchOS.Files.Drivers;
 using PatchOS.Files.Drivers.GUI;
 using PatchOS.Process;
 using System;
@@ -58,6 +59,7 @@ namespace PatchOS.Files
                         Kernel.DrawBootOut("Booting to 2");
                         Kernel.DelayCode(500);
                         ProcessManager.Run(new Desktop());
+
                     }
                 }
                 else
@@ -101,7 +103,7 @@ namespace PatchOS.Files
                 string inp = CLI.ReadLine();
                 if (inp == "1")
                 {
-                    ProcessManager.Run(new MouseMgr());
+                    ProcessManager.Run(new Desktop());
                 }
                 else if (inp == "2")
                 {

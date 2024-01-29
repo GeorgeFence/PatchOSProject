@@ -17,7 +17,7 @@ namespace PatchOS.Commands
         }
         public unsafe override void Execute(string line, string[] args)
         {
-            
+            throw new NotImplementedException("Testing");
         }
     }
 }

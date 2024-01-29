@@ -37,7 +37,7 @@ namespace PatchOS
                 string p1 = "??";
                 string p2 = "????";
                 ProcessManager.StopAll();
-                Kernel.Resolution(640, 480);
+                Kernel.Resolution(640, 480); 
                 Kernel.Canvas.Clear(System.Drawing.Color.BlueViolet);
                 ASC16.DrawACSIIString(Kernel.Canvas, "A problem has been detected and PatchOS has been shut down to prevent any", Color.Black, 5, 5);
                 ASC16.DrawACSIIString(Kernel.Canvas, "damage to your computer.", Color.Black, 5, 23);
@@ -68,8 +68,8 @@ namespace PatchOS
 
                 StopCODE = p1 + "x" + p2 + " : " + LastStatus;
                 ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE, Color.Red, 5, 200);
+                Kernel.Canvas.DrawImageAlpha(Kernel.boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.Canvas.Display();
-                Memory.Fill(0);
             }
             catch(Exception exept)
             {
