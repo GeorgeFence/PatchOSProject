@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\edittext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\edittext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\keyboardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\keyboardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,43 +38,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "KeyboardEx.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\KeyboardEx.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\KeyboardEx.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\KeyboardEx.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\KeyboardEx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T14:22:09.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CoroutinePool.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
               "RelativeToolTip": "PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
-              "ViewState": "AQIAAJ4AAAAAAAAAAAAAALQAAAAZAAAA",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAAALIAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T14:04:51.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Edittext.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Edittext.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Edittext.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Edittext.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Edittext.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAqwDAAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwB0AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-18T19:58:42.499Z",
               "EditorCaption": ""
@@ -89,8 +89,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAAAD4AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-18T14:50:55.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-18T14:50:55.179Z"
             },
             {
               "$type": "Document",
@@ -126,8 +125,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "ViewState": "AQIAAIEAAAAAAAAAAAAAAJMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-18T14:37:25.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-18T14:37:25.92Z"
             }
           ]
         }

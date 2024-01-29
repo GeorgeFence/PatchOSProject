@@ -177,10 +177,6 @@ namespace PatchOS.Files.Coroutines
                     if (current.CurrentControlPoint == null || current.CurrentControlPoint.CanContinue)
                     {
                         ASC16.DrawACSIIString(Kernel.Canvas, i.ToString(), System.Drawing.Color.Green, 0, 0);
-                        if (Console.KeyAvailable)
-                        {
-                            KeyboardEx.keypressed = Console.ReadKey();
-                        }
                         current.Step();
                     }
                 }
