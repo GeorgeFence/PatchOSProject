@@ -43,8 +43,7 @@
               "ViewState": "AQIAAC0AAAAAAAAAAAAAAIYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T18:54:46.495Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -69,8 +68,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Shell.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAqwCQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-30T13:55:12.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-30T13:55:12.12Z"
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Kernel.cs",
               "ViewState": "AQIAAL0AAAAAAAAAAAAAAOMAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-30T13:04:29.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-30T13:04:29.964Z"
             },
             {
               "$type": "Document",
@@ -95,8 +92,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\Key.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-29T18:14:08.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-29T18:14:08.395Z"
             }
           ]
         }
