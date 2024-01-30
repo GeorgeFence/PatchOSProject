@@ -10,7 +10,7 @@
 
     <PropertyGroup>
         <EnableGDB>False</EnableGDB>
-        <StartCosmosGDB>False</StartCosmosGDB>
+        <StaRTCosmosGDB>False</StaRTCosmosGDB>
         <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
         <CosmosDebugPort>Serial: COM1</CosmosDebugPort>
         <Profile>VMware</Profile>

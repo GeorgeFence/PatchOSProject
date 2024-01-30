@@ -149,12 +149,12 @@ namespace PatchOS.Files
             RegValue.Add("30");
 
             //gui/taskbar
-            PMFAT.CreateFolder(PMFAT.Root + "REG/GUI/TASKBAR/ShutdownSHRTCT");
+            PMFAT.CreateFolder(PMFAT.Root + "REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT");
 
-            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHRTCT/X.reg");
+            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT/X.reg");
             RegValue.Add("7");
 
-            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHRTCT/Y.reg");
+            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT/Y.reg");
             RegValue.Add("7");
 
             //reg uptodate 

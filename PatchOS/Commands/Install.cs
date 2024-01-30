@@ -12,21 +12,21 @@ namespace PatchOS.Commands
 {
     class Install : Command
     {
-        [ManifestResourceStream(ResourceName = "PatchOS.BootAnimation.boot_img.bmp")] static byte[] rawBoot;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.cursor.bmp")] static byte[] rawCursor;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.START.bmp")] static byte[] rawStart;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper1_FHD.bmp")] static byte[] rawWpp1fhd;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper2_FHD.bmp")] static byte[] rawWpp2fhd;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper1_HD.bmp")] static byte[] rawWpp1hd;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper2_HD.bmp")] static byte[] rawWpp2hd;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.apkApp.bmp")] static byte[] rawApk;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.userapp.bmp")] static byte[] rawImageUserApp;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.serviceapp.bmp")] static byte[] rawImageServiceApp;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.systemapp.bmp")] static byte[] rawImageSystemApp;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.exit.bmp")] static byte[] rawImageExitApp;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.connected.bmp")] static byte[] rawIWifiConn;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.notconnected.bmp")] static byte[] rawWifiNotConn;
-        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.nointernet.bmp")] static byte[] rawWifiNoInte;
+        [ManifestResourceStream(ResourceName = "PatchOS.BootAnimation.boot_img.bmp")] public static byte[] rawBoot;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.cursor.bmp")] public static byte[] rawCursor;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.START.bmp")] public static byte[] rawStart;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper1_FHD.bmp")] public static byte[] rawWpp1fhd;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper2_FHD.bmp")] public static byte[] rawWpp2fhd;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper1_HD.bmp")] public static byte[] rawWpp1hd;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.wallpaper2_HD.bmp")] public static byte[] rawWpp2hd;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.apkApp.bmp")] public static byte[] rawApk;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.userapp.bmp")] public static byte[] rawImageUserApp;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.serviceapp.bmp")] public static byte[] rawImageServiceApp;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.systemapp.bmp")] public static byte[] rawImageSystemApp;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.exit.bmp")] public static byte[] rawImageExitApp;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.connected.bmp")] public static byte[] rawIWifiConn;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.notconnected.bmp")] public static byte[] rawWifiNotConn;
+        [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.wifi.nointernet.bmp")] public static byte[] rawWifiNoInte;
 
         public Install()
         {
@@ -43,7 +43,12 @@ namespace PatchOS.Commands
         {
             try
             {
-                Kernel.Resolution(640, 480);
+                Kernel.Canvas.Disable();
+                Installer.Init();
+                Installer.Install();
+
+
+                /*Kernel.Resolution(640, 480);
                 Kernel.Canvas.Clear(System.Drawing.Color.Black);
                 GUIConsole.Init();
                 GUIConsole.SetCursorPositionChar(0, 1);
@@ -99,7 +104,7 @@ namespace PatchOS.Commands
                 PMFAT.WriteAllBytes(PMFAT.Root + "Files/service", rawImageServiceApp);
 
                 PMFAT.CreateFile(PMFAT.Root +    "Files/exit");
-                PMFAT.WriteAllBytes(PMFAT.Root + "Files/exit", rawImageExitApp);
+                PMFAT.WriteAllBytes(PMFAT.Root + "Files/exit", rawImageExitApp);*/
 
             }
             catch (Exception e) { SYS32.KernelPanic(e,"Install"); }

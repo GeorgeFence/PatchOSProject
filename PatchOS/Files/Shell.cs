@@ -47,7 +47,7 @@ namespace PatchOS.Files
             System.Drawing.Color TitleColorP = System.Drawing.Color.Black;
             bool TitleBarVisible = true;
             string TitleBarText = "PatchOS Shell";
-            string TitleBarTime = RTC.GetDateFormatted() + " " + RTC.GetTimeFormatted();
+            string TitleBarTime = PatchOS.Files.RTC.GetDateFormatted() + " " + RTC.GetTimeFormatted();
             void Initialize()
             {
                 try

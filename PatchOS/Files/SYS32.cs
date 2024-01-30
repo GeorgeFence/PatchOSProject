@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
 using System.Security.Cryptography.X509Certificates;
-using COSMOS_RTC = Cosmos.HAL.RTC;
+using RTC = Cosmos.HAL.RTC;
 using static System.Net.Mime.MediaTypeNames;
 using Cosmos.System.Graphics;
 using PatchOS.Files.Drivers.GUI;
@@ -13,7 +13,6 @@ using PatchOS.Process;
 using Color = System.Drawing.Color;
 using System.Threading;
 using Cosmos.HAL;
-using RTC = Cosmos.HAL.RTC;
 
 namespace PatchOS
 {
@@ -73,19 +72,19 @@ namespace PatchOS
                 Kernel.Canvas.DrawImageAlpha(Kernel.boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.Canvas.Display();
 
-                int start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                int start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
 
                 GUIConsole.X = 0;
                 GUIConsole.Y = 2;
                 Log.Warning("Waiting for Kernel responce");
                 Kernel.DelayCode(1000);
-                int end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                int end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Success("Kernel responsed in " + (end - start));
                 Kernel.DelayCode(500);
-                start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Warning("Stopping Services");
                 ProcessManager.StopAll();
-                end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Success("All services stopped in " + (end - start));
 
             }

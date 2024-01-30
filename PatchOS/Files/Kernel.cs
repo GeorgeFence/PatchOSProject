@@ -210,19 +210,19 @@ namespace PatchOS
             }
             else
             {
-                int start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                int start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
 
                 GUIConsole.X = 0;
                 GUIConsole.Y = 2;
                 Log.Warning("Waiting for Kernel responce");
                 DelayCode(1000);
-                int end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                int end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Success("Kernel responsed in " + (end - start));
                 DelayCode(500);
-                start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Warning("Stopping Services");
                 ProcessManager.StopAll();
-                end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Success("All services stopped in " + (end - start));
                 Log.Warning("Waiting for ACPI for Shutdown");
                 if (mode == 0)

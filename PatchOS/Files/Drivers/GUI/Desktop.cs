@@ -18,6 +18,8 @@ using Cosmos.Core.Memory;
 using System.Threading;
 using System.Timers;
 using Timer = System.Timers.Timer;
+using Cosmos.HAL;
+using RTC = Cosmos.HAL.RTC;
 
 namespace PatchOS.Files.Drivers.GUI
 {
