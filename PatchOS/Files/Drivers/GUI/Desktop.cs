@@ -38,7 +38,7 @@ namespace PatchOS.Files.Drivers.GUI
         public static MouseState prevMouseState = MouseState.None;
         public Desktop() : base("Desktop", Type.User, process)
         {
-            ProcessManager.Run(new Key());
+            
         }
         
         static IEnumerator<CoroutineControlPoint> desktop()
@@ -47,7 +47,16 @@ namespace PatchOS.Files.Drivers.GUI
             void DrawPar()
             {
                 ASC16.DrawACSIIString(Kernel.Canvas, "PatchOS Version 1", System.Drawing.Color.Orange, 5, 452);
-                ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 468);
+                ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 468); 
+                if(Key.KeyPressed)
+                {
+                    ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : true", System.Drawing.Color.Red, 5, 480);
+                }
+                else
+                {
+                    ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : false", System.Drawing.Color.Red, 5, 480);
+                }
+
                 int p = 1;
                 for (int i = 0; i < WindowManager.Windows.Count; i++)
                 {
@@ -119,7 +128,7 @@ namespace PatchOS.Files.Drivers.GUI
             Kernel.Resolution((ushort)W,(ushort)H);
             MouseManager.ScreenHeight = (UInt32)Kernel.Canvas.Mode.Height;
             MouseManager.ScreenWidth = (UInt32)Kernel.Canvas.Mode.Width;
-
+            ProcessManager.Run(new Key());
             BGC();
             Welcome.Start();
             bool once = true;

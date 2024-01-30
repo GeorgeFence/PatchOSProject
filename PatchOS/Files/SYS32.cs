@@ -11,6 +11,9 @@ using PatchOS.Files.Drivers.GUI;
 using System.Drawing;
 using PatchOS.Process;
 using Color = System.Drawing.Color;
+using System.Threading;
+using Cosmos.HAL;
+using RTC = Cosmos.HAL.RTC;
 
 namespace PatchOS
 {
@@ -36,15 +39,14 @@ namespace PatchOS
             {
                 string p1 = "??";
                 string p2 = "????";
-                ProcessManager.StopAll();
-                Kernel.Resolution(640, 480); 
-                Kernel.Canvas.Clear(System.Drawing.Color.BlueViolet);
+                Kernel.Resolution(640, 480);
+                Kernel.Canvas.Clear(System.Drawing.Color.RebeccaPurple);
                 ASC16.DrawACSIIString(Kernel.Canvas, "A problem has been detected and PatchOS has been shut down to prevent any", Color.Black, 5, 5);
                 ASC16.DrawACSIIString(Kernel.Canvas, "damage to your computer.", Color.Black, 5, 23);
 
-                ASC16.DrawACSIIString(Kernel.Canvas, ex.Message, Color.Red, 5, 41);
+                ASC16.DrawACSIIString(Kernel.Canvas, ex.Message, Color.Red, 5, 422);
 
-                ASC16.DrawACSIIString(Kernel.Canvas, Info, Color.Orange, 5, 77);
+                ASC16.DrawACSIIString(Kernel.Canvas, Info, Color.Orange, 5, 448);
 
                 #region P1
                 if (Info == "Coroutine") { p1 = "CR"; }
@@ -67,9 +69,25 @@ namespace PatchOS
                 #endregion
 
                 StopCODE = p1 + "x" + p2 + " : " + LastStatus;
-                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE, Color.Red, 5, 200);
+                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE, Color.Red, 5, 464);
                 Kernel.Canvas.DrawImageAlpha(Kernel.boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.Canvas.Display();
+
+                int start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+
+                GUIConsole.X = 0;
+                GUIConsole.Y = 2;
+                Log.Warning("Waiting for Kernel responce");
+                Kernel.DelayCode(1000);
+                int end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Success("Kernel responsed in " + (end - start));
+                Kernel.DelayCode(500);
+                start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Warning("Stopping Services");
+                ProcessManager.StopAll();
+                end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Success("All services stopped in " + (end - start));
+
             }
             catch(Exception exept)
             {

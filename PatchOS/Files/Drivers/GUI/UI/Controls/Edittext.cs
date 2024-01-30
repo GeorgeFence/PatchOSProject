@@ -40,7 +40,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         {
             Canvas.DrawFilledRectangle(System.Drawing.Color.White, Xpos + X, Ypos + Y, W, H);
             Canvas.DrawRectangle(System.Drawing.Color.Black, Xpos + X, Ypos + Y, W, H);
-            if(Key.keyevent.KeyChar.ToString() != "")
+            if(Key.KeyPressed)
             {
                 Text = Text + Key.keyevent.KeyChar.ToString();
             }

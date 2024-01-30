@@ -19,6 +19,8 @@ using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
 using Cosmos.Core;
+using System.Threading;
+using RTC = Cosmos.HAL.RTC;
 
 namespace PatchOS
 {
@@ -28,7 +30,7 @@ namespace PatchOS
         public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT
         public BootMgr bootMgr;
         private static List<string> Out = new List<string>();
-        private static  int Y = 0;
+        public static  int Y = 0;
         public static bool GUI_MODE = false;
         public static bool IsFileSystem = true;
         private static ConsoleKeyInfo o;
@@ -208,21 +210,27 @@ namespace PatchOS
             }
             else
             {
-                Y = 0;
-                //Kernel.Resolution(1280, 720);
-                Canvas.DrawImageAlpha(boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
-                Kernel.DrawBootOut("Stopping services");
-                Process.ProcessManager.StopAll();
+                int start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+
+                GUIConsole.X = 0;
+                GUIConsole.Y = 2;
+                Log.Warning("Waiting for Kernel responce");
                 DelayCode(1000);
-                Kernel.DrawBootOut("Waiting for ACPI for Shutdown");
-                DelayCode(200);
+                int end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Success("Kernel responsed in " + (end - start));
+                DelayCode(500);
+                start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Warning("Stopping Services");
+                ProcessManager.StopAll();
+                end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
+                Log.Success("All services stopped in " + (end - start));
+                Log.Warning("Waiting for ACPI for Shutdown");
                 if (mode == 0)
                 {
                     ACPI.Shutdown();
                 }
                 if (mode == 1)
                 {
-                    ACPI.Shutdown();
                     Sys.Power.Reboot();
                 }
             }

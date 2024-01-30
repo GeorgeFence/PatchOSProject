@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WindowManager = PatchOS.Files.Drivers.GUI.UI.WindowManager;
 using Cosmos.System.Graphics;
+using PatchOS.Process;
+using System.Diagnostics.Tracing;
 
 namespace PatchOS.Files.Apps
 {
@@ -31,12 +33,15 @@ namespace PatchOS.Files.Apps
         {
             if (ShutdownButton.IsClicked)
             {
+                ProcessManager.Remove("Taskbar");
+                Kernel.Canvas.Display();
                 Kernel.Shutdown(0);
-
             }
             if (RebootButton.IsClicked)
             {
+                ProcessManager.Remove("Taskbar");
                 Kernel.Shutdown(1);
+                Kernel.Canvas.Display();
             }
         }
 
