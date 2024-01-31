@@ -52,8 +52,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-30T13:04:29.964Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -63,7 +62,7 @@
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\Installer.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\Installer.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\Installer.cs",
-              "ViewState": "AQIAAN4AAAAAAAAAAAAQwAUBAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUBAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-30T17:58:03.536Z",
               "EditorCaption": ""
@@ -78,8 +77,7 @@
               "RelativeToolTip": "PatchOS\\Commands\\Install.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAUwBwAAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-30T17:56:23.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-30T17:56:23.364Z"
             }
           ]
         }
