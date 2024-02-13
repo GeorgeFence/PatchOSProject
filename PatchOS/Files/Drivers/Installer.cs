@@ -265,9 +265,9 @@ namespace PatchOS.Files.Drivers
 
             Log.Success("Done in " + (end - start) + " seconds");
             DrawUpdates("Done in " + (end - start) + " seconds");
-            Thread.Sleep(500);
+            Kernel.DelayCode(500);
             DrawTable(1, "Shutting your PC down, make sure that you didnt interrupt Installer");
-            Thread.Sleep(500);
+            Kernel.DelayCode(500);
             Kernel.Shutdown(1);
         }
     }

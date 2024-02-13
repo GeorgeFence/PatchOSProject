@@ -118,6 +118,22 @@ namespace PatchOS.Files
             RegName.Add(@"REG/FS/DefaultName.reg");
             RegValue.Add("");
 
+            //FS FORMATS
+            PMFAT.CreateFolder(PMFAT.Root + "REG/FS/FILEFORMAT");
+
+            RegName.Add(@"REG/FS/FILEFORMAT/REG.reg");
+            RegValue.Add("1");
+
+            RegName.Add(@"REG/FS/FILEFORMAT/TXT.reg");
+            RegValue.Add("1");
+
+            RegName.Add(@"REG/FS/FILEFORMAT/REG.reg");
+            RegValue.Add("1");
+
+            RegName.Add(@"REG/FS/FILEFORMAT/TXT.reg");
+            RegValue.Add("1");
+
+
             //gui
             PMFAT.CreateFolder(PMFAT.Root + "REG/GUI");
 
@@ -148,14 +164,6 @@ namespace PatchOS.Files
             RegName.Add(@"REG/GUI/TASKBAR/width.reg");
             RegValue.Add("30");
 
-            //gui/taskbar
-            PMFAT.CreateFolder(PMFAT.Root + "REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT");
-
-            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT/X.reg");
-            RegValue.Add("7");
-
-            RegName.Add(@"REG/GUI/TASKBAR/ShutdownSHCosmos.HAL.RTCT/Y.reg");
-            RegValue.Add("7");
 
             //reg uptodate 
 

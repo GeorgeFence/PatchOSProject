@@ -27,7 +27,7 @@ namespace PatchOS
     public class Kernel : Sys.Kernel
     {
         public static Bitmap boot;
-        public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT
+        public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
         public BootMgr bootMgr;
         private static List<string> Out = new List<string>();
         public static  int Y = 0;
@@ -57,7 +57,6 @@ namespace PatchOS
             {
                 Canvas = new SVGAIICanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
-                ;
                 PMFAT.Initialize();
                 DrawBootOut("Checking Requirments");
                 DelayCode(500);
@@ -76,12 +75,11 @@ namespace PatchOS
                     boot = new Bitmap(PMFAT.Root + "Files/boot");
                     GUI_MODE = true;
                     Canvas.Clear(System.Drawing.Color.Black);
-                    ;
                     Canvas.DrawImageAlpha(boot, 1280 / 2 - 72, 100);
-                    ;
+                   
                     ASC16.DrawACSIIString(Canvas, "any key Regedit", System.Drawing.Color.Red, 0, 688);
                     ASC16.DrawACSIIString(Canvas, "else    Boot", System.Drawing.Color.Green, 0, 704);
-                    ;
+                    
                     DrawBootOut("IsFileSystem = " + IsFileSystem.ToString());
                     DrawBootOut("Wait for input 2s");
                     DelayCode(2000);
@@ -194,7 +192,7 @@ namespace PatchOS
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas = new SVGAIICanvas(new Mode(W,H,ColorDepth.ColorDepth32)); ; }
+        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W,H,ColorDepth.ColorDepth32)); ; }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();

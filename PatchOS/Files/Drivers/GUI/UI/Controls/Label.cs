@@ -29,7 +29,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
 
         public override void Update(Canvas Canvas, int X, int Y, bool sel)
         {
-            ASC16.DrawACSIIString(Canvas, Text, System.Drawing.Color.Black, (uint)(X + Xpos), (uint)( Y + Ypos));
+            ASC16.DrawACSIIString(Canvas, Text, System.Drawing.Color.Black, (uint)(X + Xpos), (uint)(Y + Ypos));
         }
     }
 }

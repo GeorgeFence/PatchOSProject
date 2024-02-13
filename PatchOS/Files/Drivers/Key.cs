@@ -23,7 +23,7 @@ namespace PatchOS.Files.Drivers
         {
             void make()
             {
-                Kernel.DelayCode(500);
+                //Kernel.DelayCode(500);
                 make();
             }
             make();

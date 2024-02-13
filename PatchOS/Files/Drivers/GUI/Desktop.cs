@@ -137,7 +137,7 @@ namespace PatchOS.Files.Drivers.GUI
             int start = 0;
             int fps = 0;
             isDesktop = true;
-            while (true)
+            while (!Yield)
             {
                 if(once){start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1;once = false;}
                 if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))){once = true; fps = Count; Count = 0;}

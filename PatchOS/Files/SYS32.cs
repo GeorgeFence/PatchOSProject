@@ -39,7 +39,7 @@ namespace PatchOS
                 string p1 = "??";
                 string p2 = "????";
                 Kernel.Resolution(640, 480);
-                Kernel.Canvas.Clear(System.Drawing.Color.RebeccaPurple);
+                Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.RebeccaPurple,0,0,640,480);
                 ASC16.DrawACSIIString(Kernel.Canvas, "A problem has been detected and PatchOS has been shut down to prevent any", Color.Black, 5, 5);
                 ASC16.DrawACSIIString(Kernel.Canvas, "damage to your computer.", Color.Black, 5, 23);
 

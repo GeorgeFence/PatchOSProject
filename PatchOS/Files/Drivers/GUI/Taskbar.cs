@@ -50,6 +50,8 @@ namespace PatchOS.Files.Drivers.GUI
             yield return null;
         }
 
+        public static string LastApp = "";
+        public static int start = 0;
         public static void DrawTaskBar()
         {
             int X = 90;
@@ -65,20 +67,31 @@ namespace PatchOS.Files.Drivers.GUI
                     PanelSettings.Start();   
                 }
             }
-
-            /*for (int i = 0; i < WindowManager.Windows.Count; i++)
+            for (int i = 0; i < WindowManager.Windows.Count; i++)
             {
                 Kernel.Canvas.DrawImageAlpha(WindowManager.Windows[i].Icon, X, (int)(Kernel.Canvas.Mode.Height - 37));
-                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26,26))
+                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26,26) && MouseManager.MouseState == MouseState.Right && prevMouseState != MouseState.Right)
                 {
-                    Kernel.Canvas.DrawImageAlpha(Img.exitApp, X + 2, (int)(Kernel.Canvas.Mode.Height - 35));
-                    if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+                    LastApp = WindowManager.Windows[i].Title;
+                    start = (Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second);
+
+                }
+                else if(MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26, 26) && MouseManager.MouseState == MouseState.None)
+                {
+                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), (X + 13) - ((WindowManager.Windows[i].Title.Length * 8) / 2) + 2, (int)(Kernel.Canvas.Mode.Height - 55), (WindowManager.Windows[i].Title.Length * 8) + 4, 18);
+                    ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.White, (uint)(X + 13) - (uint)((WindowManager.Windows[i].Title.Length * 8) / 2), (uint)(Kernel.Canvas.Mode.Height - 53));
+                }
+                if (LastApp == WindowManager.Windows[i].Title && (start + 3) > ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second)))
+                {
+                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), X - 4, (int)(Kernel.Canvas.Mode.Height - 80), 32,32);
+                    Kernel.Canvas.DrawImageAlpha(Kernel.ExitApp, X + 2, (int)(Kernel.Canvas.Mode.Height - 67));
+                    if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left && MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 80), 26, 26))
                     {
                         WindowManager.Stop(WindowManager.Windows[i]);
                     }
                 }
                 X = X + 32;
-            }*/
+            }
             Kernel.Canvas.DrawImage(Kernel.start, 8, (int)(Kernel.Canvas.Mode.Height - 40));
             if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32))
             {

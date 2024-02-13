@@ -31,7 +31,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
 
         public override void Update(Canvas Canvas, int X, int Y, bool sel)
         {
-            Canvas.DrawFilledRectangle(col, X + Xpos, Y + Ypos, W, H);
+            Canvas.DrawFilledRectangle(System.Drawing.Color.Orange, X + Xpos, Y + Ypos, W, H);
         }
     }
 }

@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using Cosmos.System.Graphics;
 
 namespace PatchOS.Files.Apps
 {
@@ -20,7 +22,7 @@ namespace PatchOS.Files.Apps
         public static Drivers.GUI.UI.Window Mwindow;
 
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.MenuApp.bmp")] static byte[] rawImageIcon;
-        //public static Bitmap Icon = Image.FromBitmap(rawImageIcon, false);
+        public static Bitmap Icon = new Bitmap(rawImageIcon);
 
         public static int I = 0;
 
@@ -39,7 +41,7 @@ namespace PatchOS.Files.Apps
             {
                 for (int i = 0;i < WindowManager.Windows.Count;i++)
                 {
-                    ProcessManager.Remove(WindowManager.Windows[i].Title + ".win");
+                    WindowManager.Stop(WindowManager.Windows[i]);
                 }
                 ProcessManager.Remove("Desktop");
                 ProcessManager.Run(new Shell()); 
@@ -48,7 +50,7 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            Mwindow = new Drivers.GUI.UI.Window(5, 53, 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, null);
+            Mwindow = new Drivers.GUI.UI.Window(5, 53, 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, Icon);
             Mwindow.CanMove = false;
             ShutdownDialog = new Button(5, Mwindow.PanelH - 29, 32, 24, 0, "S/R", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Console = new Button(42, Mwindow.PanelH - 29, 64, 24, 0, "Console", true, System.Drawing.Color.Red, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
