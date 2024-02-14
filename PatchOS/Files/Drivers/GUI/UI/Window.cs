@@ -79,114 +79,136 @@ public class Window : Control
             for(int i = 0; i < Controls.Count; i++)
             {
                 Controls[i].Update(Kernel.Canvas, X, Y, sel);
+                SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 0");
             }
         }
     }
 
     public override void Update(Canvas Canvas, int X, int Y, bool sel)
     {
-        if (process.Continue)
+        try
         {
-            int w = (WinW - 255) / 2;
-            switch (Wtype)
+            if (process.Continue)
             {
-                case DesignType.Default:
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, base.Width, base.Height);
-                    if (Ptype == PermitionsType.User)
-                    {
+                SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 1");
+                int w = (WinW - 255) / 2;
+                switch (Wtype)
+                {
+                    case DesignType.Default:
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 2");
+                        Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, base.Width, base.Height);
+                        if (Ptype == PermitionsType.User)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                        }
+                        else if (Ptype == PermitionsType.System)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                        }
+                        else if (Ptype == PermitionsType.Service)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Green, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                        }
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 3");
                         Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
-                    }
-                    else if (Ptype == PermitionsType.System)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32 );
-                    }
-                    else if (Ptype == PermitionsType.Service)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Green, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
-                    }
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
-                    ConsoleKeyInfo? key = KeyboardEx.ReadKey();
-                    ProcessControls(base.X + 6, base.Y + 33, Controls, key, sel);
-                    ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
-                    break;
+                        ConsoleKeyInfo? key = KeyboardEx.ReadKey();
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 4");
+                        ProcessControls(base.X + 6, base.Y + 33, Controls, key, sel);
+                        ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
+                        break;
 
 
-                case DesignType.Classic:
-                    if (Ptype == PermitionsType.User)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue,  base.X, base.Y, 0, 32);
-                    }
-                    else if (Ptype == PermitionsType.System)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X, base.Y, 0, 32);
-                    }
-                    else if (Ptype == PermitionsType.Service)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Green, base.X, base.Y, 0, 32);
-                    }
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y + 32, (ushort)(base.Width - 32), base.Height);
-                    ConsoleKeyInfo? key5 = KeyboardEx.ReadKey();
-                    ProcessControls(base.X + 6, base.Y + 33, Controls, key5, sel);
-                    ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
-                    break;
+                    case DesignType.Classic:
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 5");
+                        if (Ptype == PermitionsType.User)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X, base.Y, 0, 32);
+                        }
+                        else if (Ptype == PermitionsType.System)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X, base.Y, 0, 32);
+                        }
+                        else if (Ptype == PermitionsType.Service)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Green, base.X, base.Y, 0, 32);
+                        }
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 6");
+                        Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y + 32, (ushort)(base.Width - 32), base.Height);
+                        ConsoleKeyInfo? key5 = KeyboardEx.ReadKey();
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 7");
+                        ProcessControls(base.X + 6, base.Y + 33, Controls, key5, sel);
+                        ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
+                        break;
 
 
-                case DesignType.Modern:
-                    if (Ptype == PermitionsType.User)
-                    {
+                    case DesignType.Modern:
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 8");
+                        if (Ptype == PermitionsType.User)
+                        {
 
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(0, 0, 255), X, Y, (ushort)w, WinH);
-                        Canvas.DrawImage(Kernel.UserApp, X + w, Y);
-                        Canvas.DrawImage(Kernel.UserApp, X + w, Y + WinH - 32);
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
-                        Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(0, 0, 255), X, Y, (ushort)w, WinH);
+                            Canvas.DrawImage(Kernel.UserApp, X + w, Y);
+                            Canvas.DrawImage(Kernel.UserApp, X + w, Y + WinH - 32);
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
+                            Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
 
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
-                        ConsoleKeyInfo? key3 = KeyboardEx.ReadKey();
-                        ProcessControls(base.X + 6, base.Y + 33, Controls, key3, sel);
-                        ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
-                    }
-                    else if (Ptype == PermitionsType.System)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 0), X, Y, (ushort)w, WinH);
-                        Canvas.DrawImage(Kernel.SystemApp, X + w, Y);
-                        Canvas.DrawImage(Kernel.SystemApp, X + w, Y + WinH - 32);
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
-                        Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
+                            SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 9");
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
+                            ConsoleKeyInfo? key3 = KeyboardEx.ReadKey();
+                            ProcessControls(base.X + 6, base.Y + 33, Controls, key3, sel);
+                            ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
+                        }
+                        else if (Ptype == PermitionsType.System)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 0), X, Y, (ushort)w, WinH);
+                            Canvas.DrawImage(Kernel.SystemApp, X + w, Y);
+                            Canvas.DrawImage(Kernel.SystemApp, X + w, Y + WinH - 32);
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
+                            Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
 
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
-                        ConsoleKeyInfo? key6 = KeyboardEx.ReadKey();
-                        ProcessControls(base.X + 6, base.Y + 33, Controls, key6, sel);
-                        ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
+                            SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 10");
 
-                    }
-                    else if (Ptype == PermitionsType.Service)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(0, 255, 0), X, Y, (ushort)w, WinH);
-                        Canvas.DrawImage(Kernel.ServiceApp, X + w, Y);
-                        Canvas.DrawImage(Kernel.ServiceApp, X + w, Y + WinH - 32);
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
-                        Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
+                            ConsoleKeyInfo? key6 = KeyboardEx.ReadKey();
+                            ProcessControls(base.X + 6, base.Y + 33, Controls, key6, sel);
+                            ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
 
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
-                        ConsoleKeyInfo? key4 = KeyboardEx.ReadKey();
-                        ProcessControls(base.X + 6, base.Y + 33, Controls, key4, sel);
-                        ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
-                    }
-                    break;
+                        }
+                        else if (Ptype == PermitionsType.Service)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(0, 255, 0), X, Y, (ushort)w, WinH);
+                            Canvas.DrawImage(Kernel.ServiceApp, X + w, Y);
+                            Canvas.DrawImage(Kernel.ServiceApp, X + w, Y + WinH - 32);
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(255, 0, 255), (X + w + 255), Y, (ushort)((WinW - 255) / 2), WinH);
+                            Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
 
-                case DesignType.Blank:
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, WinW, WinH);
-                    ConsoleKeyInfo? key7 = KeyboardEx.ReadKey();
-                    ProcessControls(base.X, base.Y, Controls, key7, sel);
-                    break;
+                            SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 11");
+
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Black, X + 5, Y + 32, (ushort)(WinW - 10), (ushort)(WinH - 37));
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.White, X + 6, Y + 33, (ushort)(WinW - 12), (ushort)(WinH - 39));
+                            ConsoleKeyInfo? key4 = KeyboardEx.ReadKey();
+                            ProcessControls(base.X + 6, base.Y + 33, Controls, key4, sel);
+                            ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 5), (uint)(base.Y + 8));
+                        }
+                        break;
+
+                    case DesignType.Blank:
+                        Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, WinW, WinH);
+                        SYS32.ErrorStatusAdd("WINDOW " + Title + " ERR 12");
+                        ConsoleKeyInfo? key7 = KeyboardEx.ReadKey();
+                        ProcessControls(base.X, base.Y, Controls, key7, sel);
+                        break;
+                }
+
+
+                act();
             }
-
-
-            act();
+        }
+        catch (Exception ex)
+        {
+            SYS32.KernelPanic(ex, "Desktop");
         }
     }
 }

@@ -57,7 +57,14 @@ namespace PatchOS
             {
                 Canvas = new SVGAIICanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
+                SYS32.TempFileName = "log";
+                
                 PMFAT.Initialize();
+                if (PMFAT.FileExists(PMFAT.Root + SYS32.TempFileName + ".txt"))
+                {
+                    PMFAT.CreateFile(PMFAT.Root + SYS32.TempFileName + ".txt");
+                }
+                SYS32.ErrorStatusAdd("KERNEL STARTS WORKING");
                 DrawBootOut("Checking Requirments");
                 DelayCode(500);
                 if (!PMFAT.FolderExists(PMFAT.Root + "Files") || !PMFAT.FolderExists(PMFAT.Root + "REG") )

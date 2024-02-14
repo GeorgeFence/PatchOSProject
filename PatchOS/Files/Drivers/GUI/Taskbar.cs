@@ -52,6 +52,7 @@ namespace PatchOS.Files.Drivers.GUI
 
         public static string LastApp = "";
         public static int start = 0;
+        public static bool startMenu = false;
         public static void DrawTaskBar()
         {
             int X = 90;
@@ -76,15 +77,16 @@ namespace PatchOS.Files.Drivers.GUI
                     start = (Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second);
 
                 }
-                else if(MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26, 26) && MouseManager.MouseState == MouseState.None)
+                else if(MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26, 26) && MouseManager.MouseState == MouseState.None && !((start + 3) > ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))))
                 {
-                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), (X + 13) - ((WindowManager.Windows[i].Title.Length * 8) / 2) + 2, (int)(Kernel.Canvas.Mode.Height - 55), (WindowManager.Windows[i].Title.Length * 8) + 4, 18);
+                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), (X + 13) - ((WindowManager.Windows[i].Title.Length * 8) / 2) - 2, (int)(Kernel.Canvas.Mode.Height - 55), (WindowManager.Windows[i].Title.Length * 8) + 4, 18);
                     ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.White, (uint)(X + 13) - (uint)((WindowManager.Windows[i].Title.Length * 8) / 2), (uint)(Kernel.Canvas.Mode.Height - 53));
                 }
                 if (LastApp == WindowManager.Windows[i].Title && (start + 3) > ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second)))
                 {
                     Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), X - 4, (int)(Kernel.Canvas.Mode.Height - 80), 32,32);
-                    Kernel.Canvas.DrawImageAlpha(Kernel.ExitApp, X + 2, (int)(Kernel.Canvas.Mode.Height - 67));
+                    Kernel.Canvas.DrawRectangle(System.Drawing.Color.Red, X - 4, (int)(Kernel.Canvas.Mode.Height - 80), 32, 32);
+                    Kernel.Canvas.DrawImageAlpha(Kernel.ExitApp, X + 2, (int)(Kernel.Canvas.Mode.Height - 74));
                     if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left && MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 80), 26, 26))
                     {
                         WindowManager.Stop(WindowManager.Windows[i]);
@@ -93,12 +95,30 @@ namespace PatchOS.Files.Drivers.GUI
                 X = X + 32;
             }
             Kernel.Canvas.DrawImage(Kernel.start, 8, (int)(Kernel.Canvas.Mode.Height - 40));
-            if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32))
+            if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
             {
-                if(MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+                startMenu = true;
+                for (int i = 0; i < ProcessManager.running.Count; i++)
                 {
-                    Menu.Start();
+                    if (ProcessManager.running[i].name == Menu.Title() + ".win" )
+                    {
+
+                        if (startMenu)
+                        {
+                            Menu.Stop();
+                            startMenu = false;
+                        }
+                    }
+                    else 
+                    {
+                        if (startMenu)
+                        {
+                            Menu.Start();
+                            startMenu = false;
+                        }
+                    }
                 }
+                
             }
             prevMouseState = MouseManager.MouseState;
         }

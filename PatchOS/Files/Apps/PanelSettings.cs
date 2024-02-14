@@ -31,7 +31,7 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            window = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width - 300), 20, 300, (ushort)(Kernel.Canvas.Mode.Height - 68), "Settings", Update, DesignType.Blank, PermitionsType.Service, null);
+            window = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width - 300), 20, 300, (ushort)(Kernel.Canvas.Mode.Height - 48), "Settings", Update, DesignType.Blank, PermitionsType.Service, null);
             window.CanMove = false;
             WindowManager.Add(window);
         }

@@ -43,14 +43,14 @@ namespace PatchOS.Files.Apps
                 {
                     WindowManager.Stop(WindowManager.Windows[i]);
                 }
-                ProcessManager.Remove("Desktop");
+                ProcessManager.StopAll();
                 ProcessManager.Run(new Shell()); 
             }
         }
 
         public static void Start()
         {
-            Mwindow = new Drivers.GUI.UI.Window(5, 53, 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, Icon);
+            Mwindow = new Drivers.GUI.UI.Window(5, (int)(Kernel.Canvas.Mode.Height - 658), 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, Icon);
             Mwindow.CanMove = false;
             ShutdownDialog = new Button(5, Mwindow.PanelH - 29, 32, 24, 0, "S/R", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Console = new Button(42, Mwindow.PanelH - 29, 64, 24, 0, "Console", true, System.Drawing.Color.Red, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);

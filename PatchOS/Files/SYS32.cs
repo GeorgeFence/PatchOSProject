@@ -22,13 +22,14 @@ namespace PatchOS
         public static bool End = false;
         public  static string ErrorStatus;
         private static bool onceCreate = true;
-        private static string TempFileName;
+        public static string TempFileName;
         public static String StopCODE = "??x???? : ??";
         private static string LastStatus = "00";
 
         public static void ErrorStatusAdd(string text)
         {
-            ErrorStatus += text;
+            
+            ErrorStatus += text + "|";
             LastStatus = text;
 
         }
@@ -40,6 +41,8 @@ namespace PatchOS
                 string p2 = "????";
                 Kernel.Resolution(640, 480);
                 Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.RebeccaPurple,0,0,640,480);
+
+                PMFAT.WriteAllText(PMFAT.Root + TempFileName + ".txt", ErrorStatus);
                 ASC16.DrawACSIIString(Kernel.Canvas, "A problem has been detected and PatchOS has been shut down to prevent any", Color.Black, 5, 5);
                 ASC16.DrawACSIIString(Kernel.Canvas, "damage to your computer.", Color.Black, 5, 23);
 
@@ -57,6 +60,7 @@ namespace PatchOS
                 else if (Info == "NetworkMgr") { p1 = "05"; }
                 else if (Info == "Desktop") { p1 = "06"; }
                 #endregion
+
                 #region P2
                 if (p1 == "00")
                 {
@@ -64,11 +68,11 @@ namespace PatchOS
                     else if (ex.Message == "CANVAS") { p2 = "0002"; }
                     else if (ex.Message == "3") { p2 = "0003"; }
                     else{ p2 = "0000"; }
-                } 
+                }
                 #endregion
 
                 StopCODE = p1 + "x" + p2 + " : " + LastStatus;
-                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE, Color.Red, 5, 464);
+                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE + "            Please contact developer! Error log file: " + PMFAT.Root + TempFileName + ".txt", Color.Red, 5, 464);
                 Kernel.Canvas.DrawImageAlpha(Kernel.boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.Canvas.Display();
 

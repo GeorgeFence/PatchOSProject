@@ -12,26 +12,26 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         internal string InternalContents;
 
         public System.Drawing.Color col;
-        AnachorType AnachorType;
+        AnachorType anachorType;
         public int Xpos;
         public int Ypos;
-        public int W;
-        public int H;
+        public int Widt;
+        public int Heig;
 
         public Panel(int X, int Y,int W, int H, System.Drawing.Color color, AnachorType anachor)
             : base(X, Y, (ushort)W, (ushort)H)
         {
             this.col = color;
-            AnachorType = anachor;
+            anachorType = anachor;
             this.Xpos = X;
             this.Ypos = Y;
-            this.W = Width;
-            this.H = Height;
+            this.Widt = W;
+            this.Heig = H;
         }
 
         public override void Update(Canvas Canvas, int X, int Y, bool sel)
         {
-            Canvas.DrawFilledRectangle(System.Drawing.Color.Orange, X + Xpos, Y + Ypos, W, H);
+            Canvas.DrawFilledRectangle(col, X + Xpos, Y + Ypos, Widt, Heig);
         }
     }
 }

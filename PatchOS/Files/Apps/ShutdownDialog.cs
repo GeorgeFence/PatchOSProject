@@ -47,9 +47,10 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            Swindow = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Height / 2 - 150), (int)(Kernel.Canvas.Mode.Width / 2 - 64), 300, 128, "Shutdown Dialog", Update, DesignType.Modern, PermitionsType.Service, Icon);
-            ShutdownButton = new Button(5,5, 241, 16, 0, "SHUTDOWN", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
-            RebootButton = new Button(5, 26, 241, 16, 0, "REBOOT", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
+            Swindow = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width / 2 - 150), (int)(Kernel.Canvas.Mode.Height / 2 - 64), 300, 128, "Shutdown Dialog", Update, DesignType.Modern, PermitionsType.Service, Icon);
+            Swindow.CanMove = false;
+            ShutdownButton = new Button(5,5, 273, 44, 0, "SHUTDOWN", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
+            RebootButton = new Button(5, 44, 273, 44, 0, "REBOOT", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Swindow.Controls.Add(ShutdownButton);
             Swindow.Controls.Add(RebootButton);
             WindowManager.Add(Swindow);

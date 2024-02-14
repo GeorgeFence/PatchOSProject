@@ -45,122 +45,131 @@ namespace PatchOS.Files.Drivers.GUI
         
         static IEnumerator<CoroutineControlPoint> desktop()
         {
-            int i = 0;
-            void DrawPar()
+            try
             {
-                ASC16.DrawACSIIString(Kernel.Canvas, "PatchOS Version 1", System.Drawing.Color.Orange, 5, 452);
-                ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 468); 
-                if(Key.KeyPressed)
+                int i = 0;
+                void DrawPar()
                 {
-                    ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : true", System.Drawing.Color.Red, 5, 480);
-                }
-                else
-                {
-                    ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : false", System.Drawing.Color.Red, 5, 480);
-                }
-
-                int p = 1;
-                for (int i = 0; i < WindowManager.Windows.Count; i++)
-                {
-                    ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.Orange, 5, (uint)(500 + (i * 16)));
-                    p++;
-                }
-                ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Selected, System.Drawing.Color.Blue, 5, (uint)(584));
-                for (int i = 0; i < ProcessManager.running.Count; i++)
-                {
-                    ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(600 + (i * 16)));
-                }
-            }
-            bool Fill = true;
-            void BGC()
-            {
-                try
-                {
-                    if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "0")
+                    ASC16.DrawACSIIString(Kernel.Canvas, "PatchOS Version 1", System.Drawing.Color.Orange, 5, 152);
+                    ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 168);
+                    if (Key.KeyPressed)
                     {
-                        BGColor = ColorP.Black;
-                    }
-                    else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "1")
-                    {
-                        BGColor = ColorP.White;
-                    }
-                    else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "2")
-                    {
-                        BGColor = ColorP.Red;
-                    }
-                    else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "3")
-                    {
-                        BGColor = ColorP.Green;
-                    }
-                    else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "4")
-                    {
-                        BGColor = ColorP.Blue;
-                    }
-                    else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "5")
-                    {
-                        BGColor = ColorP.Yellow;
+                        ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : true", System.Drawing.Color.Red, 5, 180);
                     }
                     else
                     {
-                        Fill  = false;
-                        //Wallpaper = Kernel.Wpp1FHD;
+                        ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : false", System.Drawing.Color.Red, 5, 180);
                     }
-                    
-                }
-                catch (Exception ex)
-                {
-                    SYS32.KernelPanic(ex, "Desktop");
-                }
-            }
 
-            if (Kernel.IsFileSystem)
-            {
-                //BGC();
-                H = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/resolutionH.reg"));
-                SYS32.ErrorStatusAdd("2");
-                W = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/resolutionW.reg"));
-            }
-            else
-            {
-                Fill = false;
-                H = 1080;
-                W = 1920;
-            }
-
-            Kernel.Resolution((ushort)W,(ushort)H);
-            MouseManager.ScreenHeight = (UInt32)Kernel.Canvas.Mode.Height;
-            MouseManager.ScreenWidth = (UInt32)Kernel.Canvas.Mode.Width;
-            ProcessManager.Run(new Key());
-            BGC();
-            Welcome.Start();
-            bool once = true;
-            int start = 0;
-            int fps = 0;
-            isDesktop = true;
-            while (!Yield)
-            {
-                if(once){start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1;once = false;}
-                if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))){once = true; fps = Count; Count = 0;}
-                
-                Kernel.Canvas.Clear();
-                if (Fill)
+                    int p = 1;
+                    for (int i = 0; i < WindowManager.Windows.Count; i++)
+                    {
+                        ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.Orange, 5, (uint)(200 + (i * 16)));
+                        p++;
+                    }
+                    ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Selected, System.Drawing.Color.Blue, 5, (uint)(284));
+                    for (int i = 0; i < ProcessManager.running.Count; i++)
+                    {
+                        ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(300 + (i * 16)));
+                    }
+                }
+                bool Fill = true;
+                void BGC()
                 {
-                    Kernel.Canvas.Clear(BGColor);
+                    try
+                    {
+                        if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "0")
+                        {
+                            BGColor = ColorP.Black;
+                        }
+                        else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "1")
+                        {
+                            BGColor = ColorP.White;
+                        }
+                        else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "2")
+                        {
+                            BGColor = ColorP.Red;
+                        }
+                        else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "3")
+                        {
+                            BGColor = ColorP.Green;
+                        }
+                        else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "4")
+                        {
+                            BGColor = ColorP.Blue;
+                        }
+                        else if (PMFAT.ReadText(PMFAT.Root + "REG/GUI/bgc.reg") == "5")
+                        {
+                            BGColor = ColorP.Yellow;
+                        }
+                        else
+                        {
+                            Fill = false;
+                            //Wallpaper = Kernel.Wpp1FHD;
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        SYS32.KernelPanic(ex, "Desktop");
+                    }
+                }
+
+                if (Kernel.IsFileSystem)
+                {
+                    //BGC();
+                    H = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/resolutionH.reg"));
+                    SYS32.ErrorStatusAdd("2");
+                    W = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/resolutionW.reg"));
                 }
                 else
                 {
-                    Kernel.Canvas.DrawImage(Kernel.Wpp1FHD, 0, 0);
+                    Fill = false;
+                    H = 1080;
+                    W = 1920;
                 }
-                Taskbar.DrawTaskBar();
-                ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);
-                WindowManager.Update(Kernel.Canvas);
-                MouseMgr.DrawMouse();
-                DrawPar();
-                Kernel.Canvas.Display();
-                if (Count.ToString().EndsWith("0")) { Heap.Collect(); }
-                Count++;
-                prevMouseState = MouseManager.MouseState;
-            } 
+
+                Kernel.Resolution((ushort)W, (ushort)H);
+                MouseManager.ScreenHeight = (UInt32)Kernel.Canvas.Mode.Height;
+                MouseManager.ScreenWidth = (UInt32)Kernel.Canvas.Mode.Width;
+                ProcessManager.Run(new Key());
+                BGC();
+                Welcome.Start();
+                bool once = true;
+                int start = 0;
+                int fps = 0;
+                isDesktop = true;
+                while (!Yield)
+                {
+                    if (once) { start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1; once = false; }
+                    if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))) { once = true; fps = Count; Count = 0; }
+
+                    Kernel.Canvas.Clear();
+                    if (Fill)
+                    {
+                        Kernel.Canvas.Clear(BGColor);
+                    }
+                    else
+                    {
+                        Kernel.Canvas.DrawImage(Kernel.Wpp1FHD, 0, 0);
+                    }
+
+
+                    WindowManager.Update(Kernel.Canvas);
+                    Taskbar.DrawTaskBar();
+                    MouseMgr.DrawMouse();
+                    DrawPar();
+                    ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);
+                    Kernel.Canvas.Display();
+                    Heap.Collect();
+                    Count++;
+                    prevMouseState = MouseManager.MouseState;
+                }
+            }
+            catch (Exception ex)
+            {
+                SYS32.KernelPanic(ex,"Desktop");
+            }
             yield return null;
         }
         public static void ReduceFPS(bool FromRegistry, int fps)
