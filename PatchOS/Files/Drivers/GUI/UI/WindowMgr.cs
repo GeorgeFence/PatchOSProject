@@ -42,7 +42,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
             {
                 bool SelDone = false;
                 bool Once = false;
-                Selected = "";
+                //Selected = "";
                 foreach (Window window in Windows)
                 {
                     window.IsSelected = false;
@@ -68,6 +68,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
                                 Windows.Remove(window);
                                 Windows.Insert(Windows.Count, window);
                                 SelDone = true;
+                                Selected = window.Title;
                                 if (window.CanMove)
                                 {
                                     window.IX = (int)MouseManager.X - window.X;
@@ -90,15 +91,17 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         Windows.Remove(window);
                         Windows.Insert(Windows.Count, window);
                         SelDone = true;
+                        Selected = window.Title;
                     }
 
                     
                     if (!Once && SelDone)
                     {
                         window.IsSelected = true;
+                        Selected = window.Title;
                         Once = true;
                     }
-                    else { window.IsSelected = false; }
+                    else { window.IsSelected = false;}
 
                     window.Update(Canvas, window.X, window.Y, Once);
 

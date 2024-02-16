@@ -132,13 +132,14 @@ namespace PatchOS.Files.Drivers.GUI
                 Kernel.Resolution((ushort)W, (ushort)H);
                 MouseManager.ScreenHeight = (UInt32)Kernel.Canvas.Mode.Height;
                 MouseManager.ScreenWidth = (UInt32)Kernel.Canvas.Mode.Width;
-                ProcessManager.Run(new Key());
+                //ProcessManager.Run(new Key());
                 BGC();
                 Welcome.Start();
                 bool once = true;
                 int start = 0;
                 int fps = 0;
                 isDesktop = true;
+                int count2 = 0;
                 while (!Yield)
                 {
                     if (once) { start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1; once = false; }
@@ -157,12 +158,16 @@ namespace PatchOS.Files.Drivers.GUI
 
                     WindowManager.Update(Kernel.Canvas);
                     Taskbar.DrawTaskBar();
+                    Kernel.Canvas.DrawFilledRectangle(ColorP.Red, 0, 20, 400, 64);
+                    Kernel.Canvas.DrawFilledRectangle(ColorP.Green, 0, 20,fps * 2, 64);
+                    ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), ColorP.White, (UInt32)(200 - (fps.ToString().Length / 2)), 30);
                     MouseMgr.DrawMouse();
                     DrawPar();
                     ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);
                     Kernel.Canvas.Display();
                     Heap.Collect();
                     Count++;
+                    count2++;
                     prevMouseState = MouseManager.MouseState;
                 }
             }

@@ -70,7 +70,16 @@ namespace PatchOS.Files.Drivers.GUI
             }
             for (int i = 0; i < WindowManager.Windows.Count; i++)
             {
+
+                if(WindowManager.Selected == WindowManager.Windows[i].Title)
+                {
+                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Gray, X - 11, (Int32)(Kernel.Canvas.Mode.Height - 48), 48,48);
+                }
                 Kernel.Canvas.DrawImageAlpha(WindowManager.Windows[i].Icon, X, (int)(Kernel.Canvas.Mode.Height - 37));
+                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26, 26) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+                {
+                    WindowManager.Selected = WindowManager.Windows[i].Title;
+                }
                 if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26,26) && MouseManager.MouseState == MouseState.Right && prevMouseState != MouseState.Right)
                 {
                     LastApp = WindowManager.Windows[i].Title;
@@ -92,7 +101,7 @@ namespace PatchOS.Files.Drivers.GUI
                         WindowManager.Stop(WindowManager.Windows[i]);
                     }
                 }
-                X = X + 32;
+                X = X + 48;
             }
             Kernel.Canvas.DrawImage(Kernel.start, 8, (int)(Kernel.Canvas.Mode.Height - 40));
             if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
