@@ -78,7 +78,7 @@ namespace PatchOS.Files.Drivers.GUI
                 Kernel.Canvas.DrawImageAlpha(WindowManager.Windows[i].Icon, X, (int)(Kernel.Canvas.Mode.Height - 37));
                 if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26, 26) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
                 {
-                    WindowManager.Selected = WindowManager.Windows[i].Title;
+                    WindowManager.Selected = WindowManager.Windows[i].Title; 
                 }
                 if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 37), 26,26) && MouseManager.MouseState == MouseState.Right && prevMouseState != MouseState.Right)
                 {
