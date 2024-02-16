@@ -58,7 +58,6 @@ namespace PatchOS.Commands
                         }
                         else { GUIConsole.WriteLine("Could not locate directory!", System.Drawing.Color.Red); }
                     }
-                    else { GUIConsole.WriteLine("Invalid argument! Path expected.", System.Drawing.Color.Red); }
                 }
             }
             else
@@ -96,7 +95,6 @@ namespace PatchOS.Commands
                         }
                         else { CLI.WriteLine("Could not locate directory!", ColorFile.Red); }
                     }
-                    else { CLI.WriteLine("Invalid argument! Path expected.", ColorFile.Red); }
                 }
             }
             
@@ -127,7 +125,7 @@ namespace PatchOS.Commands
                         if (attr != null)
                         {
                             GUIConsole.Write(files[i], System.Drawing.Color.White);
-                            GUIConsole.SetCursorPositionChar(30, GUIConsole.Y / 16);
+                            GUIConsole.SetCursorPositionChar(30, GUIConsole.Y);
                             GUIConsole.WriteLine(attr.mSize.ToString() + " BYTES", System.Drawing.Color.LightGray);
                         }
                         else { GUIConsole.WriteLine("Error retrieiving file info", System.Drawing.Color.Red); }

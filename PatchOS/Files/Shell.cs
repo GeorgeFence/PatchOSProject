@@ -33,6 +33,7 @@ namespace PatchOS.Files
         public static bool Yield = false;
         public static bool once = true;
         private static bool IsGUI = Kernel.GUI_MODE;
+        private static string[] commandsUsed;
         public Shell() : base("Shell", Type.Service, process)
         {
             
@@ -143,6 +144,7 @@ namespace PatchOS.Files
                     CommandsList.Add(new Commands.Update());
                     CommandsList.Add(new Commands.Get());
                     CommandsList.Add(new Commands.Install());
+                    CommandsList.Add(new Commands.Cat());
                     SYS32.ErrorStatusAdd("ADD");
                 }
                 catch (Exception ex)
@@ -268,6 +270,7 @@ namespace PatchOS.Files
                                     SYS32.ErrorStatusAdd("4");
                                     // execute and finish
                                     SYS32.ErrorStatusAdd("EXECUTE");
+                                    GUIConsole.WriteLine("");
                                     CommandsList[i].Execute(line, args);
                                     GUIConsole.WriteLine("");
                                     error = false;

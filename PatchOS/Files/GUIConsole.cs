@@ -126,8 +126,8 @@ namespace PatchOS.Files
 
         private static void ScrollDown()
         {
-            Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Black, 0, 384, 640, 16);
-            SetCursorPositionChar(0, 24);
+            //Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Black, 0, 384, 640, 16);
+            //SetCursorPositionChar(0, 24);
         }
 
     }

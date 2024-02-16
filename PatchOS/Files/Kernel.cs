@@ -58,9 +58,9 @@ namespace PatchOS
                 Canvas = new SVGAIICanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
                 SYS32.TempFileName = "log";
-                
+
                 PMFAT.Initialize();
-                if (PMFAT.FileExists(PMFAT.Root + SYS32.TempFileName + ".txt"))
+                if (!PMFAT.FileExists(PMFAT.Root + SYS32.TempFileName + ".txt"))
                 {
                     PMFAT.CreateFile(PMFAT.Root + SYS32.TempFileName + ".txt");
                 }

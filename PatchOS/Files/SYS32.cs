@@ -13,6 +13,7 @@ using PatchOS.Process;
 using Color = System.Drawing.Color;
 using System.Threading;
 using Cosmos.HAL;
+using System.Numerics;
 
 namespace PatchOS
 {
@@ -42,13 +43,13 @@ namespace PatchOS
                 Kernel.Resolution(640, 480);
                 Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.RebeccaPurple,0,0,640,480);
 
-                PMFAT.WriteAllText(PMFAT.Root + TempFileName + ".txt", ErrorStatus);
+                
                 ASC16.DrawACSIIString(Kernel.Canvas, "A problem has been detected and PatchOS has been shut down to prevent any", Color.Black, 5, 5);
                 ASC16.DrawACSIIString(Kernel.Canvas, "damage to your computer.", Color.Black, 5, 23);
 
-                ASC16.DrawACSIIString(Kernel.Canvas, ex.Message, Color.Red, 5, 422);
+                ASC16.DrawACSIIString(Kernel.Canvas, ex.Message, Color.Red, 5, 416);
 
-                ASC16.DrawACSIIString(Kernel.Canvas, Info, Color.Orange, 5, 448);
+                ASC16.DrawACSIIString(Kernel.Canvas, Info, Color.Orange, 5, 432);
 
                 #region P1
                 if (Info == "Coroutine") { p1 = "CR"; }
@@ -72,7 +73,8 @@ namespace PatchOS
                 #endregion
 
                 StopCODE = p1 + "x" + p2 + " : " + LastStatus;
-                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE + "            Please contact developer! Error log file: " + PMFAT.Root + TempFileName + ".txt", Color.Red, 5, 464);
+                ASC16.DrawACSIIString(Kernel.Canvas, "PLEASE CONTACT DEVELOPER! ERROR LOG FILE PATH: " + PMFAT.Root + TempFileName + ".txt", Color.Red, 5, 448);
+                ASC16.DrawACSIIString(Kernel.Canvas, "STOPCODE " + StopCODE, Color.Red, 5, 464);
                 Kernel.Canvas.DrawImageAlpha(Kernel.boot, (int)(Kernel.Canvas.Mode.Width / 2 - 72), (int)Kernel.Canvas.Mode.Height / 4);
                 Kernel.Canvas.Display();
 
@@ -80,16 +82,23 @@ namespace PatchOS
 
                 GUIConsole.X = 0;
                 GUIConsole.Y = 2;
-                Log.Warning("Waiting for Kernel responce");
+                Log.Warning("WAITING FOR KERNEL RESPONSE");
                 Kernel.DelayCode(1000);
                 int end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
-                Log.Success("Kernel responsed in " + (end - start));
+                Log.Success("KERNEL RESPONSED IN " + (end - start));
                 Kernel.DelayCode(500);
                 start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
-                Log.Warning("Stopping Services");
+                Log.Warning("STOPPING SERVICES");
                 ProcessManager.StopAll();
                 end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
-                Log.Success("All services stopped in " + (end - start));
+                Log.Success("ALL SERVICES STOPED IN " + (end - start) + " S");
+
+                Kernel.DelayCode(500);
+                Log.Warning("SAVING ERRORSTATUS");
+
+                PMFAT.WriteAllText(PMFAT.Root + TempFileName + ".txt", ErrorStatus);
+
+                Log.Success("ERRORSTATUS SAVED IN " + PMFAT.Root + TempFileName + ".txt");
 
             }
             catch(Exception exept)
