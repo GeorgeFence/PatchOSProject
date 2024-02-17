@@ -17,7 +17,7 @@ using PatchOS.Files.Drivers.Network;
 using System.Runtime.CompilerServices;
 using System.Drawing;
 using System.Diagnostics;
-using System.Collections;
+using System.Collections; 
 using Cosmos.Core;
 using System.Threading;
 using RTC = Cosmos.HAL.RTC;
@@ -27,7 +27,7 @@ namespace PatchOS
     public class Kernel : Sys.Kernel
     {
         public static Bitmap boot;
-        public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
+        public static Canvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
         public BootMgr bootMgr;
         private static List<string> Out = new List<string>();
         public static  int Y = 0;
@@ -55,7 +55,7 @@ namespace PatchOS
         {
             try
             {
-                Canvas = new SVGAIICanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
+                Canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
                 SYS32.TempFileName = "log";
 
@@ -192,14 +192,14 @@ namespace PatchOS
                 {
                     GUIConsole.SetCursorPositionChar(0, (Y / 16));
                     for (int i = 0; i < NewOut.Length; i++)
-                    {
+                    { 
                         space = space + " ";
                     }
                     GUIConsole.Write(space);
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W,H,ColorDepth.ColorDepth32)); ; }
+        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W,H, ColorDepth.ColorDepth32)); }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\commands\\filesystem\\dir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\commands\\filesystem\\dir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\commands\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\commands\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -47,16 +47,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Kernel.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Kernel.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Kernel.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Kernel.cs",
               "RelativeToolTip": "PatchOS\\Files\\Kernel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
+              "ViewState": "AQIAALcAAAAAAAAAAAAgwMIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-30T13:04:29.964Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -64,20 +65,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Dir.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Commands\\FileSystem\\Dir.cs",
               "RelativeDocumentMoniker": "PatchOS\\Commands\\FileSystem\\Dir.cs",
               "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Commands\\FileSystem\\Dir.cs",
               "RelativeToolTip": "PatchOS\\Commands\\FileSystem\\Dir.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAAAK0AAAAJAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAK0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-05T13:15:13.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-05T13:15:13.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Installer.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Files\\Drivers\\Installer.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\Installer.cs",
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Install.cs",
               "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOS\\Commands\\Install.cs",
               "RelativeDocumentMoniker": "PatchOS\\Commands\\Install.cs",
