@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Cosmos.System.Graphics;
 
 namespace PatchOS.Files.Apps
 {
@@ -16,6 +17,7 @@ namespace PatchOS.Files.Apps
         public static Drivers.GUI.UI.Window window;
 
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.settings.bmp")] static byte[] rawImage14;
+        
 
         public static int I = 0;
 
@@ -31,7 +33,7 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            window = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width - 300), 20, 300, (ushort)(Kernel.Canvas.Mode.Height - 48), "Settings", Update, DesignType.Blank, PermitionsType.Service, null);
+            window = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width - 300), 20, 300, (ushort)(Kernel.Canvas.Mode.Height - 68), "Settings", Update, DesignType.Blank, PermitionsType.Service, Kernel.apk);
             window.CanMove = false;
             WindowManager.Add(window);
         }

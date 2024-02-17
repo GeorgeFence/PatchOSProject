@@ -33,6 +33,7 @@ namespace PatchOS.Files.Drivers.GUI
         private static int Count = 0;
         private static int wait = 0;
         private static int regfps;
+        public static int FPS = 0;
         private static bool regfpsonce = true;
         public static bool isDesktop = false;
         public static List<String> ListPar = new List<String>();
@@ -143,7 +144,7 @@ namespace PatchOS.Files.Drivers.GUI
                 while (!Yield)
                 {
                     if (once) { start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1; once = false; }
-                    if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))) { once = true; fps = Count; Count = 0; }
+                    if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))) { once = true; fps = Count;FPS = fps; Count = 0; }
 
                     Kernel.Canvas.Clear();
                     if (Fill)
@@ -158,9 +159,6 @@ namespace PatchOS.Files.Drivers.GUI
 
                     WindowManager.Update(Kernel.Canvas);
                     Taskbar.DrawTaskBar();
-                    Kernel.Canvas.DrawFilledRectangle(ColorP.Red, 0, 20, 400, 64);
-                    Kernel.Canvas.DrawFilledRectangle(ColorP.Green, 0, 20,fps * 2, 64);
-                    ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), ColorP.White, (UInt32)(200 - (fps.ToString().Length / 2)), 30);
                     MouseMgr.DrawMouse();
                     DrawPar();
                     ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);

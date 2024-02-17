@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using Cosmos.System.Graphics;
+using Image = PatchOS.Files.Drivers.GUI.UI.Controls.Image;
 
 namespace PatchOS.Files.Apps
 {
@@ -19,6 +20,11 @@ namespace PatchOS.Files.Apps
         public static Button ShutdownDialog = null!;
         public static Button Console = null!;
         public static Panel downPanel = null!;
+        public static Panel fpsBgPanel = null!;
+        public static Panel fpsFgPanel = null!;
+        public static Label fps = null!;
+
+        public static Image Welcome = null!;
         public static Drivers.GUI.UI.Window Mwindow;
 
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.MenuApp.bmp")] static byte[] rawImageIcon;
@@ -33,6 +39,8 @@ namespace PatchOS.Files.Apps
 
         public static void Update()
         {
+            fps.Text = Desktop.FPS.ToString();
+            fpsFgPanel.Widt = Desktop.FPS * 2;
             if (ShutdownDialog.IsClicked)
             {
                 PatchOS.Files.Apps.ShutdownDialog.Start();
@@ -55,9 +63,17 @@ namespace PatchOS.Files.Apps
             ShutdownDialog = new Button(5, Mwindow.PanelH - 29, 32, 24, 0, "S/R", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Console = new Button(42, Mwindow.PanelH - 29, 64, 24, 0, "Console", true, System.Drawing.Color.Red, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             downPanel = new Panel(0, 600 - 34, 400, 34,System.Drawing.Color.Gray, Drivers.AnachorType.Bottom);
+            fpsBgPanel = new Panel(0, 0, 400, 16, System.Drawing.Color.Red, Drivers.AnachorType.Left);
+            fpsFgPanel = new Panel(0,0,200,16,System.Drawing.Color.Green, Drivers.AnachorType.Left);
+            fps = new Label((200 - (Desktop.FPS.ToString().Length / 2)), 0,"FPS", Drivers.AnachorType.Centre);
+            Welcome = new Image(0,16, Kernel.apk, true, Drivers.AnachorType.Left, "Welcome");
             Mwindow.Controls.Add(downPanel);
             Mwindow.Controls.Add(ShutdownDialog);
             Mwindow.Controls.Add(Console);
+            Mwindow.Controls.Add(fpsBgPanel);
+            Mwindow.Controls.Add(fpsFgPanel);
+            Mwindow.Controls.Add(fps);
+            Mwindow.Controls.Add(Welcome);
             WindowManager.Add(Mwindow);
         }
 

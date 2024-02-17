@@ -27,12 +27,13 @@ namespace PatchOS.Files.Drivers.GUI.UI
         {
             Windows.Add(window);
             ProcessManager.Run(new WindowProcess(window.Title));
+            Selected = window.Title;
         }
 
         public static void Stop(Window window)
         {
             ProcessManager.running[ProcessManager.running.IndexOf(window.process)].Stop();
-            Windows.RemoveAt(Windows.IndexOf(window));
+            Windows.Remove(window);
             Desktop.ListPar.Add("Stop");
         }
 
@@ -51,8 +52,12 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         IsDragging = false;
                         window.IsMoving = false;
                     }
-
-                    if(window.Wtype != DesignType.Blank)
+                    if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, (ushort)window.WinH) && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
+                    {
+                        SelDone = true;
+                        Selected = window.Title;
+                    }
+                    if (window.Wtype != DesignType.Blank)
                     {
                         if (MouseEx.IsMouseWithin(window.X + window.WinW - 27, window.Y + 5, 24, 24))
                         {
@@ -65,8 +70,8 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         {
                             if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, 32) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && !SelDone)
                             {
-                                Windows.Remove(window);
-                                Windows.Insert(Windows.Count, window);
+                                //Windows.Remove(window);
+                                //Windows.Insert(Windows.Count, window);
                                 SelDone = true;
                                 Selected = window.Title;
                                 if (window.CanMove)
@@ -88,8 +93,8 @@ namespace PatchOS.Files.Drivers.GUI.UI
 
                     if (MouseEx.IsMouseWithin(window.X, window.Y, (ushort)window.WinW, (ushort)window.WinH) && !window.IsMoving && !IsDragging && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState !=MouseState.Left && !SelDone && window.CanMove)
                     {
-                        Windows.Remove(window);
-                        Windows.Insert(Windows.Count, window);
+                        //Windows.Remove(window);
+                        //Windows.Insert(Windows.Count, window);
                         SelDone = true;
                         Selected = window.Title;
                     }
@@ -103,7 +108,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
                     }
                     else { window.IsSelected = false;}
 
-                    window.Update(Canvas, window.X, window.Y, Once);
+                    window.Update(Canvas, window.X, window.Y, Selected == window.Title);
 
                 }
             }
