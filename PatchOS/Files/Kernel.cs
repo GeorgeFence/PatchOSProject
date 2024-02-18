@@ -180,7 +180,7 @@ namespace PatchOS
                     {
                         space = space + " ";
                     }
-                    GUIConsole.Write(space);
+                    GUIConsole.Write(space); 
                 }
             }
             else
@@ -199,7 +199,7 @@ namespace PatchOS
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W,H, ColorDepth.ColorDepth32)); }
+        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W, H, ColorDepth.ColorDepth32)); }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();
