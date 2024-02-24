@@ -27,7 +27,7 @@ namespace PatchOS
     public class Kernel : Sys.Kernel
     {
         public static Bitmap boot;
-        public static Canvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
+        public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
         public BootMgr bootMgr;
         private static List<string> Out = new List<string>();
         public static  int Y = 0;
@@ -55,7 +55,7 @@ namespace PatchOS
         {
             try
             {
-                Canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
+                Canvas = (SVGAIICanvas)FullScreenCanvas.GetFullScreenCanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
                 SYS32.TempFileName = "log";
 
@@ -199,7 +199,7 @@ namespace PatchOS
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) { Canvas.Clear(); Canvas.Disable(); Canvas = new SVGAIICanvas(new Mode(W, H, ColorDepth.ColorDepth32)); }
+        public static void Resolution(ushort W,ushort H) {Canvas = new SVGAIICanvas(new Mode(W, H, ColorDepth.ColorDepth32)); }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();

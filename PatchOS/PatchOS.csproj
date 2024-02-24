@@ -38,6 +38,7 @@
         <PackageIcon>logo.png</PackageIcon>
         <Company>PatchOS</Company>
         <CompressionType>Gzip</CompressionType>
+        <TraceMode>None</TraceMode>
     </PropertyGroup>
 
     <ItemGroup>

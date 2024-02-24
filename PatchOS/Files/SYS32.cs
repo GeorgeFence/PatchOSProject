@@ -29,8 +29,11 @@ namespace PatchOS
 
         public static void ErrorStatusAdd(string text)
         {
-            
-            ErrorStatus += text + "|";
+            if(ErrorStatus.Length > 1000)
+            {
+                ErrorStatus = "";
+            }
+            ErrorStatus += text + "|"; //ErrorStatus += text + "|";
             LastStatus = text;
 
         }

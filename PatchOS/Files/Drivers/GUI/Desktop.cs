@@ -39,6 +39,7 @@ namespace PatchOS.Files.Drivers.GUI
         public static List<String> ListPar = new List<String>();
         public static Bitmap Wallpaper;
         public static MouseState prevMouseState = MouseState.None;
+        public static bool DevMode = false;
         public Desktop() : base("Desktop", Type.User, process)
         {
             
@@ -48,31 +49,40 @@ namespace PatchOS.Files.Drivers.GUI
         {
             try
             {
+
+                if (RegMgr.GetValue("REG/GUI/developermode.reg") == "1")
+                {
+                    DevMode = true;
+                }
                 int i = 0;
                 void DrawPar()
                 {
-                    ASC16.DrawACSIIString(Kernel.Canvas, "PatchOS Version 1", System.Drawing.Color.Orange, 5, 152);
-                    ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 168);
-                    if (Key.KeyPressed)
+                    if (DevMode)
                     {
-                        ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : true", System.Drawing.Color.Red, 5, 180);
+                        ASC16.DrawACSIIString(Kernel.Canvas, "PatchOS Version 1", System.Drawing.Color.Orange, 5, 152);
+                        ASC16.DrawACSIIString(Kernel.Canvas, "GeorgeFence @Jirkovic", System.Drawing.Color.Orange, 5, 168);
+                           if (Key.KeyPressed)
+                        {
+                            ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : true", System.Drawing.Color.Red, 5, 180);
+                        }
+                        else
+                        {
+                            ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : false", System.Drawing.Color.Red, 5, 180);
+                        }
+                        
+                        int p = 1;
+                        for (int i = 0; i < WindowManager.Windows.Count; i++)
+                        {
+                            ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.Orange, 5, (uint)(200 + (i * 16)));
+                            p++;
+                        }
+                        ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Selected, System.Drawing.Color.Blue, 5, (uint)(284));
+                        for (int i = 0; i < ProcessManager.running.Count; i++)
+                        {
+                            ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(300 + (i * 16)));
+                        }
                     }
-                    else
-                    {
-                        ASC16.DrawACSIIString(Kernel.Canvas, "KeyState : false", System.Drawing.Color.Red, 5, 180);
-                    }
-
-                    int p = 1;
-                    for (int i = 0; i < WindowManager.Windows.Count; i++)
-                    {
-                        ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Windows[i].Title, System.Drawing.Color.Orange, 5, (uint)(200 + (i * 16)));
-                        p++;
-                    }
-                    ASC16.DrawACSIIString(Kernel.Canvas, WindowManager.Selected, System.Drawing.Color.Blue, 5, (uint)(284));
-                    for (int i = 0; i < ProcessManager.running.Count; i++)
-                    {
-                        ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(300 + (i * 16)));
-                    }
+                    
                 }
                 bool Fill = true;
                 void BGC()
@@ -161,7 +171,7 @@ namespace PatchOS.Files.Drivers.GUI
                     Taskbar.DrawTaskBar();
                     MouseMgr.DrawMouse();
                     DrawPar();
-                    ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString(), System.Drawing.Color.Green, 0, 0);
+                    ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString() + " " + Cosmos.Core.GCImplementation.GetUsedRAM().ToString() + " Bytes" , System.Drawing.Color.Green, 0, 0);
                     Kernel.Canvas.Display();
                     Heap.Collect();
                     Count++;

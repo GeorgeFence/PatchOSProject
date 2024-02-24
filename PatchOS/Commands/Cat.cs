@@ -7,17 +7,24 @@ using System.Threading.Tasks;
 
 namespace PatchOS.Commands
 {
-    class Edit : Command
+    class Cat : Command
     {
-        public Edit()
+        public Cat()
         {
-            this.Name = "edit";
-            this.Help = "edit files";
+            this.Name = "cat";
+            this.Help = "Read content of file";
 
         }
         public override void Execute(string line, String[] args)
         {
-            txtedit.StartTXTEDIT(args[1].ToString());
+            if (PMFAT.FileExists(args[1]))
+            {
+                GUIConsole.WriteLine(PMFAT.ReadText(args[1]));
+            }
+            else
+            {
+                GUIConsole.WriteLine("Path "+ args[1] + " cannot be opened! Is the path correct?", System.Drawing.Color.Red);
+            }
         }
     }
 }

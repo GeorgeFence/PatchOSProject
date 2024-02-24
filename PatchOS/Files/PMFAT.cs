@@ -5,6 +5,7 @@ using System.Text;
 using Sys = Cosmos.System;
 using Cosmos.System.FileSystem;
 using System.Drawing;
+using PatchOS.Files.Drivers;
 
 namespace PatchOS.Files
 {
@@ -23,6 +24,8 @@ namespace PatchOS.Files
             {
                 // init Driver
                 Kernel.DrawBootOut("Initializing PMFAT...");
+                AHCI_DISK ahci = new AHCI_DISK();
+                ahci.Init(); 
                 Driver = new CosmosVFS();
                 Sys.FileSystem.VFS.VFSManager.RegisterVFS(Driver);
                 Kernel.DrawBootOut("Initialized PMFAT");

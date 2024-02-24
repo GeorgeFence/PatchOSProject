@@ -146,6 +146,18 @@ namespace PatchOS.Files
             RegName.Add("REG/GUI/fps.reg");
             RegValue.Add("60");
 
+            RegName.Add("REG/GUI/developermode.reg");
+            RegValue.Add("0");
+
+            //gui/taskbar
+            PMFAT.CreateFolder(PMFAT.Root + "REG/GUI/TASKBAR");
+
+            RegName.Add(@"REG/GUI/TASKBAR/ShowApps.reg");
+            RegValue.Add("1");
+
+            RegName.Add(@"REG/GUI/TASKBAR/Show.reg");
+            RegValue.Add("1");
+
             //gui/basic
             PMFAT.CreateFolder(PMFAT.Root + "REG/GUI/BASIC");
 
