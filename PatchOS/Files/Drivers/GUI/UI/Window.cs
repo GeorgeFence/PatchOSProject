@@ -31,7 +31,7 @@ public class Window : Control
 
     public bool IsSelected = false;
 
-    public static int ID;
+    public int ID;
 
     public string Title = "";
 
@@ -44,12 +44,11 @@ public class Window : Control
     internal int IY;
 
     public Bitmap Icon;
-    public static Action act;
     public DesignType Wtype;
     public PermitionsType Ptype;
-
-    public Window(int X, int Y, ushort Width, ushort Height, string TitleStr, Action action, DesignType type, PermitionsType perType, Bitmap Icon) : base(X, Y, Width, Height)
+    public Window(int X, int Y, ushort Width, ushort Height, string TitleStr, Action action, DesignType type, PermitionsType perType, Bitmap Icon) : base(X, Y, Width, Height, action)
     {
+        process = new WindowProcess(TitleStr);
         ShelfControls = new List<Control>();
         Controls = new List<Control>();
         Title = TitleStr;
@@ -57,7 +56,6 @@ public class Window : Control
         {
             PanelW = Width;
             PanelH = Height;
-            
         }
         else
         {
@@ -66,21 +64,17 @@ public class Window : Control
         }
         WinW = Width;
         WinH = Height;
-        act = action;
         Wtype = type;
         Ptype = perType;
         this.Icon = Icon;
     }
     public void ProcessControls(int X, int Y, List<Control> Controls, ConsoleKeyInfo? Key, bool sel)
     {
-        if(process.Continue)
+        for (int i = 0; i < Controls.Count; i++)
         {
-            for(int i = 0; i < Controls.Count; i++)
-            {
-                Controls[i].Update(Kernel.Canvas, X, Y, sel);
-                SYS32.ErrorStatusAdd("WINDOW " + Title);
-            }
+            Controls[i].Update(Kernel.Canvas, X, Y, sel);
         }
+        SYS32.ErrorStatusAdd("WINDOW " + Title);
     }
 
     public override void Update(Canvas Canvas, int X, int Y, bool sel)
@@ -113,7 +107,6 @@ public class Window : Control
                     ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
                     break;
 
-
                 case DesignType.Classic:
                     if (Ptype == PermitionsType.User)
                     {
@@ -132,7 +125,6 @@ public class Window : Control
                     ProcessControls(base.X + 6, base.Y + 33, Controls, key5, sel);
                     ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
                     break;
-
 
                 case DesignType.Modern:
                     if (Ptype == PermitionsType.User)
@@ -188,7 +180,7 @@ public class Window : Control
                     ProcessControls(base.X, base.Y, Controls, key7, sel);
                     break;
             }
-            act();
+            base.act();
         }
         catch (Exception ex)
         {

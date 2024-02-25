@@ -24,13 +24,15 @@ namespace PatchOS.Files.Drivers.GUI.UI
 
         public Color Accent;
 
+        public Action act;
+
         public int X;
         public int Y;
 
         public int Width;
         public int Height;   
 
-        internal Control(int X, int Y, ushort Width, ushort Height)
+        internal Control(int X, int Y, ushort Width, ushort Height, Action action = null)
         {
             OnClick = delegate
             {
@@ -45,6 +47,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
             Accent = Color.CoolGreen;
             this.X = X;
             this.Y = Y;
+            act = action;
         }
 
         public abstract void Update(Canvas Canvas, int X,int Y, bool sel);

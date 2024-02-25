@@ -26,14 +26,19 @@ namespace PatchOS.Files.Drivers.GUI.UI
         public static void Add(Window window)
         {
             Windows.Add(window);
-            ProcessManager.Run(new WindowProcess(window.Title));
+            ProcessManager.Run(window.process);
             Selected = window.Title;
         }
-
-        public static void Stop(Window window)
+         
+        public static void Stop(Window window) 
         {
-            ProcessManager.running[ProcessManager.running.IndexOf(window.process)].Stop();
+            window.process.Stop();
             Windows.Remove(window);
+            try
+            {
+                Selected = Windows[Windows.Count - 1].Title;
+            }
+            catch(Exception ex) { }
             Desktop.ListPar.Add("Stop");
         }
 
@@ -42,8 +47,10 @@ namespace PatchOS.Files.Drivers.GUI.UI
             bool SelDone = false;
             bool Once = false;
             //Selected = "";
+            int i = 0;
             foreach (Window window in Windows)
             {
+                i++;
                 window.IsSelected = false;
                 if (MouseManager.MouseState != MouseState.Left)
                 {
@@ -62,6 +69,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
                         if (MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
                         {
                             Stop(window);
+                            SelDone = true;
                         }
                     }
                     else
@@ -105,7 +113,6 @@ namespace PatchOS.Files.Drivers.GUI.UI
                     Once = true;
                 }
                 else { window.IsSelected = false; }
-
                 window.Update(Canvas, window.X, window.Y, Selected == window.Title);
             }
 

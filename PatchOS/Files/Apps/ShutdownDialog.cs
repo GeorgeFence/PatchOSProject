@@ -11,6 +11,7 @@ using WindowManager = PatchOS.Files.Drivers.GUI.UI.WindowManager;
 using Cosmos.System.Graphics;
 using PatchOS.Process;
 using System.Diagnostics.Tracing;
+using PatchOS.Files.Drivers.GUI;
 
 namespace PatchOS.Files.Apps
 {

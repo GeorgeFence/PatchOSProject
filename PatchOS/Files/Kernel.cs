@@ -88,15 +88,15 @@ namespace PatchOS
                     ASC16.DrawACSIIString(Canvas, "else    Boot", System.Drawing.Color.Green, 0, 704);
                     
                     DrawBootOut("IsFileSystem = " + IsFileSystem.ToString());
-                    DrawBootOut("Wait for input 2s");
-                    DelayCode(2000);
+                    DrawBootOut("Wait for input 1s");
+                    DelayCode(1000);
                     try
                     {
                         if(Console.KeyAvailable)
                         {
                             Kernel.Canvas.Disable();
                             Kernel.GUI_MODE = false;
-                            REGEDIT.DrawFresh(@"0:\");
+                            REGEDIT.DrawFresh(@"0:\REG\");
                         }
                         else
                         {

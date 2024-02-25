@@ -41,6 +41,10 @@ namespace PatchOS.Files.Apps
         {
             fps.Text = Desktop.FPS.ToString();
             fpsFgPanel.Widt = Desktop.FPS * 2;
+            if(Welcome.IsClicked)
+            {
+                PatchOS.Files.Apps.Welcome.Start();
+            }
             if (ShutdownDialog.IsClicked)
             {
                 PatchOS.Files.Apps.ShutdownDialog.Start();

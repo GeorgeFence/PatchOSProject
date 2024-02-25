@@ -52,16 +52,16 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
 
         public override void Update(Canvas canvas, int X, int Y, bool sel)
         {
-            canvas.DrawFilledRectangle(Bg, X + Xpos , Y + Ypos , W, H);
-            canvas.DrawRectangle(Outline, X + Xpos , Y + Ypos , W, H);
-            ASC16.DrawACSIIString(canvas, Text, Fg,  (uint)(X + W / 2 + Xpos) - (uint)((Text.Length / 2) * 8), (uint)(Y + H / 4 + Ypos - 1));
+            canvas.DrawFilledRectangle(Bg, X + Xpos, Y + Ypos, W, H);
+            canvas.DrawRectangle(Outline, X + Xpos, Y + Ypos, W, H);
+            ASC16.DrawACSIIString(canvas, Text, Fg, (uint)(X + W / 2 + Xpos) - (uint)((Text.Length / 2) * 8), (uint)(Y + H / 4 + Ypos - 1));
             if (MouseEx.IsMouseWithin(X + Xpos, Y + Ypos, (ushort)W, (ushort)H))
             {
                 if (MouseManager.MouseState == MouseState.Left && sel)
                 {
                     IsClicked = true;
-                    canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, X + Xpos , Y + Ypos , W, H );
-                    canvas.DrawRectangle(Outline, X + Xpos , Y + Ypos , W, H);
+                    canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, X + Xpos, Y + Ypos, W, H);
+                    canvas.DrawRectangle(Outline, X + Xpos, Y + Ypos, W, H);
                     ASC16.DrawACSIIString(canvas, Text, Fg, (uint)(X + W / 2 + Xpos) - (uint)((Text.Length / 2) * 8), (uint)(Y + H / 4 + Ypos - 1));
                 }
                 else

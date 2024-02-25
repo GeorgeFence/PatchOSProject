@@ -103,3 +103,16 @@ D:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.
 D:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
 D:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.pdb
 D:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.deps.json
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\bin\Debug\net6.0\PatchOS.pdb
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.csproj.AssemblyReference.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfoInputs.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.AssemblyInfo.cs
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.csproj.CoreCompileInputs.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.sourcelink.json
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\refint\PatchOS.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\PatchOS.pdb
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\PatchOS\obj\Debug\net6.0\ref\PatchOS.dll

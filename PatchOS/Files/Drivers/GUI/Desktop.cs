@@ -81,6 +81,11 @@ namespace PatchOS.Files.Drivers.GUI
                         {
                             ASC16.DrawACSIIString(Kernel.Canvas, ProcessManager.running[i].name, System.Drawing.Color.Green, 5, (uint)(300 + (i * 16)));
                         }
+
+                        for(int i = 0; i < ListPar.Count; i++)
+                        {
+                            ASC16.DrawACSIIString(Kernel.Canvas, ListPar[i], System.Drawing.Color.Purple, 5, (uint)(400 + (i * 16)));
+                        }
                     }
                     
                 }
