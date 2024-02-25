@@ -7,6 +7,7 @@ PatchOS is operating system based on [Cosmos](https://github.com/CosmosOS/Cosmos
 
 ### Desktop
 <img src="Other/Screenshot 2024-02-25 205830.png" style="width:800px">
+
 > Desktop fully supports FHD(1920x1080) with ColorDepth32 so you can fully enjoy OS. Windows had a lot of types like MODERN, DEFAULT, BLANK, CLASSIC. Taskbar shows you all running applications that you can stop immediately from taskbar.
 
 > [!CAUTION]
