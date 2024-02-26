@@ -12,6 +12,7 @@ using System.Drawing;
 using System.Diagnostics;
 using IL2CPU.API.Attribs;
 using Cosmos.System.Graphics;
+using PatchOS.Files.Drivers.GUI.UI.Controls;
 
 namespace PatchOS.Files.Drivers.GUI.UI;  
 
@@ -48,6 +49,7 @@ public class Window : Control
     public PermitionsType Ptype;
     public Window(int X, int Y, ushort Width, ushort Height, string TitleStr, Action action, DesignType type, PermitionsType perType, Bitmap Icon) : base(X, Y, Width, Height, action)
     {
+        process.Continue = true;
         process = new WindowProcess(TitleStr);
         ShelfControls = new List<Control>();
         Controls = new List<Control>();
@@ -56,6 +58,11 @@ public class Window : Control
         {
             PanelW = Width;
             PanelH = Height;
+        }
+        else if (DesignType.Default == type)
+        {
+            PanelW = Width;
+            PanelH = Height - 32;
         }
         else
         {
@@ -86,25 +93,33 @@ public class Window : Control
             {
                 case DesignType.Default:
 
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, base.Width, base.Height);
-                    if (Ptype == PermitionsType.User)
+                    Canvas.DrawFilledRectangle(System.Drawing.Color.GhostWhite, base.X, base.Y, WinW, WinH);
+                    if (sel)
                     {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                        if (Ptype == PermitionsType.User)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Blue, base.X, base.Y, (ushort)(WinW), 32);
+                        }
+                        else if (Ptype == PermitionsType.System)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X, base.Y, (ushort)(WinW), 32);
+                        }
+                        else if (Ptype == PermitionsType.Service)
+                        {
+                            Canvas.DrawFilledRectangle(System.Drawing.Color.LimeGreen, base.X, base.Y, (ushort)(WinW), 32);
+                        }
                     }
-                    else if (Ptype == PermitionsType.System)
+                    else
                     {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Red, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
-                    }
-                    else if (Ptype == PermitionsType.Service)
-                    {
-                        Canvas.DrawFilledRectangle(System.Drawing.Color.Green, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                        Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(30, 30, 30), base.X, base.Y, (ushort)(WinW), 32);
                     }
 
-                    Canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, base.X + 5, base.Y + 5, (ushort)(base.Width - 10), 32);
+                    Canvas.DrawImageAlpha(Kernel.ExitApp, X + WinW - 27, Y + 5);
+
                     ConsoleKeyInfo? key = KeyboardEx.ReadKey();
 
-                    ProcessControls(base.X + 6, base.Y + 33, Controls, key, sel);
-                    ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 8), (uint)(base.Y + 8));
+                    ProcessControls(base.X, base.Y + 32, Controls, key, sel);
+                    ASC16.DrawACSIIString(Kernel.Canvas, Title, System.Drawing.Color.White, (uint)(base.X + 3), (uint)(base.Y + 8));
                     break;
 
                 case DesignType.Classic:
@@ -192,7 +207,7 @@ public class WindowProcess : Process.Process
 {
     public static Coroutine process = new Coroutine(window());
 
-    public bool Continue = true;
+    public bool Continue = false;
     public WindowProcess(string title) : base(title + ".win", Type.User, process)
     {
         MouseManager.ScreenHeight = (UInt32)Kernel.Canvas.Mode.Height;

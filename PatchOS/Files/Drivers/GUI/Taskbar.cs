@@ -106,26 +106,9 @@ namespace PatchOS.Files.Drivers.GUI
             Kernel.Canvas.DrawImage(Kernel.start, 8, (int)(Kernel.Canvas.Mode.Height - 40));
             if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
             {
-                startMenu = true;
                 for (int i = 0; i < ProcessManager.running.Count; i++)
                 {
-                    if (ProcessManager.running[i].name == Menu.Title() + ".win" )
-                    {
-
-                        if (startMenu)
-                        {
-                            Menu.Stop();
-                            startMenu = false;
-                        }
-                    }
-                    else 
-                    {
-                        if (startMenu)
-                        {
-                            Menu.Start();
-                            startMenu = false;
-                        }
-                    }
+                    Menu.Start();
                 }
                 
             }

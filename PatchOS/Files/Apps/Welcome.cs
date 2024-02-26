@@ -39,7 +39,7 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            window = new Drivers.GUI.UI.Window(100, 100, 320, 100, "Welcome", Update, DesignType.Modern, PermitionsType.User, Kernel.apk);
+            window = new Drivers.GUI.UI.Window(100, 100, 320, 100, "Welcome", Update, DesignType.Default, PermitionsType.User, Kernel.apk);
             WelcomeLabel = new Label(3 , 3, "Welcome back!", Drivers.AnachorType.Left);
             WelcomeLabel2 = new Label(3, 19, "Enjoy while PatchOS is running", Drivers.AnachorType.Left);
             edittext = new Edittext(10, 30, 50, 20, AnachorType.Centre);
