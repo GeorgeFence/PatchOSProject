@@ -92,17 +92,15 @@ namespace PatchOS.Files
                     else
                     {
                         string[] Out1 = Out.Split("");
-                        Out = "";
+                        Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Black, Xold * 8, GUIConsole.Y * 16, Out.Length * 8, 16);
+                        string Out2 = "";
                         for (int i = 0; i < (Out1.Length - 1); i++)
                         {
-                            Out = Out + Out1[i];
+                            Out2 = Out2 + Out1[i];
                         }
-                        SetCursorPositionChar(Xold, Y / 16);
-                        FG = System.Drawing.Color.Black;
-                        Write(Out + " ");
-                        FG = System.Drawing.Color.White;
-                        SetCursorPositionChar(Xold + Out.Length, Y / 16);
-                        Write(Out);
+                        GUIConsole.FG = System.Drawing.Color.White;
+                        SetCursorPositionChar(Xold, Y);
+                        Write(Out2);
                         DrawInput();
                     }
                 }

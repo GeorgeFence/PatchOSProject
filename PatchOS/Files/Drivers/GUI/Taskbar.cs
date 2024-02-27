@@ -23,7 +23,6 @@ namespace PatchOS.Files.Drivers.GUI
         public static Coroutine process = new Coroutine(taskbar());
         public static bool Yield = false;
         public static List<Control> Controls;
-        public static MouseState prevMouseState;
         public static bool StartBtn = true;
 
         public Taskbar() : base("Taskbar", Type.User, process)
@@ -63,7 +62,7 @@ namespace PatchOS.Files.Drivers.GUI
             Wifi.DrawWifiStatus((int)(Kernel.Canvas.Mode.Width - 96), 2);
             if (MouseEx.IsMouseWithin((int)(Kernel.Canvas.Mode.Width - 96), 2, 16, 16))
             {
-                if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+                if (MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
                 {
                     PanelSettings.Start();   
                 }
@@ -76,11 +75,11 @@ namespace PatchOS.Files.Drivers.GUI
                     Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Gray, X - 8, (Int32)(Kernel.Canvas.Mode.Height - 48), 48,48);
                 }
                 Kernel.Canvas.DrawImageAlpha(WindowManager.Windows[i].Icon, X, (int)(Kernel.Canvas.Mode.Height - 40));
-                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 40), 32, 32) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 40), 32, 32) && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
                 {
                     WindowManager.Selected = WindowManager.Windows[i].Title; 
                 }
-                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 40), 32,32) && MouseManager.MouseState == MouseState.Right && prevMouseState != MouseState.Right)
+                if (MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 40), 32,32) && MouseManager.MouseState == MouseState.Right && Desktop.prevMouseState != MouseState.Right)
                 {
                     LastApp = WindowManager.Windows[i].Title;
                     start = (Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second);
@@ -96,7 +95,7 @@ namespace PatchOS.Files.Drivers.GUI
                     Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.FromArgb(15, 15, 15), X, (int)(Kernel.Canvas.Mode.Height - 80), 32,32);
                     Kernel.Canvas.DrawRectangle(System.Drawing.Color.Red, X, (int)(Kernel.Canvas.Mode.Height - 80), 32, 32);
                     Kernel.Canvas.DrawImageAlpha(Kernel.ExitApp, X + 5, (int)(Kernel.Canvas.Mode.Height - 74));
-                    if (MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left && MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 80), 26, 26))
+                    if (MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left && MouseEx.IsMouseWithin(X, (int)(Kernel.Canvas.Mode.Height - 80), 26, 26))
                     {
                         WindowManager.Stop(WindowManager.Windows[i]);
                     }
@@ -104,15 +103,10 @@ namespace PatchOS.Files.Drivers.GUI
                 X = X + 48;
             }
             Kernel.Canvas.DrawImage(Kernel.start, 8, (int)(Kernel.Canvas.Mode.Height - 40));
-            if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32) && MouseManager.MouseState == MouseState.Left && prevMouseState != MouseState.Left)
+            if (MouseEx.IsMouseWithin(8, (int)(Kernel.Canvas.Mode.Height - 40), 64, 32) && MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
             {
-                for (int i = 0; i < ProcessManager.running.Count; i++)
-                {
-                    Menu.Start();
-                }
-                
+                Menu.Start();
             }
-            prevMouseState = MouseManager.MouseState;
         }
         internal override int Start()
         {
