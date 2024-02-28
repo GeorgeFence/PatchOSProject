@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <!--<RuntimeIdentifier>cosmos</RuntimeIdentifier>-->
+        <Platform>cosmos</Platform>
+        <SupportsX86Intrinsics>false</SupportsX86Intrinsics>
+        <SelfContained>True</SelfContained>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <EnableGDB>False</EnableGDB>
+        <StartCosmosGDB>False</StartCosmosGDB>
+        <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
+        <CosmosDebugPort>Serial: COM1</CosmosDebugPort>
+        <Launch>VMware</Launch>
+        <Profile>VMware</Profile>
+        <Description>Use VMware Player or Workstation to deploy and debug.</Description>
+        <PxeInterface>192.168.0.8</PxeInterface>
+        <DebugEnabled>False</DebugEnabled>
+        <VMWareEdition>Workstation</VMWareEdition>
+        <CompressionType>Gzip</CompressionType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="boot\BOOTIA32.EFI" />
+      <None Remove="boot\BOOTX64.EFI" />
+      <None Remove="boot\limine-bios.sys" />
+      <None Remove="boot\limine.cfg" />
+      <None Remove="boot_sector" />
+      <None Remove="empty_sector" />
+      <None Remove="image.hdd" />
+      <None Remove="limine.bin" />
+      <None Remove="PatchOS.bin.gz" />
+      <None Remove="Test\Kernel" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="image.hdd" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="boot\BOOTIA32.EFI" />
+      <EmbeddedResource Include="boot\BOOTX64.EFI" />
+      <EmbeddedResource Include="boot\limine-bios.sys" />
+      <EmbeddedResource Include="boot\limine.cfg" />
+      <EmbeddedResource Include="boot_sector" />
+      <EmbeddedResource Include="empty_sector" />
+      <EmbeddedResource Include="limine.bin" />
+      <EmbeddedResource Include="boot\bin.gz" />
+      <EmbeddedResource Include="Test\Kernel" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Cosmos.Build" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.Coroutines" Version="1.0.0" />
+        <PackageReference Include="Cosmos.Debug.Kernel" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
+      <PackageReference Include="Cosmos.Plugs" Version="0-*" NoWarn="NU1604" />
+      <PackageReference Include="PrismAPI" Version="1.0.3" />
+    </ItemGroup>
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+      <Exec Command="E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Installer\disk.bat&#xD;&#xA;" />
+    </Target>
+
+</Project>
