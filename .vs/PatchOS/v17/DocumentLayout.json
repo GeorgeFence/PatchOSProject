@@ -82,7 +82,7 @@
               "RelativeDocumentMoniker": "PatchOS\\Files\\GUIConsole.cs",
               "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\GUIConsole.cs",
               "RelativeToolTip": "PatchOS\\Files\\GUIConsole.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAuwFsAAAAYAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAA8wFsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T18:17:10.119Z",
               "EditorCaption": ""
@@ -121,8 +121,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAwwEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:56:04.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-25T17:56:04.423Z"
             },
             {
               "$type": "Document",

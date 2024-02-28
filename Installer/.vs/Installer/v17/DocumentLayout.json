@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\",
+  "WorkspaceRootPath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|e:\\dokumenty\\patchos\\repository\\patchosproject\\patchosinstaller\\installer\\installer\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\installer\\installer\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|solutionrelative:installer\\install.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\installer\\installer\\installer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|solutionrelative:installer\\installer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\installer\\installer\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{242B3322-A917-457E-8885-61BEBDE15556}|Installer\\Installer.csproj|solutionrelative:installer\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Installer.csproj",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj",
+              "RelativeDocumentMoniker": "Installer\\Installer.csproj",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj",
+              "RelativeToolTip": "Installer\\Installer.csproj",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-28T20:20:29.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Log.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Log.cs",
+              "RelativeDocumentMoniker": "Installer\\Log.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Log.cs",
+              "RelativeToolTip": "Installer\\Log.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T19:59:20.584Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Install.cs",
-              "DocumentMoniker": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Install.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Install.cs",
               "RelativeDocumentMoniker": "Installer\\Install.cs",
-              "ToolTip": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Install.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Install.cs",
               "RelativeToolTip": "Installer\\Install.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T19:10:44.771Z",
               "EditorCaption": ""

@@ -47,3 +47,16 @@ E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Instal
 E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Installer\obj\Debug\net6.0\Installer.csproj.CoreCompileInputs.cache
 E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Installer\obj\Debug\net6.0\Installer.sourcelink.json
 E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Installer\obj\Debug\net6.0\ref\Installer.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\bin\Debug\net6.0\Installer.deps.json
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\bin\Debug\net6.0\Installer.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\bin\Debug\net6.0\Installer.pdb
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.csproj.AssemblyReference.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.AssemblyInfoInputs.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.AssemblyInfo.cs
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.csproj.CoreCompileInputs.cache
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.sourcelink.json
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\refint\Installer.dll
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\Installer.pdb
+C:\Users\defaultAdministrator\Desktop\PatchOS REPOSITORY\PatchOSProject\Installer\Installer\obj\Debug\net6.0\ref\Installer.dll

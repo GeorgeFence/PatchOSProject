@@ -17,7 +17,7 @@ namespace Installer
         }
 
         public static void Success(string message)
-        {
+        { 
             System.Console.ForegroundColor = ConsoleColor.Green;
             System.Console.Write("[   OK   ]");
             System.Console.ForegroundColor = ConsoleColor.White;

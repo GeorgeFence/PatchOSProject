@@ -23,6 +23,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="boot\bin.gz" />
       <None Remove="boot\BOOTIA32.EFI" />
       <None Remove="boot\BOOTX64.EFI" />
       <None Remove="boot\limine-bios.sys" />
@@ -36,18 +37,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="image.hdd" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Include="boot\BOOTIA32.EFI" />
-      <EmbeddedResource Include="boot\BOOTX64.EFI" />
+      <EmbeddedResource Include="boot\bin.gz" />
       <EmbeddedResource Include="boot\limine-bios.sys" />
       <EmbeddedResource Include="boot\limine.cfg" />
       <EmbeddedResource Include="boot_sector" />
       <EmbeddedResource Include="empty_sector" />
+      <EmbeddedResource Include="image.hdd" />
       <EmbeddedResource Include="limine.bin" />
-      <EmbeddedResource Include="boot\bin.gz" />
       <EmbeddedResource Include="Test\Kernel" />
     </ItemGroup>
 
@@ -61,7 +57,7 @@
     </ItemGroup>
 
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-      <Exec Command="E:\Dokumenty\PATCHOS\Repository\PatchOSProject\PatchOSInstaller\Installer\Installer\disk.bat&#xD;&#xA;" />
+      <Exec Command="call &quot;disk.bat&quot;&#xD;&#xA;" />
     </Target>
 
 </Project>

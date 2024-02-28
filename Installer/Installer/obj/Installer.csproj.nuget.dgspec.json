@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Installer.csproj": {}
+    "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj": {}
   },
   "projects": {
-    "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Installer.csproj": {
+    "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Installer.csproj",
+        "projectUniqueName": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj",
         "projectName": "Installer",
-        "projectPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\Installer.csproj",
+        "projectPath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj",
         "packagesPath": "C:\\Users\\defaultAdministrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Dokumenty\\PATCHOS\\Repository\\PatchOSProject\\PatchOSInstaller\\Installer\\Installer\\obj\\",
+        "outputPath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200-preview.23624.5\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

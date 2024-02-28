@@ -17,7 +17,7 @@ using Cosmos.HAL.BlockDevice;
 using Cosmos.HAL;  
 using PrismAPI.Runtime.SShell.Scripts;
 using Cosmos.Core.Memory;
-
+ 
 namespace Installer
 {
     public static class Installer
@@ -36,12 +36,6 @@ namespace Installer
 
         [ManifestResourceStream(ResourceName = "Installer.boot.limine-bios.sys")]
         public static byte[] sys;
-
-        [ManifestResourceStream(ResourceName = "Installer.boot.BOOTIA32.EFI")]
-        public static byte[] b32;
-
-        [ManifestResourceStream(ResourceName = "Installer.boot.BOOTX64.EFI")]
-        public static byte[] b64;
 
         [ManifestResourceStream(ResourceName = "Installer.boot.bin.gz")]
         public static byte[] bin;
@@ -580,15 +574,10 @@ namespace Installer
             DrawUpdates("Copying system files");
             start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
             Log.Warning("Copying files");
-            PMFAT.CreateFolder(@"0:\ELF/BOOT");
             PMFAT.CreateFile(@"0:\limine.cfg");
             PMFAT.WriteAllBytes(@"0:\limine.cfg", cfg);
             PMFAT.CreateFile(@"0:\limine-bios.sys");
             PMFAT.WriteAllBytes(@"0:\limine-bios.sys", sys);
-            PMFAT.CreateFile(@"0:\EFI/BOOT/BOOTIA32.EFI");
-            PMFAT.WriteAllBytes(@"0:\EFI/BOOT/BOOTIA32.EFI", b32);
-            PMFAT.CreateFile(@"0:\EFI/BOOT/BOOTX64.EFI");
-            PMFAT.WriteAllBytes(@"0:\EFI/BOOT/BOOTX64.EFI", b64);
             PMFAT.CreateFile(@"0:\PatchOS.bin.gz");
             PMFAT.WriteAllBytes(@"0:\PatchOS.bin.gz", bin);
             end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
