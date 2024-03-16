@@ -11,6 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using CosmosHttp.Client;
 using static System.Net.WebRequestMethods;
+using System.Net.Sockets;
+using System.Reflection.Metadata;
+using System.Net;
+using EndPoint = Cosmos.System.Network.IPv4.EndPoint;
 
 namespace PatchOS.Files.Drivers.Network
 {
@@ -18,7 +22,6 @@ namespace PatchOS.Files.Drivers.Network
     {
         public static DHCPClient client = new DHCPClient();
         public static DnsClient dnsClient = new DnsClient();
-        //public static Tcp tcpClient = new Tcp(80);
 
         public static void Initialize()
         {
@@ -43,24 +46,76 @@ namespace PatchOS.Files.Drivers.Network
             //Download(@"0:\update.pkg", "");
             return path;
         }
-        public static string Wget(string domain)
+        private static string ExtractDomainNameFromUrl(string url)
         {
-            try
+            int start;
+            if (url.Contains("://"))
             {
-                HttpRequest request = new();
-                request.IP = "34.223.124.45";
-                request.Domain = "neverssl.com";
-                request.Path = "/";
-                request.Method = "GET";
-                request.Send();
-                GUIConsole.WriteLine(request.Response.Content);
+                start = url.IndexOf("://") + 3;
             }
-            catch (Exception ex)
+            else
             {
-                Log.Error(ex.ToString());
+                start = 0;
             }
 
-            return string.Empty;
+            int end = url.IndexOf("/", start);
+            if (end == -1)
+            {
+                end = url.Length;
+            }
+
+            return url[start..end];
+        }
+
+
+        private static string ExtractPathFromUrl(string url)
+        {
+            int start;
+            if (url.Contains("://"))
+            {
+                start = url.IndexOf("://") + 3;
+            }
+            else
+            {
+                start = 0;
+            }
+
+            int indexOfSlash = url.IndexOf("/", start);
+            if (indexOfSlash != -1)
+            {
+                return url.Substring(indexOfSlash);
+            }
+            else
+            {
+                return "/";
+            }
+        }
+
+        public static string DownloadFile(string url)
+        {
+            if (url.StartsWith("https://"))
+            {
+                throw new WebException("HTTPS currently not supported, please use http://");
+            }
+
+            string path = ExtractPathFromUrl(url);
+            string domainName = ExtractDomainNameFromUrl(url);
+
+            var dnsClient = new DnsClient();
+
+            dnsClient.Connect(DNSConfig.DNSNameservers[0]);
+            dnsClient.SendAsk(domainName);
+            Address address = dnsClient.Receive();
+            dnsClient.Close();
+
+            HttpRequest request = new();
+            request.IP = address.ToString();
+            request.Domain = domainName;
+            request.Path = path;
+            request.Method = "GET";
+            request.Send();
+
+            return request.Response.Content.ToString();
         }
 
         public static void Ping(string URL)

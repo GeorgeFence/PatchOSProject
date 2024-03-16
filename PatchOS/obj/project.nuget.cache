@@ -4,22 +4,22 @@
   "success": true,
   "projectFilePath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\PatchOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20240218070550\\cosmos.build.0.1.0-localbuild20240218070550.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20240218070557\\cosmos.common.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.core\\0.1.0-localbuild20240218070557\\cosmos.core.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.debug.kernel\\0.1.0-localbuild20240218070557\\cosmos.debug.kernel.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.hal2\\0.1.0-localbuild20240218070557\\cosmos.hal2.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.plugs\\0.1.0-localbuild20240218070557\\cosmos.plugs.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.system2\\0.1.0-localbuild20240218070557\\cosmos.system2.0.1.0-localbuild20240218070557.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20240307092017\\cosmos.build.0.1.0-localbuild20240307092017.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20240307092024\\cosmos.common.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.core\\0.1.0-localbuild20240307092024\\cosmos.core.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.debug.kernel\\0.1.0-localbuild20240307092024\\cosmos.debug.kernel.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.hal2\\0.1.0-localbuild20240307092024\\cosmos.hal2.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.plugs\\0.1.0-localbuild20240307092024\\cosmos.plugs.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.system2\\0.1.0-localbuild20240307092024\\cosmos.system2.0.1.0-localbuild20240307092024.nupkg.sha512",
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmoshttp\\1.0.3\\cosmoshttp.1.0.3.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\il2cpu.api\\0.1.0-localbuild20240218070557\\il2cpu.api.0.1.0-localbuild20240218070557.nupkg.sha512"
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\il2cpu.api\\0.1.0-localbuild20240307092024\\il2cpu.api.0.1.0-localbuild20240307092024.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "PatchOS depends on Cosmos.Core (>= 0.1.0-localbuild20230723082731) but Cosmos.Core 0.1.0-localbuild20230723082731 was not found. An approximate best match of Cosmos.Core 0.1.0-localbuild20240218070557 was resolved.",
+      "message": "PatchOS depends on Cosmos.Core (>= 0.1.0-localbuild20230723082731) but Cosmos.Core 0.1.0-localbuild20230723082731 was not found. An approximate best match of Cosmos.Core 0.1.0-localbuild20240307092024 was resolved.",
       "libraryId": "Cosmos.Core",
       "targetGraphs": [
         "net6.0"
@@ -29,7 +29,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "PatchOS depends on Cosmos.System2 (>= 0.1.0-localbuild20230723082731) but Cosmos.System2 0.1.0-localbuild20230723082731 was not found. An approximate best match of Cosmos.System2 0.1.0-localbuild20240218070557 was resolved.",
+      "message": "PatchOS depends on Cosmos.System2 (>= 0.1.0-localbuild20230723082731) but Cosmos.System2 0.1.0-localbuild20230723082731 was not found. An approximate best match of Cosmos.System2 0.1.0-localbuild20240307092024 was resolved.",
       "libraryId": "Cosmos.System2",
       "targetGraphs": [
         "net6.0"

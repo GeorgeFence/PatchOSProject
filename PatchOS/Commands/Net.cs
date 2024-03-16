@@ -26,7 +26,7 @@ namespace PatchOS.Commands
                 }
                 if (args[1] == "get")
                 {
-                    GUIConsole.WriteLine(NetworkMgr.Wget(args[2]));
+                    GUIConsole.WriteLine(NetworkMgr.DownloadFile(args[2]));
                 }
                 if (args[1] == "ping")
                 {

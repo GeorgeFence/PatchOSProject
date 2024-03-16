@@ -171,7 +171,15 @@ namespace PatchOS.Files.Drivers.GUI
                         Kernel.Canvas.DrawImage(Kernel.Wpp1FHD, 0, 0);
                     }
 
-
+                    if (KeyboardEx.TryReadKey(out Key.keyevent))
+                    {
+                        Key.KeyPressed = true;
+                    }
+                    else
+                    {
+                        Key.KeyPressed = false;
+                        Key.keyevent = new ConsoleKeyInfo();
+                    }
                     WindowManager.Update(Kernel.Canvas);
                     Taskbar.DrawTaskBar();
                     MouseMgr.DrawMouse();

@@ -22,7 +22,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         public int Xpos;
         public int Ypos;
         public bool Alpha = false;
-        public static string text = "";
+        public string Text = "";
 
         AnachorType AnachorType;
 
@@ -32,9 +32,9 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
             this.Xpos = X;
             this.Ypos = Y;
             image = img;
-            Alpha = alpha;
-            text = title;
-            AnachorType = anachor;
+            this.Alpha = alpha;
+            this.Text = title;
+            this.AnachorType = anachor;
         }
 
         public override void Update(Canvas Canvas, int X, int Y, bool sel)
@@ -50,10 +50,10 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
 
             if (MouseEx.IsMouseWithin(X + Xpos, Y + Ypos, (ushort)image.Width, (ushort)image.Height))
             {
-                if(text != "")
+                if(Text != "")
                 {
-                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.DarkGray,(int)(X + Xpos -((text.Length /2 ) * 8) + (image.Height / 2)) ,(int)(Y + Ypos + image.Height - 16), text.Length * 8, 16);
-                    ASC16.DrawACSIIString(Kernel.Canvas, text, System.Drawing.Color.White,(uint)((X + Xpos - ((text.Length / 2) * 8)) + (image.Height / 2)), (uint)(Y + Ypos + image.Height - 16));
+                    Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.DarkGray,(int)(X + Xpos -((Text.Length /2 ) * 8) + (image.Height / 2)) ,(int)(Y + Ypos + image.Height - 16), Text.Length * 8, 16);
+                    ASC16.DrawACSIIString(Kernel.Canvas, Text, System.Drawing.Color.White,(uint)((X + Xpos - ((Text.Length / 2) * 8)) + (image.Height / 2)), (uint)(Y + Ypos + image.Height - 16));
                 }
                 if (MouseManager.MouseState == MouseState.Left && sel)
                 {

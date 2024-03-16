@@ -559,27 +559,29 @@ namespace Installer
             DrawUpdates("Writing Boot Partition");
             int start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
 
-            PMFAT.Driver.Disks[DiskInt].Host.WriteBlock(0, 32768, ref boot);
-
+            PMFAT.Driver.Disks[DiskInt].Host.WriteBlock(0, 131072, ref boot);
+              
             int end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second; 
-
+              
 
             DrawUpdates("Writed in " + (end - start) + " seconds");
             Thread.Sleep(1000);
-            DrawUpdates("Formating again");
-            Log.Warning("Formating");
-            PMFAT.Driver.Disks[0].CreatePartition(96);
-            PMFAT.Driver.Disks[0].FormatPartition(0,"FAT32", true);
-            Log.Success("Formating");
+            DrawUpdates("Creating Partition");
+            Log.Warning("Partitioning");
+            //PMFAT.Driver.Disks[DiskInt].CreatePartition(64);
+            //PMFAT.Driver.Disks[DiskInt].FormatPartition(0, "FAT32", true);
+            Log.Success("Partitioning");
             DrawUpdates("Copying system files");
             start = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
             Log.Warning("Copying files");
-            PMFAT.CreateFile(@"0:\limine.cfg");
-            PMFAT.WriteAllBytes(@"0:\limine.cfg", cfg);
-            PMFAT.CreateFile(@"0:\limine-bios.sys");
-            PMFAT.WriteAllBytes(@"0:\limine-bios.sys", sys);
-            PMFAT.CreateFile(@"0:\PatchOS.bin.gz");
-            PMFAT.WriteAllBytes(@"0:\PatchOS.bin.gz", bin);
+            /*PMFAT.CreateFolder(@"0:\boot");
+            PMFAT.CreateFolder(@"0:\boot\limine");
+            PMFAT.CreateFile(@"0:\boot\limine\limine.cfg");
+            PMFAT.WriteAllBytes(@"0:\boot\limine\limine.cfg", cfg);
+            PMFAT.CreateFile(@"0:\boot\limine\limine-bios.sys");
+            PMFAT.WriteAllBytes(@"0:\boot\limine\limine-bios.sys", sys);
+            PMFAT.CreateFile(@"0:\boot\PatchOS.bin.gz");
+            PMFAT.WriteAllBytes(@"0:\boot\PatchOS.bin.gz", bin);*/
             end = RTC.Hour * 3600 + RTC.Minute * 60 + RTC.Second;
             Log.Success("Done copying files in " + (end - start));
             DrawUpdates("Done copying files in " + (end - start));

@@ -120,6 +120,10 @@
         <PackageReference Include="CosmosHttp" Version="1.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Files\Drivers\HTMLCSS\" />
+    </ItemGroup>
+
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
       <Exec Command="call &quot;copytorepo.bat&quot;&#xD;&#xA;" />
     </Target>

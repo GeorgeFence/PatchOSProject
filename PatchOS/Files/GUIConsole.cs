@@ -91,16 +91,11 @@ namespace PatchOS.Files
                     }
                     else
                     {
-                        string[] Out1 = Out.Split("");
-                        Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Black, Xold * 8, GUIConsole.Y * 16, Out.Length * 8, 16);
-                        string Out2 = "";
-                        for (int i = 0; i < (Out1.Length - 1); i++)
-                        {
-                            Out2 = Out2 + Out1[i];
-                        }
+                        Kernel.Canvas.DrawFilledRectangle(System.Drawing.Color.Black, Xold * 8, GUIConsole.Y * 16, Out.Length * 8 + 16, 16);
                         GUIConsole.FG = System.Drawing.Color.White;
                         SetCursorPositionChar(Xold, Y);
-                        Write(Out2);
+                        Out = Out.Remove(Out.Length - 1);    
+                        Write(Out);
                         DrawInput();
                     }
                 }

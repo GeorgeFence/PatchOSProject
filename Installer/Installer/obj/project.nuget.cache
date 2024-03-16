@@ -4,15 +4,15 @@
   "success": true,
   "projectFilePath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\Installer\\Installer\\Installer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20240218070550\\cosmos.build.0.1.0-localbuild20240218070550.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20240218070557\\cosmos.common.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.core\\0.1.0-localbuild20240218070557\\cosmos.core.0.1.0-localbuild20240218070557.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20240307092017\\cosmos.build.0.1.0-localbuild20240307092017.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20240307092024\\cosmos.common.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.core\\0.1.0-localbuild20240307092024\\cosmos.core.0.1.0-localbuild20240307092024.nupkg.sha512",
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.coroutines\\1.0.0\\cosmos.coroutines.1.0.0.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.debug.kernel\\0.1.0-localbuild20240218070557\\cosmos.debug.kernel.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.hal2\\0.1.0-localbuild20240218070557\\cosmos.hal2.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.plugs\\0.1.0-localbuild20240218070557\\cosmos.plugs.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.system2\\0.1.0-localbuild20240218070557\\cosmos.system2.0.1.0-localbuild20240218070557.nupkg.sha512",
-    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\il2cpu.api\\0.1.0-localbuild20240218070557\\il2cpu.api.0.1.0-localbuild20240218070557.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.debug.kernel\\0.1.0-localbuild20240307092024\\cosmos.debug.kernel.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.hal2\\0.1.0-localbuild20240307092024\\cosmos.hal2.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.plugs\\0.1.0-localbuild20240307092024\\cosmos.plugs.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\cosmos.system2\\0.1.0-localbuild20240307092024\\cosmos.system2.0.1.0-localbuild20240307092024.nupkg.sha512",
+    "C:\\Users\\defaultAdministrator\\.nuget\\packages\\il2cpu.api\\0.1.0-localbuild20240307092024\\il2cpu.api.0.1.0-localbuild20240307092024.nupkg.sha512",
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\prismapi\\1.0.3\\prismapi.1.0.3.nupkg.sha512",
     "C:\\Users\\defaultAdministrator\\.nuget\\packages\\tinymath\\1.0.1\\tinymath.1.0.1.nupkg.sha512"
   ],
@@ -21,7 +21,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "PrismAPI 1.0.3 depends on Cosmos.HAL2 (>= 0.1.0-localbuild) but Cosmos.HAL2 0.1.0-localbuild was not found. An approximate best match of Cosmos.HAL2 0.1.0-localbuild20240218070557 was resolved.",
+      "message": "PrismAPI 1.0.3 depends on Cosmos.HAL2 (>= 0.1.0-localbuild) but Cosmos.HAL2 0.1.0-localbuild was not found. An approximate best match of Cosmos.HAL2 0.1.0-localbuild20240307092024 was resolved.",
       "libraryId": "Cosmos.HAL2",
       "targetGraphs": [
         "net6.0"
