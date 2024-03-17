@@ -160,7 +160,6 @@ namespace PatchOS.Files.Drivers.GUI
                 {
                     if (once) { start = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second + 1; once = false; }
                     if (start == ((Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second))) { once = true; fps = Count;FPS = fps; Count = 0; }
-
                     Kernel.Canvas.Clear();
                     if (Fill)
                     {
@@ -171,6 +170,7 @@ namespace PatchOS.Files.Drivers.GUI
                         Kernel.Canvas.DrawImage(Kernel.Wpp1FHD, 0, 0);
                     }
 
+                    CoroutinePool.StepMore(5);
                     if (KeyboardEx.TryReadKey(out Key.keyevent))
                     {
                         Key.KeyPressed = true;

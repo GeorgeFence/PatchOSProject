@@ -19,6 +19,7 @@ namespace PatchOS.Files.Coroutines
         bool performHeapCollection = false; // do not perform heap collection by default
         bool shouldCollectOnNextCycle;
         ulong heapCollectionIntervalNs = 250000000; // 250ms
+        public static int stepmore = 0;
         PIT.PITTimer? heapCollectionTimer;
 
         /// <summary>
@@ -141,6 +142,10 @@ namespace PatchOS.Files.Coroutines
         /// </summary>
         /// <exception cref="InvalidOperationException">Thrown when an attempt is made to start the coroutine pool while it's already running.</exception>
         //
+        public static void StepMore(int more)
+        {
+            stepmore = more;
+        }
         public void StartPool()
         {
             if (started)
@@ -178,6 +183,17 @@ namespace PatchOS.Files.Coroutines
                     {
                         ASC16.DrawACSIIString(Kernel.Canvas, i.ToString(), System.Drawing.Color.Green, 0, 0);
                         current.Step();
+                        if(stepmore != 0)
+                        {
+                            for(int j = 0; j < stepmore; j++)
+                            {
+                                current.Step();
+                                if(j == stepmore)
+                                {
+                                    stepmore = 0;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -194,11 +210,6 @@ namespace PatchOS.Files.Coroutines
                 foreach (var handler in OnCoroutineCycle)
                 {
                     handler.Invoke();
-                }
-
-                if (shouldCollectOnNextCycle)
-                {
-                    Heap.Collect();
                 }
             }
         }

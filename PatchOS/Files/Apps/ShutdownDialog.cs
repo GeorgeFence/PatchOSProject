@@ -49,7 +49,6 @@ namespace PatchOS.Files.Apps
         public static void Start()
         {
             Swindow = new Drivers.GUI.UI.Window((int)(Kernel.Canvas.Mode.Width / 2 - 150), (int)(Kernel.Canvas.Mode.Height / 2 - 64), 300, 128, "Shutdown Dialog", Update, DesignType.Default, PermitionsType.Service, Icon);
-            Swindow.CanMove = false;
             ShutdownButton = new Button(0,0, (ushort)Swindow.PanelW,(ushort)(Swindow.PanelH / 2), 0, "SHUTDOWN", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             RebootButton = new Button(0, (ushort)(Swindow.PanelH / 2), (ushort)Swindow.PanelW, (ushort)(Swindow.PanelH / 2), 0, "REBOOT", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Swindow.Controls.Add(ShutdownButton);

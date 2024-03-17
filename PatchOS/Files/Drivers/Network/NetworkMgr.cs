@@ -15,6 +15,8 @@ using System.Net.Sockets;
 using System.Reflection.Metadata;
 using System.Net;
 using EndPoint = Cosmos.System.Network.IPv4.EndPoint;
+using PatchOS.Files.Coroutines;
+using System.Xml.Linq;
 
 namespace PatchOS.Files.Drivers.Network
 {
@@ -93,29 +95,13 @@ namespace PatchOS.Files.Drivers.Network
 
         public static string DownloadFile(string url)
         {
-            if (url.StartsWith("https://"))
-            {
-                throw new WebException("HTTPS currently not supported, please use http://");
-            }
-
-            string path = ExtractPathFromUrl(url);
-            string domainName = ExtractDomainNameFromUrl(url);
-
-            var dnsClient = new DnsClient();
-
-            dnsClient.Connect(DNSConfig.DNSNameservers[0]);
-            dnsClient.SendAsk(domainName);
-            Address address = dnsClient.Receive();
-            dnsClient.Close();
-
             HttpRequest request = new();
-            request.IP = address.ToString();
-            request.Domain = domainName;
-            request.Path = path;
+            request.IP = "34.223.124.45";
+            request.Domain = url; //very useful for subdomains on same IP
+            request.Path = "/";
             request.Method = "GET";
             request.Send();
-
-            return request.Response.Content.ToString();
+            return request.Response.Content;
         }
 
         public static void Ping(string URL)

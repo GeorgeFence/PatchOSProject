@@ -9,6 +9,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using PatchOS.Files.Coroutines;
 
 namespace PatchOS.Files.Drivers.GUI.UI.Controls
 {
@@ -55,6 +56,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
             canvas.DrawFilledRectangle(Bg, X + Xpos, Y + Ypos, W, H);
             canvas.DrawRectangle(Outline, X + Xpos, Y + Ypos, W, H);
             ASC16.DrawACSIIString(canvas, Text, Fg, (uint)(X + W / 2 + Xpos) - (uint)((Text.Length / 2) * 8), (uint)(Y + H / 4 + Ypos - 1));
+            CoroutinePool.StepMore(2);
             if (MouseEx.IsMouseWithin(X + Xpos, Y + Ypos, (ushort)W, (ushort)H))
             {
                 if (MouseManager.MouseState == MouseState.Left && sel)

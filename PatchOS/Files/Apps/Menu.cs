@@ -19,6 +19,7 @@ namespace PatchOS.Files.Apps
     {
         public static Button ShutdownDialog = null!;
         public static Button Console = null!;
+        public static Button Settings = null!;
         public static Panel downPanel = null!;
         public static Panel fpsBgPanel = null!;
         public static Panel fpsFgPanel = null!;
@@ -54,6 +55,10 @@ namespace PatchOS.Files.Apps
             {
                 PatchOS.Files.Apps.ShutdownDialog.Start();
             }
+            if (Settings.IsClicked)
+            {
+                PatchOS.Files.Apps.PanelSettings.Start();
+            }
             if (Console.IsClicked)
             {
                 for (int i = 0;i < WindowManager.Windows.Count;i++)
@@ -67,19 +72,21 @@ namespace PatchOS.Files.Apps
 
         public static void Start()
         {
-            Mwindow = new Drivers.GUI.UI.Window(5, (int)(Kernel.Canvas.Mode.Height - 658), 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, Icon);
+            Mwindow = new Drivers.GUI.UI.Window(15, (int)(Kernel.Canvas.Mode.Height - 658), 400, 600, "Menu", Update, DesignType.Blank, PermitionsType.User, Icon);
             Mwindow.CanMove = false;
             ShutdownDialog = new Button(5, Mwindow.PanelH - 29, 32, 24, 0, "S/R", true, System.Drawing.Color.Blue, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             Console = new Button(42, Mwindow.PanelH - 29, 64, 24, 0, "Console", true, System.Drawing.Color.Red, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
+            Settings = new Button(Mwindow.PanelW - 101, Mwindow.PanelH - 29, 96, 24, 0, "Settings", true, System.Drawing.Color.DimGray, System.Drawing.Color.White, System.Drawing.Color.DarkBlue, Drivers.AnachorType.Left);
             downPanel = new Panel(0, 600 - 34, 400, 34,System.Drawing.Color.Gray, Drivers.AnachorType.Bottom);
             fpsBgPanel = new Panel(0, 0, 400, 16, System.Drawing.Color.Red, Drivers.AnachorType.Left);
             fpsFgPanel = new Panel(0,0,200,16,System.Drawing.Color.Green, Drivers.AnachorType.Left);
             fps = new Label((200 - (Desktop.FPS.ToString().Length / 2)), 0,"FPS", Drivers.AnachorType.Centre);
             Welcome = new Image(0,16, Kernel.apk, true, Drivers.AnachorType.Left, "Welcome");
-            PatchBrowser = new Image(64, 16, Kernel.apk, true, Drivers.AnachorType.Left, "Patch Browser");
+            PatchBrowser = new Image(32, 16, Kernel.apk, true, Drivers.AnachorType.Left, "Patch Browser");
             Mwindow.Controls.Add(downPanel);
             Mwindow.Controls.Add(ShutdownDialog);
             Mwindow.Controls.Add(Console);
+            Mwindow.Controls.Add(Settings);
             Mwindow.Controls.Add(fpsBgPanel);
             Mwindow.Controls.Add(fpsFgPanel);
             Mwindow.Controls.Add(fps);

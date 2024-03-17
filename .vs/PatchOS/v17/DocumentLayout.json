@@ -3,60 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\windowmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\coroutines\\coroutinepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\patchbrowser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\patchbrowser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\webpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\webpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\network\\networkmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\network\\networkmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\commands\\net.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\commands\\net.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\network\\wifi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\network\\wifi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\guiconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\guiconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\taskbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,8 +19,24 @@
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\shutdowndialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\panelsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\panelsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\network\\networkmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\network\\networkmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\patchbrowser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\patchbrowser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\guiconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\guiconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\apps\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,33 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Desktop.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAowLAAAAAVAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowJcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T18:54:46.495Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Window.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Window.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAgwMwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T11:40:25.731Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -118,28 +72,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CoroutinePool.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Coroutines\\CoroutinePool.cs",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAYwLIAAABtAAAA",
+              "DocumentIndex": 0,
+              "Title": "WindowMgr.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\WindowMgr.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwFkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T13:20:46.143Z",
+              "WhenOpened": "2024-03-17T19:39:49.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Net.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Commands\\Net.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Commands\\Net.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Commands\\Net.cs",
-              "RelativeToolTip": "PatchOS\\Commands\\Net.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAApwBwAAABAAAAA",
+              "DocumentIndex": 5,
+              "Title": "PatchBrowser.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PatchBrowser.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\PatchBrowser.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PatchBrowser.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Apps\\PatchBrowser.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwCQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T13:16:07.649Z",
+              "WhenOpened": "2024-03-15T20:59:23.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GUIConsole.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\GUIConsole.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\GUIConsole.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\GUIConsole.cs",
+              "RelativeToolTip": "PatchOS\\Files\\GUIConsole.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAcwGMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T18:17:10.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShutdownDialog.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T19:09:42.719Z",
               "EditorCaption": ""
             },
             {
@@ -150,116 +128,27 @@
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\Network\\NetworkMgr.cs",
               "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\Network\\NetworkMgr.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\Network\\NetworkMgr.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAqwFsAAAAJAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAowGAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-16T12:59:47.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Wifi.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\Network\\Wifi.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\Network\\Wifi.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\Network\\Wifi.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\Network\\Wifi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T12:59:47.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WebPanel.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\WebPanel.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\WebPanel.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\WebPanel.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\WebPanel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T11:34:01.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Label.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Label.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T11:27:14.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\Menu.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\Menu.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\Menu.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\Menu.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T11:15:43.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PatchBrowser.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PatchBrowser.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\PatchBrowser.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PatchBrowser.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\PatchBrowser.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwCQAAAAyAAAA",
+              "Title": "Taskbar.cs",
+              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
+              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
+              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
+              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwEwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T20:59:23.125Z",
+              "WhenOpened": "2024-02-25T17:56:04.423Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Key.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\Key.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\Key.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\Key.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\Key.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T14:43:18.993Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GUIConsole.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\GUIConsole.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\GUIConsole.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\GUIConsole.cs",
-              "RelativeToolTip": "PatchOS\\Files\\GUIConsole.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAcwGMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T18:17:10.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ShutdownDialog.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\ShutdownDialog.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwDcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T19:09:42.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Welcome.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\Welcome.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\Welcome.cs",
@@ -271,31 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Taskbar.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Taskbar.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAwwEcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:56:04.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PanelSettings.cs",
-              "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PanelSettings.cs",
-              "RelativeDocumentMoniker": "PatchOS\\Files\\Apps\\PanelSettings.cs",
-              "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Apps\\PanelSettings.cs",
-              "RelativeToolTip": "PatchOS\\Files\\Apps\\PanelSettings.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAowEkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:53:53.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Panel.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
@@ -303,12 +168,11 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Panel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T12:20:11.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-25T12:20:11.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
               "Title": "Control.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Control.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Control.cs",

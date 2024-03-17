@@ -42,6 +42,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
         {
             Canvas.DrawFilledRectangle(System.Drawing.Color.White, Xpos + X, Ypos + Y, W, H);
             Canvas.DrawRectangle(System.Drawing.Color.Black, Xpos + X, Ypos + Y, W, H);
+            CoroutinePool.StepMore(3);
             if (MouseEx.IsMouseWithin(Xpos + X, Ypos + Y, (ushort)W,(ushort)H))
             {
                 if(MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left)
