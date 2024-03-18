@@ -33,6 +33,7 @@ namespace PatchOS.Files.Drivers.GUI.UI
         public static void Stop(Window window) 
         {
             window.process.Stop();
+            ProcessManager.running.Remove(window.process);
             Windows.Remove(window);
             try
             {

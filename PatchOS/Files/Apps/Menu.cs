@@ -27,6 +27,7 @@ namespace PatchOS.Files.Apps
 
         public static Image Welcome = null!;
         public static Image PatchBrowser = null!;
+        public static Image DevelopStudio = null!;
         public static Drivers.GUI.UI.Window Mwindow;
 
         [ManifestResourceStream(ResourceName = "PatchOS.Files.Drivers.GUI.fileIcons.MenuApp.bmp")] static byte[] rawImageIcon;
@@ -50,6 +51,10 @@ namespace PatchOS.Files.Apps
             if (PatchBrowser.IsClicked)
             {
                 PatchOS.Files.Apps.PatchBrowser.Start();
+            }
+            if (DevelopStudio.IsClicked)
+            {
+                PatchOS.Files.Apps.DeveloperStudio.Start();
             }
             if (ShutdownDialog.IsClicked)
             {
@@ -83,6 +88,7 @@ namespace PatchOS.Files.Apps
             fps = new Label((200 - (Desktop.FPS.ToString().Length / 2)), 0,"FPS", Drivers.AnachorType.Centre);
             Welcome = new Image(0,16, Kernel.apk, true, Drivers.AnachorType.Left, "Welcome");
             PatchBrowser = new Image(32, 16, Kernel.apk, true, Drivers.AnachorType.Left, "Patch Browser");
+            DevelopStudio = new Image(64, 16, Kernel.apk, true, Drivers.AnachorType.Left, "Develop Studio");
             Mwindow.Controls.Add(downPanel);
             Mwindow.Controls.Add(ShutdownDialog);
             Mwindow.Controls.Add(Console);
@@ -92,6 +98,7 @@ namespace PatchOS.Files.Apps
             Mwindow.Controls.Add(fps);
             Mwindow.Controls.Add(Welcome);
             Mwindow.Controls.Add(PatchBrowser);
+            Mwindow.Controls.Add(DevelopStudio);
             WindowManager.Add(Mwindow);
         }
 
