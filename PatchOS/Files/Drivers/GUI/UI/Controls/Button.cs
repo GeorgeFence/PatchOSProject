@@ -59,7 +59,7 @@ namespace PatchOS.Files.Drivers.GUI.UI.Controls
             CoroutinePool.StepMore(2);
             if (MouseEx.IsMouseWithin(X + Xpos, Y + Ypos, (ushort)W, (ushort)H))
             {
-                if (MouseManager.MouseState == MouseState.Left && sel)
+                if (MouseManager.MouseState == MouseState.Left && Desktop.prevMouseState != MouseState.Left && sel)
                 {
                     IsClicked = true;
                     canvas.DrawFilledRectangle(System.Drawing.Color.SteelBlue, X + Xpos, Y + Ypos, W, H);

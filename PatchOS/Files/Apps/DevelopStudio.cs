@@ -6,6 +6,7 @@ using PatchOS.Files.Drivers.GUI.UI.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Security.Principal;
@@ -25,7 +26,9 @@ namespace PatchOS.Files.Apps
         public static Panel PanelCode = null!;
         public static Panel PanelToolBox = null!;
         public static Panel PanelOutput = null!;
-        public static Edittext code = null!;
+        public static RichEdittext code = null!;
+        public static RichEdittext output = null!;
+        public static Button build = null!;
         public static Drivers.GUI.UI.Window Code;
 
 
@@ -46,7 +49,11 @@ namespace PatchOS.Files.Apps
         }
         public static void UpdateCode()
         {
-            
+            if (build.IsClicked)
+            {
+                output.text.Add("Starting Pa# system");
+                PaSharp.Build(code.text);
+            }
         }
 
         public static void Start()
@@ -57,19 +64,23 @@ namespace PatchOS.Files.Apps
             title = new Label(5 , 5, "Develop Studio", Drivers.AnachorType.Left);
 
             Code = new Window(300, 300, 720, 480, "Develop Studio", UpdateCode, DesignType.Default, PermitionsType.User, Kernel.apk);
-            PanelCode = new Panel(120,0,480,Code.PanelH - 120, System.Drawing.Color.LightGray, AnachorType.Centre);
+            PanelCode = new Panel(120,32,480,Code.PanelH - 152, System.Drawing.Color.LightGray, AnachorType.Centre);
             PanelOutput = new Panel(120, Code.PanelH - 120, 480, 120, System.Drawing.Color.Aqua, AnachorType.Bottom);
-            PanelToolBox = new Panel(0,0,120,Code.PanelH,System.Drawing.Color.HotPink,AnachorType.Left);
-            code = new Edittext(120,0,480,Code.PanelH - 120, AnachorType.Centre);
+            PanelToolBox = new Panel(0,32,120,Code.PanelH - 32,System.Drawing.Color.HotPink,AnachorType.Left);
+            code = new RichEdittext(120,32,480,Code.PanelH - 152, AnachorType.Centre);
+            output = new RichEdittext(120, Code.PanelH - 120, 480, 120, AnachorType.Bottom);
+            build = new Button(0,0,96,32,0,"BUILD", true , System.Drawing.Color.GreenYellow, System.Drawing.Color.IndianRed, System.Drawing.Color.Green, AnachorType.Left);
 
             Main.Controls.Add(title);
             Main.Controls.Add(Open);
             Main.Controls.Add(New);
-             
+            
             Code.Controls.Add(PanelCode);
             Code.Controls.Add(PanelOutput);
             Code.Controls.Add(PanelToolBox);
             Code.Controls.Add(code);
+            Code.Controls.Add(output);
+            Code.Controls.Add(build);
 
             WindowManager.Add(Main);
         }
