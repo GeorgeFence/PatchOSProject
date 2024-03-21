@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\ui\\controls\\richedittext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\ui\\controls\\richedittext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\pasharp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\pasharp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|solutionrelative:patchos\\files\\drivers\\gui\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76B12514-E07D-4AAB-98D5-6CA1BFF9B159}|PatchOS\\PatchOS.csproj|c:\\users\\defaultadministrator\\desktop\\patchos repository\\patchosproject\\patchos\\files\\apps\\developstudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,17 +70,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Desktop.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\Desktop.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T18:54:46.495Z",
               "IsPinned": true,
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PaSharp.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\PaSharp.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\PaSharp.cs",
@@ -100,8 +100,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\PaSharp.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:52:13.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T19:52:13.819Z"
             },
             {
               "$type": "Document",
@@ -113,8 +112,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\Button.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAgwEwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:49:34.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T19:49:34.954Z"
             },
             {
               "$type": "Document",
@@ -130,16 +128,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RichEdittext.cs",
               "DocumentMoniker": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\RichEdittext.cs",
               "RelativeDocumentMoniker": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\RichEdittext.cs",
               "ToolTip": "C:\\Users\\defaultAdministrator\\Desktop\\PatchOS REPOSITORY\\PatchOSProject\\PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\RichEdittext.cs",
               "RelativeToolTip": "PatchOS\\Files\\Drivers\\GUI\\UI\\Controls\\RichEdittext.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAiwFcAAAAoAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAiwGoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:08:45.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T18:08:45.794Z"
             },
             {
               "$type": "Document",
@@ -151,8 +148,7 @@
               "RelativeToolTip": "PatchOS\\Files\\Apps\\DevelopStudio.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAAwDQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:04.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T14:03:04.794Z"
             },
             {
               "$type": "Document",

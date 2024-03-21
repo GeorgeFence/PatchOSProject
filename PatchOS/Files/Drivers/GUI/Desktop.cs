@@ -13,7 +13,7 @@ using IL2CPU.API.Attribs;
 using ColorP = System.Drawing.Color;
 using PatchOS.Files.Drivers.GUI.UI;
 using PatchOS.Files.Drivers.GUI.UI.Controls;
-using PatchOS.Files.Apps;
+using PatchOS.Files.Apps; 
 using Cosmos.Core.Memory;
 using System.Threading;
 using System.Timers;
@@ -186,7 +186,12 @@ namespace PatchOS.Files.Drivers.GUI
                     DrawPar();
                     ASC16.DrawACSIIString(Kernel.Canvas, fps.ToString() + " " + Cosmos.Core.GCImplementation.GetUsedRAM().ToString() + " Bytes" , System.Drawing.Color.Green, 0, 0);
                     Kernel.Canvas.Display();
-                    Heap.Collect();
+                    if(count2 == 20)
+                    {
+                        Heap.Collect();
+                        count2 = 0;
+                    }
+
                     Count++;
                     count2++;
                     prevMouseState = MouseManager.MouseState;
