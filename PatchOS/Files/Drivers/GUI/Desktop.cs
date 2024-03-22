@@ -32,7 +32,7 @@ namespace PatchOS.Files.Drivers.GUI
         public static bool Yield = false;
         private static int Count = 0;
         private static int wait = 0;
-        private static int regfps;
+        private static int regfps = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/fps.reg"));
         public static int FPS = 0;
         private static bool regfpsonce = true;
         public static bool isDesktop = false;
@@ -203,23 +203,9 @@ namespace PatchOS.Files.Drivers.GUI
             }
             yield return null;
         }
-        public static void ReduceFPS(bool FromRegistry, int fps)
+        public static void ReduceFPS(bool FromRegistry)
         {
-            //1s == 1000ms
-            if (regfpsonce)
-            {
-                regfps = Int32.Parse(PMFAT.ReadText(PMFAT.Root + "REG/GUI/fps.reg"));
-                regfpsonce = false;
-                if (FromRegistry)
-                {
-                    wait = 1000 / regfps;
-                }
-                else if (fps != 0)
-                {
-                    wait = 1000 / fps;
-                }
-            }
-            Kernel.DelayCode((UInt32)wait);
+            Kernel.DelayCode((uint)(1000 / (regfps)));
         }
 
         internal override int Start()

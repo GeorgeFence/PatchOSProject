@@ -52,7 +52,7 @@ namespace PatchOS.Files.Apps
             if (build.IsClicked)
             {
                 output.text.Add("Starting Pa# system");
-                PaSharp.Build(code.text);
+                PaSharp.Build(code.text,ref output.text);
             }
         }
 
@@ -63,12 +63,12 @@ namespace PatchOS.Files.Apps
             Open = new Button(Main.PanelW - 101, Main.PanelH - 29, 96, 24, 0, "Open", true, System.Drawing.Color.AliceBlue, System.Drawing.Color.Purple, System.Drawing.Color.Black, AnachorType.Right);
             title = new Label(5 , 5, "Develop Studio", Drivers.AnachorType.Left);
 
-            Code = new Window(300, 300, 720, 480, "Develop Studio", UpdateCode, DesignType.Default, PermitionsType.User, Kernel.apk);
-            PanelCode = new Panel(120,32,480,Code.PanelH - 152, System.Drawing.Color.LightGray, AnachorType.Centre);
-            PanelOutput = new Panel(120, Code.PanelH - 120, 480, 120, System.Drawing.Color.Aqua, AnachorType.Bottom);
+            Code = new Window(300, 300, 1280, 720, "Develop Studio", UpdateCode, DesignType.Default, PermitionsType.User, Kernel.apk);
+            PanelCode = new Panel(120,32,1000,Code.PanelH - 152, System.Drawing.Color.LightGray, AnachorType.Centre);
+            PanelOutput = new Panel(120, Code.PanelH - 120, 1000, 120, System.Drawing.Color.Aqua, AnachorType.Bottom);
             PanelToolBox = new Panel(0,32,120,Code.PanelH - 32,System.Drawing.Color.HotPink,AnachorType.Left);
-            code = new RichEdittext(120,32,480,Code.PanelH - 152, AnachorType.Centre);
-            output = new RichEdittext(120, Code.PanelH - 120, 480, 120, AnachorType.Bottom);
+            code = new RichEdittext(120,32,1000,Code.PanelH - 152, AnachorType.Centre);
+            output = new RichEdittext(120, Code.PanelH - 120, 1000, 120, AnachorType.Bottom);
             build = new Button(0,0,96,32,0,"BUILD", true , System.Drawing.Color.GreenYellow, System.Drawing.Color.IndianRed, System.Drawing.Color.Green, AnachorType.Left);
 
             Main.Controls.Add(title);
