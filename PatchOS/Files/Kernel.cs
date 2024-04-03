@@ -21,19 +21,21 @@ using System.Collections;
 using Cosmos.Core;
 using System.Threading;
 using RTC = Cosmos.HAL.RTC;
+using Cosmos.Core.MemoryGroup;
 
 namespace PatchOS
 {
     public class Kernel : Sys.Kernel
     {
         public static Bitmap boot;
-        public static SVGAIICanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
+        public static PATCHVGACanvas Canvas; // if  real hw use VGACanvas!!! VERY IMPORTANT - edit: yeah VGACanvas not working :(
         public BootMgr bootMgr;
         private static List<string> Out = new List<string>();
         public static  int Y = 0;
         public static bool GUI_MODE = false;
         public static bool IsFileSystem = true;
         private static ConsoleKeyInfo o;
+        private static int ShutdownMode = 0;
         #region IMAGES
         public static Bitmap Cursor;
         public static Bitmap Wpp1FHD;
@@ -55,7 +57,7 @@ namespace PatchOS
         {
             try
             {
-                Canvas = (SVGAIICanvas)FullScreenCanvas.GetFullScreenCanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
+                Canvas = (PATCHVGACanvas)FullScreenCanvas.GetFullScreenCanvas(new Mode(1280, 720, ColorDepth.ColorDepth32));
                 Canvas.Clear(System.Drawing.Color.Black);
                 SYS32.TempFileName = "log";
 
@@ -159,7 +161,7 @@ namespace PatchOS
         }
         protected override void Run()
         {
-            
+
         }
 
         public static void DrawBootOut(string NewOut)
@@ -199,7 +201,7 @@ namespace PatchOS
                 }
             } 
         }
-        public static void Resolution(ushort W,ushort H) {Canvas = new SVGAIICanvas(new Mode(W, H, ColorDepth.ColorDepth32)); }
+        public static void Resolution(ushort W,ushort H) {Canvas = (PATCHVGACanvas)FullScreenCanvas.GetFullScreenCanvas(new Mode(W, H, ColorDepth.ColorDepth32)); }
         public static void DelayCode(uint milliseconds)
         {
             Cosmos.HAL.PIT pit = new Cosmos.HAL.PIT();
@@ -230,18 +232,28 @@ namespace PatchOS
                 end = Cosmos.HAL.RTC.Hour * 3600 + Cosmos.HAL.RTC.Minute * 60 + Cosmos.HAL.RTC.Second;
                 Log.Success("All services stopped in " + (end - start));
                 Log.Warning("Waiting for ACPI for Shutdown");
-                if (mode == 0)
-                {
-                    ACPI.Shutdown();
-                }
-                if (mode == 1)
-                {
-                    Sys.Power.Reboot();
-                }
+                ShutdownMode = mode;
+                StopKernel();
+
             }
             
         }
+        public static void StopKernel()
+        {
+            Canvas.Disable();
 
+            Console.WriteLine("");
+            Console.WriteLine("Turning system down! Please wait");
+            Thread.Sleep(2000);
+            if (ShutdownMode == 0)
+            {
+                ACPI.Shutdown();
+            }
+            else
+            {
+                Sys.Power.Reboot();
+            }
+        }
         public static void Update(string PackagePath)
         {
             Y = 384;

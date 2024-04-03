@@ -95,13 +95,25 @@ namespace PatchOS.Files.Drivers.Network
 
         public static string DownloadFile(string url)
         {
+            string Path, DomainName;
+
+            DomainName = ExtractDomainNameFromUrl(url);
+            Path = ExtractPathFromUrl(url);
+            var DNSClient = new DnsClient();
+            DNSClient.Connect(DNSConfig.DNSNameservers[0]);
+            DNSClient.SendAsk(DomainName);
+            Address Addr = DNSClient.Receive();
+            DNSClient.Close();
+
             HttpRequest request = new();
-            request.IP = "34.223.124.45";
-            request.Domain = url; //very useful for subdomains on same IP
-            request.Path = "/";
+            request.IP = Addr.ToString();
+            request.Domain = DomainName;
+            request.Path = Path;
             request.Method = "GET";
             request.Send();
-            return request.Response.Content;
+
+            return request.Response.Content.ToString();
+
         }
 
         public static void Ping(string URL)

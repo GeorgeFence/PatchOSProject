@@ -29,7 +29,7 @@ namespace PatchOS
 
         public static void ErrorStatusAdd(string text)
         {
-            if(ErrorStatus.Length > 1000)
+            if (ErrorStatus.Length > 1000)
             {
                 ErrorStatus = "";
             }
@@ -107,7 +107,6 @@ namespace PatchOS
             catch(Exception exept)
             {
                 KernelPanic(exept, "2KERNELPANICs");
-                
             }
         }
         
@@ -131,6 +130,5 @@ namespace PatchOS
                 progress = "";
             }
         }
-
     }
 }
